@@ -29,7 +29,7 @@ input [2:0] CardSelectCode;
 
 output QInit, QS1C, QF1C, QS2C, QF2C, QRemCards, QHideCards, QWin;
 
-reg [6:0] state;
+reg [7:0] state;
 assign {QWin, QHideCards, QRemCards, QF2C, QS2C, QF1C, QS1C, QInit} = state;
 
 reg [2:0] CARD1;
@@ -49,6 +49,12 @@ localparam
 	UNK			= 8'bXXXXXXXX;
 
 //----------------------STATE ASSIGNMENT----------------//
+
+always @ (state)
+begin
+	$display("%d",state);
+end
+
 always @ (posedge Clk, posedge Reset)
 	begin
 		if(Reset)
@@ -56,6 +62,7 @@ always @ (posedge Clk, posedge Reset)
 				state <= INIT;
 				CARD1 <= 3'bXXX;
 				CARD2 <= 3'bXXX;
+				NUM_MATCHES = 4'bXXXX;
 			end
 		else
 			case(state)
@@ -63,7 +70,7 @@ always @ (posedge Clk, posedge Reset)
 					begin
 						CARD1 <= 3'b000;
 						CARD2 <= 3'b000;
-						NUM_MATCHES <= 0;
+						NUM_MATCHES <= 4'b0000;
 						if(Start)
 							state <= S1C;
 					end
@@ -98,18 +105,28 @@ always @ (posedge Clk, posedge Reset)
 				REM_CARDS:
 					begin
 						NUM_MATCHES <= NUM_MATCHES + 1;
-						if(NUM_MATCHES == num_matches-1)
-							state <= WIN;
+						$display("Removing Cards");
+						if(NUM_MATCHES == num_matches[3:0]-1)
+							begin
+							$display("Winning: %b", WIN);
+							state <= 8'b10000000;
+							end
 						else
+							begin
+							$display("Losing: %d", S1C);
 							state <= S1C;
+							end
 					end
 				HIDE_CARDS:
 					begin
 						state <= S1C;
 					end
 				WIN:
-					if(Ack)
-						state <= INIT;
+					begin
+						$display("I WON I WON I WON");
+						if(Ack)
+							state <= INIT;
+					end
 				default:
 					state <= UNK;
 			endcase

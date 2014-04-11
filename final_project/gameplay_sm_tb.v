@@ -45,7 +45,7 @@ module gameplay_sm_tb;
 	reg [5*8:0] state_string;
 
 	// Instantiate the Unit Under Test (UUT)
-	gameplay_sm uut (
+	gameplay_sm uut(
 		.Clk(Clk), 
 		.Start(Start), 
 		.Reset(Reset), 
@@ -97,13 +97,16 @@ module gameplay_sm_tb;
 		end
 	endtask
 
-	initial begin
+	initial begin : VALUES
+	
+		integer i;
+		i=0;
 		// Initialize Inputs
 		Clk = 0;
 		Start = 0;
 		Reset = 1;
 		Select = 0;
-		CardSelectCode = 3;
+		CardSelectCode = 4;
 		Ack = 0;
 
 		// Wait 100 ns for global reset to finish
@@ -111,7 +114,23 @@ module gameplay_sm_tb;
       Start = 1;
 		Reset = 0;
 		// Add stimulus here
-		GET_MATCH();
+		for(i = 0; i < 8; i = i+1)
+		begin
+			if(i == 7)
+			begin
+				$display("LAST TIME");
+				GET_MATCH();
+			end else
+			begin
+				$display("OTHER TIMES");
+				GET_MATCH();
+				wait(QS1C);
+			end
+		end
+		$display("Waiting for a win");
+		wait(QWin);
+		Ack = 1;
+		wait(QInit);
 		$stop;
 		
 		
