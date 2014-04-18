@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="/home/chris/Documents/USC/2013/3_Fall/EE201_Introduction_to_Digital_Ciruits/X3_rom_square_vga_example/rom_example/vga_rom_top_tb_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="vga_rom_top_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="42" />
+   <wvobject fp_name="/vga_rom_top_tb/vga_h_sync" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">vga_h_sync</obj_property>
+      <obj_property name="ObjectShortName">vga_h_sync</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_rom_top_tb/vga_v_sync" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">vga_v_sync</obj_property>
+      <obj_property name="ObjectShortName">vga_v_sync</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_rom_top_tb/vga_r" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">vga_r</obj_property>
+      <obj_property name="ObjectShortName">vga_r</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_rom_top_tb/vga_g" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">vga_g</obj_property>
+      <obj_property name="ObjectShortName">vga_g</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_rom_top_tb/vga_b" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">vga_b</obj_property>
+      <obj_property name="ObjectShortName">vga_b</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_rom_top_tb/ClkPort" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ClkPort</obj_property>
+      <obj_property name="ObjectShortName">ClkPort</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_rom_top_tb/Sw0" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">Sw0</obj_property>
+      <obj_property name="ObjectShortName">Sw0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_rom_top_tb/uut/syncgen/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_rom_top_tb/uut/syncgen/reset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_rom_top_tb/St_ce_bar" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">St_ce_bar</obj_property>
+      <obj_property name="ObjectShortName">St_ce_bar</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_rom_top_tb/St_rp_bar" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">St_rp_bar</obj_property>
+      <obj_property name="ObjectShortName">St_rp_bar</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_rom_top_tb/Mt_ce_bar" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">Mt_ce_bar</obj_property>
+      <obj_property name="ObjectShortName">Mt_ce_bar</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_rom_top_tb/Mt_St_oe_bar" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">Mt_St_oe_bar</obj_property>
+      <obj_property name="ObjectShortName">Mt_St_oe_bar</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_rom_top_tb/Mt_St_we_bar" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">Mt_St_we_bar</obj_property>
+      <obj_property name="ObjectShortName">Mt_St_we_bar</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_rom_top_tb/An0" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">An0</obj_property>
+      <obj_property name="ObjectShortName">An0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_rom_top_tb/An1" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">An1</obj_property>
+      <obj_property name="ObjectShortName">An1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_rom_top_tb/An2" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">An2</obj_property>
+      <obj_property name="ObjectShortName">An2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_rom_top_tb/An3" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">An3</obj_property>
+      <obj_property name="ObjectShortName">An3</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_rom_top_tb/Ca" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">Ca</obj_property>
+      <obj_property name="ObjectShortName">Ca</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_rom_top_tb/Cb" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">Cb</obj_property>
+      <obj_property name="ObjectShortName">Cb</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_rom_top_tb/Cc" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">Cc</obj_property>
+      <obj_property name="ObjectShortName">Cc</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_rom_top_tb/Cd" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">Cd</obj_property>
+      <obj_property name="ObjectShortName">Cd</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_rom_top_tb/Ce" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">Ce</obj_property>
+      <obj_property name="ObjectShortName">Ce</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_rom_top_tb/Cf" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">Cf</obj_property>
+      <obj_property name="ObjectShortName">Cf</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_rom_top_tb/Cg" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">Cg</obj_property>
+      <obj_property name="ObjectShortName">Cg</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_rom_top_tb/Dp" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">Dp</obj_property>
+      <obj_property name="ObjectShortName">Dp</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_rom_top_tb/LD0" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">LD0</obj_property>
+      <obj_property name="ObjectShortName">LD0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_rom_top_tb/LD1" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">LD1</obj_property>
+      <obj_property name="ObjectShortName">LD1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_rom_top_tb/LD2" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">LD2</obj_property>
+      <obj_property name="ObjectShortName">LD2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_rom_top_tb/LD3" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">LD3</obj_property>
+      <obj_property name="ObjectShortName">LD3</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_rom_top_tb/LD4" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">LD4</obj_property>
+      <obj_property name="ObjectShortName">LD4</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_rom_top_tb/LD5" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">LD5</obj_property>
+      <obj_property name="ObjectShortName">LD5</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_rom_top_tb/LD6" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">LD6</obj_property>
+      <obj_property name="ObjectShortName">LD6</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_rom_top_tb/LD7" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">LD7</obj_property>
+      <obj_property name="ObjectShortName">LD7</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_rom_top_tb/Sw1" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">Sw1</obj_property>
+      <obj_property name="ObjectShortName">Sw1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_rom_top_tb/BtnU" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">BtnU</obj_property>
+      <obj_property name="ObjectShortName">BtnU</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_rom_top_tb/BtnD" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">BtnD</obj_property>
+      <obj_property name="ObjectShortName">BtnD</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_rom_top_tb/BtnR" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">BtnR</obj_property>
+      <obj_property name="ObjectShortName">BtnR</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_rom_top_tb/BtnL" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">BtnL</obj_property>
+      <obj_property name="ObjectShortName">BtnL</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_rom_top_tb/BtnC" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">BtnC</obj_property>
+      <obj_property name="ObjectShortName">BtnC</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_rom_top_tb/reset_done" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">reset_done</obj_property>
+      <obj_property name="ObjectShortName">reset_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_rom_top_tb/CLK_PERIOD" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">CLK_PERIOD[31:0]</obj_property>
+      <obj_property name="ObjectShortName">CLK_PERIOD[31:0]</obj_property>
+   </wvobject>
+</wave_config>
