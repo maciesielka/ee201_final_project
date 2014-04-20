@@ -18,22 +18,23 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module memory_mux(addr, digit, spo
+module memory_mux(digit, index_Y, spo
     );
-input [6:0] addr;
+	 
 input [3:0] digit;
+input [5:0] index_Y;
+reg [63:0] temp;
+output [63:0] spo;
 
-output [127:0] spo;
-
-wire [127:0] data1;
-wire [127:0] data2;
-wire [127:0] data3;
-wire [127:0] data4;
-wire [127:0] data5;
-wire [127:0] data6;
-wire [127:0] data7;
-wire [127:0] data8;
-wire [127:0] data9;
+wire [63:0] data1;
+wire [63:0] data2;
+wire [63:0] data3;
+wire [63:0] data4;
+wire [63:0] data5;
+wire [63:0] data6;
+wire [63:0] data7;
+wire [63:0] data8;
+wire [63:0] data9;
 
 async_rom mem1 (
       .a(index_Y), // input [6 : 0] a
@@ -80,20 +81,21 @@ async_rom_9 mem9 (
       .spo(data9) // output [127 : 0] spo
 );
 
-/*case(digit)
-	begin
-		4'b0000: assign spo = data1;
-		4'b0001: assign spo = data2;
-		4'b0010: assign spo = data3;
-		4'b0011: assign spo = data4;
-		4'b0100: assign spo = data;
-		4'b0101:
-		4'b0110:
-		4'b0111:
-		4'b1000:
-		4'b1001:
-		default: assign spo = data9;
-	end
-endcase*/
+always @ (digit, data1, data2, data3, data4, data5, data6, data7, data8, data9)
+begin
+	case(digit)
+		4'b0000: temp = data1; //blank
+		4'b0001: temp = data2;
+		4'b0010: temp = data3;
+		4'b0011: temp = data4;
+		4'b0100: temp = data5;
+		4'b0101: temp = data6;
+		4'b0110: temp = data7;
+		4'b0111: temp = data8;
+		4'b1000: temp = data9;
+		default: temp = 127'd0;
+	endcase
+end
 
+assign spo = temp;
 endmodule

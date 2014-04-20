@@ -5,5 +5,23 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
+<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">card_memory/dina&lt;5&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">card_memory/dina&lt;4&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">card_memory/dina&lt;3&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">card_memory/dina&lt;2&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">card_memory/dina&lt;1&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">card_memory/dina&lt;0&gt;</arg>&apos; has no driver
+</msg>
+
 </messages>
 

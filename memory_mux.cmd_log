@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "/home/student/Desktop/EE201/ee201_final_project/memory_mux.xst" -ofn "/home/student/Desktop/EE201/ee201_final_project/memory_mux.syr" 
+xst -intstyle ise -ifn "/home/student/Desktop/EE201/ee201_final_project/memory_mux.xst" -ofn "/home/student/Desktop/EE201/ee201_final_project/memory_mux.syr" 

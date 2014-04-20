@@ -10,40 +10,40 @@ Target Device  : xc6slx16
 Target Package : csg324
 Target Speed   : -3
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Fri Apr 18 01:04:30 2014
+Mapped Date    : Sat Apr 19 19:13:18 2014
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:    0
+Number of warnings:    6
 Slice Logic Utilization:
-  Number of Slice Registers:                   244 out of  18,224    1%
-    Number used as Flip Flops:                 244
-    Number used as Latches:                      0
+  Number of Slice Registers:                   318 out of  18,224    1%
+    Number used as Flip Flops:                 310
+    Number used as Latches:                      8
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                      1,030 out of   9,112   11%
-    Number used as logic:                    1,021 out of   9,112   11%
-      Number using O6 output only:             782
-      Number using O5 output only:             135
-      Number using O5 and O6:                  104
+  Number of Slice LUTs:                      1,323 out of   9,112   14%
+    Number used as logic:                    1,316 out of   9,112   14%
+      Number using O6 output only:           1,039
+      Number using O5 output only:             156
+      Number using O5 and O6:                  121
       Number used as ROM:                        0
     Number used as Memory:                       0 out of   2,176    0%
-    Number used exclusively as route-thrus:      9
-      Number with same-slice register load:      3
-      Number with same-slice carry load:         6
+    Number used exclusively as route-thrus:      7
+      Number with same-slice register load:      0
+      Number with same-slice carry load:         7
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                   362 out of   2,278   15%
-  Number of MUXCYs used:                       264 out of   4,556    5%
-  Number of LUT Flip Flop pairs used:        1,032
-    Number with an unused Flip Flop:           796 out of   1,032   77%
-    Number with an unused LUT:                   2 out of   1,032    1%
-    Number of fully used LUT-FF pairs:         234 out of   1,032   22%
-    Number of unique control sets:              11
+  Number of occupied Slices:                   576 out of   2,278   25%
+  Number of MUXCYs used:                       292 out of   4,556    6%
+  Number of LUT Flip Flop pairs used:        1,329
+    Number with an unused Flip Flop:         1,017 out of   1,329   76%
+    Number with an unused LUT:                   6 out of   1,329    1%
+    Number of fully used LUT-FF pairs:         306 out of   1,329   23%
+    Number of unique control sets:              28
     Number of slice register sites lost
-      to control set restrictions:              52 out of  18,224    1%
+      to control set restrictions:             154 out of  18,224    1%
 
   A LUT Flip Flop pair for this architecture represents one LUT paired with
   one Flip Flop within a slice.  A control set is a unique combination of
@@ -57,7 +57,7 @@ IO Utilization:
 
 Specific Feature Utilization:
   Number of RAMB16BWERs:                         0 out of      32    0%
-  Number of RAMB8BWERs:                          0 out of      64    0%
+  Number of RAMB8BWERs:                          1 out of      64    1%
   Number of BUFIO2/BUFIO2_2CLKs:                 0 out of      32    0%
   Number of BUFIO2FB/BUFIO2FB_2CLKs:             0 out of      32    0%
   Number of BUFG/BUFGMUXs:                       2 out of      16   12%
@@ -80,11 +80,11 @@ Specific Feature Utilization:
   Number of STARTUPs:                            0 out of       1    0%
   Number of SUSPEND_SYNCs:                       0 out of       1    0%
 
-Average Fanout of Non-Clock Nets:                4.04
+Average Fanout of Non-Clock Nets:                4.15
 
-Peak Memory Usage:  692 MB
-Total REAL time to MAP completion:  13 secs 
-Total CPU time to MAP completion:   13 secs 
+Peak Memory Usage:  695 MB
+Total REAL time to MAP completion:  12 secs 
+Total CPU time to MAP completion:   12 secs 
 
 Table of Contents
 -----------------
@@ -107,6 +107,29 @@ Section 1 - Errors
 
 Section 2 - Warnings
 --------------------
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   state_machine/Reset_CardSelectData[3]_AND_26_o is sourced by a combinatorial
+   pin. This is not good design practice. Use the CE pin to control the loading
+   of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net row4_col4_MUX_136_o is
+   sourced by a combinatorial pin. This is not good design practice. Use the CE
+   pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   state_machine/Reset_CardSelectData[0]_AND_32_o is sourced by a combinatorial
+   pin. This is not good design practice. Use the CE pin to control the loading
+   of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   state_machine/Reset_CardSelectData[1]_AND_30_o is sourced by a combinatorial
+   pin. This is not good design practice. Use the CE pin to control the loading
+   of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   state_machine/Reset_CardSelectData[2]_AND_28_o is sourced by a combinatorial
+   pin. This is not good design practice. Use the CE pin to control the loading
+   of data into the flip-flop.
+WARNING:PhysDesignRules:2410 - This design is using one or more 9K Block RAMs
+   (RAMB8BWER).  9K Block RAM initialization data, both user defined and
+   default, may be incorrect and should not be used.  For more information,
+   please reference Xilinx Answer Record 39999.
 
 Section 3 - Informational
 -------------------------
@@ -124,22 +147,36 @@ INFO:Pack:1650 - Map created a placed design.
 
 Section 4 - Removed Logic Summary
 ---------------------------------
-   6 block(s) optimized away
+   5 block(s) optimized away
+   6 signal(s) removed
 
 Section 5 - Removed Logic
 -------------------------
 
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+The signal "card_memory/dina<5>" is sourceless and has been removed.
+The signal "card_memory/dina<4>" is sourceless and has been removed.
+The signal "card_memory/dina<3>" is sourceless and has been removed.
+The signal "card_memory/dina<2>" is sourceless and has been removed.
+The signal "card_memory/dina<1>" is sourceless and has been removed.
+The signal "card_memory/dina<0>" is sourceless and has been removed.
+
 Optimized Block(s):
 TYPE 		BLOCK
-LUT6 		Mmux_index_X[5]_data3[63]_Mux_158_o_11
-   optimized to 1
-LUT6 		Mmux_index_X[5]_data3[63]_Mux_158_o_111
-   optimized to 1
-LUT6 		Mmux_index_X[5]_data3[63]_Mux_158_o_12
-   optimized to 1
 GND 		XST_GND
 VCC 		XST_VCC
-VCC 		mem3/XST_VCC1
+GND 		card_memory/XST_GND
+VCC 		card_memory/XST_VCC
+VCC 		mem_mux/mem3/XST_VCC1
 
 To enable printing of redundant blocks removed and signals merged, set the
 detailed map report option and rerun map.

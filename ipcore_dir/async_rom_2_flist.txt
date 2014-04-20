@@ -31,6 +31,7 @@ async_rom_2.asy
 async_rom_2.gise
 async_rom_2.mif
 async_rom_2.ngc
+async_rom_2.sym
 async_rom_2.v
 async_rom_2.veo
 async_rom_2.xco

@@ -1,8 +1,8 @@
 INTSTYLE=ise
-INFILE=/home/student/Desktop/EE201/12_rom_example/vga_demo.ncd
-OUTFILE=/home/student/Desktop/EE201/12_rom_example/vga_demo.bit
+INFILE=/home/student/Desktop/EE201/ee201_final_project/vga_demo.ncd
+OUTFILE=/home/student/Desktop/EE201/ee201_final_project/vga_demo.bit
 FAMILY=Spartan6
 PART=xc6slx16-3csg324
-WORKINGDIR=/home/student/Desktop/EE201/12_rom_example
+WORKINGDIR=/home/student/Desktop/EE201/ee201_final_project
 LICENSE=WebPack
 USER_INFO=210736937_0_0_159

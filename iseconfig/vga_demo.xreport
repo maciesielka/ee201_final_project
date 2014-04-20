@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2014-04-18T04:20:22</DateModified>
+  <DateModified>2014-04-19T17:07:09</DateModified>
   <ModuleName>vga_demo</ModuleName>
-  <SummaryTimeStamp>2014-04-18T01:05:13</SummaryTimeStamp>
-  <SavedFilePath>/home/student/Desktop/EE201/12_rom_example/iseconfig/vga_demo.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/student/Desktop/EE201/12_rom_example/</ImplementationReportsDirectory>
-  <DateInitialized>2014-04-15T18:50:41</DateInitialized>
+  <SummaryTimeStamp>2014-04-19T13:31:54</SummaryTimeStamp>
+  <SavedFilePath>/home/student/Desktop/EE201/ee201_final_project/iseconfig/vga_demo.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>/home/student/Desktop/EE201/ee201_final_project/</ImplementationReportsDirectory>
+  <DateInitialized>2014-04-19T12:24:40</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
  <body>

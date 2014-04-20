@@ -54,10 +54,9 @@ module vga_demo(ClkPort, vga_h_sync, vga_v_sync, vga_r, vga_g, vga_b, Sw0, Sw1,
 	reg [1:0] selectCol;
 	wire [9:0] selectWidth = 10'd5;
 	
-	wire UP;
-	wire LEFT;
-	wire DOWN;
-	wire RIGHT;
+	wire [3:0] selectCard = {selectRow, selectCol};
+	
+	wire UP, DOWN, LEFT, RIGHT, CENTER, CENTER_bar;
 	ee201_debouncer #(.N_dc(25)) UP_debounce
 			(.CLK(clk), .RESET(reset), .PB(BtnU), .DPB( ), .SCEN(UP), .MCEN(), .CCEN( ));
 	ee201_debouncer #(.N_dc(25)) DOWN_debounce
@@ -66,17 +65,56 @@ module vga_demo(ClkPort, vga_h_sync, vga_v_sync, vga_r, vga_g, vga_b, Sw0, Sw1,
 			(.CLK(clk), .RESET(reset), .PB(BtnL), .DPB( ), .SCEN(LEFT), .MCEN(), .CCEN( ));
 	ee201_debouncer #(.N_dc(25)) RIGHT_debounce
 			(.CLK(clk), .RESET(reset), .PB(BtnR), .DPB( ), .SCEN(RIGHT), .MCEN(), .CCEN( ));
+	ee201_debouncer #(.N_dc(25)) CENTER_debounce
+			(.CLK(clk), .RESET(reset), .PB(BtnC), .DPB( ), .SCEN(CENTER), .MCEN(), .CCEN( ));
+	ee201_debouncer #(.N_dc(25)) CENTER_bar_debounce
+			(.CLK(clk), .RESET(reset), .PB(~BtnC), .DPB( ), .SCEN(CENTER_bar), .MCEN(), .CCEN( ));
+	
+	wire writeEnable;
+	wire SELECT = CENTER && (~selectCardData[5] && selectCardData[4]);
+	 wire [5:0] newData;
+	 wire [5:0] selectCardData;
+	 wire [7:0] state;
+	 wire [3:0] newDataLoc;
+	gameplay_sm state_machine(
+		.Clk(clk), 
+		.Start(start), 
+		.Reset(reset), 
+		.Select(SELECT), 
+		.CardSelectLoc(selectCard),
+		.CardSelectData(selectCardData), 
+		.Ack(CENTER), 
+		.state(state),
+		.WriteEnable(writeEnable),
+		.CARD1(),
+		.CARD2(),
+		.dataOut(newData),
+		.dataLoc(newDataLoc)
+    );
+	
 	
 	always @(posedge clk)
 		begin
 			if(reset)
 			begin
-				selectRow <= 2'd0;
-				selectCol <= 2'd0;
+				selectRow <= 2'b00;
+				selectCol <= 2'b00;
 				positionX <= 20;
 				positionY <= 20;
+				//newData <= {2'b01, selectCardData[3:0]};
 			end
-			else if(DOWN && ~UP)
+			else /*if(CENTER)
+				begin
+					if(~selectCardData[5])
+					begin
+						if(selectCardData[4])
+							newData <= {2'b00, selectCardData[3:0]};
+						else 
+							newData <= {2'b01, selectCardData[3:0]};
+					end
+					
+				end
+			else */if(DOWN && ~UP)
 				selectRow <= selectRow+1;
 			else if(UP && ~DOWN)
 				selectRow <= selectRow-1;	
@@ -84,6 +122,9 @@ module vga_demo(ClkPort, vga_h_sync, vga_v_sync, vga_r, vga_g, vga_b, Sw0, Sw1,
 				selectCol<= selectCol+1;
 			else if(LEFT && ~RIGHT)
 				selectCol <= selectCol-1;
+				
+			//writeEnable <= CENTER;
+			
 		end
 	
 
@@ -110,6 +151,51 @@ module vga_demo(ClkPort, vga_h_sync, vga_v_sync, vga_r, vga_g, vga_b, Sw0, Sw1,
 	wire mem7En = row2 && col3;
 	wire mem8En = row2 && col4;
 	
+	reg [3:0] tempCardAddr;
+	wire [3:0] cardAddr;
+	wire valid = (row1 || row2 || row3 || row4) && (col1 || col2 || col3 || col4);
+	
+	always @ (row1, row2, row3, row4, col1, col2, col3, col4)
+	begin
+		if(row1)
+		begin
+			case({col4, col3, col2, col1})
+				4'b0001: tempCardAddr = 4'b0000;
+				4'b0010: tempCardAddr = 4'b0001;
+				4'b0100: tempCardAddr = 4'b0010;
+				4'b1000: tempCardAddr = 4'b0011;
+			endcase
+		end
+		else if(row2)
+		begin
+			case({col4, col3, col2, col1})
+				4'b0001: tempCardAddr = 4'b0100;
+				4'b0010: tempCardAddr = 4'b0101;
+				4'b0100: tempCardAddr = 4'b0110;
+				4'b1000: tempCardAddr = 4'b0111;
+			endcase
+		end else if(row3)
+		begin
+			case({col4, col3, col2, col1})
+				4'b0001: tempCardAddr = 4'b1000;
+				4'b0010: tempCardAddr = 4'b1001;
+				4'b0100: tempCardAddr = 4'b1010;
+				4'b1000: tempCardAddr = 4'b1011;
+			endcase
+		end else if(row4)
+		begin
+			case({col4, col3, col2, col1})
+				4'b0001: tempCardAddr = 4'b1100;
+				4'b0010: tempCardAddr = 4'b1101;
+				4'b0100: tempCardAddr = 4'b1110;
+				4'b1000: tempCardAddr = 4'b1111;
+			endcase
+		end
+	end
+	
+	assign cardAddr = tempCardAddr;
+	
+	//cursor box
 	wire [9:0] selectStartX = positionX - selectWidth;
 	wire [9:0] selectStartY = positionY - selectWidth;
 	wire [9:0] boxX = selectStartX+(width+offset)*selectCol;
@@ -120,65 +206,56 @@ module vga_demo(ClkPort, vga_h_sync, vga_v_sync, vga_r, vga_g, vga_b, Sw0, Sw1,
 						 (CounterY >= boxY && CounterY < boxY+selectWidth && CounterX >= boxX && CounterX < boxX+width+selectWidth*2) ||
 						 (CounterY >= boxY+width+selectWidth && CounterY < boxY+selectWidth*2+width && CounterX >= boxX && CounterX < boxX+width+selectWidth*2);
 	
-	/*wire selectEn = (( CounterX >= (positionX+(width+offset)*selectCol-selectWidth) && CounterX < (positionX+(width+offset)*selectCol) ) ||
-						 ( CounterX >= (positionX+(width+offset)*(selectCol+1)-selectWidth) && CounterX < (positionX+(width+offset)*(selectCol+1)) )) &&
-						 (( CounterY >= (positionY+(width+offset)*selectRow-selectWidth) && CounterX < (positionY+(width+offset)*selectRow) ) ||
-						 ( CounterY >= (positionY+(width+offset)*(selectRow+1)-selectWidth) && CounterX < (positionY+(width+offset)*(selectRow+1)) ) ); */
-	
 	reg [5:0] index_X;
 	reg [5:0] index_Y;
-	wire [63:0] data1;
-	wire [63:0] data2;
-	wire [63:0] data3;
-	wire [63:0] data4;
-	wire [63:0] data5;
-	wire [63:0] data6;
-	wire [63:0] data7;
-	wire [63:0] data8;
+	
+	wire [63:0] data;
 	
 	
     //----------- Begin Cut here for INSTANTIATION Template ---// INST_TAG
-    async_rom mem1 (
-      .a(index_Y), // input [6 : 0] a
-      .spo(data1) // output [127 : 0] spo
-	 );
-	 async_rom_2 mem2 (
-      .a(index_Y), // input [6 : 0] a
-      .spo(data2) // output [127 : 0] spo
-    );
-	 async_rom_3 mem3 (
-      .a(index_Y), // input [6 : 0] a
-      .spo(data3) // output [127 : 0] spo
-	 );
-	 async_rom_4 mem4 (
-      .a(index_Y), // input [6 : 0] a
-      .spo(data4) // output [127 : 0] spo
-    );
-	 async_rom_5 mem5 (
-      .a(index_Y), // input [6 : 0] a
-      .spo(data5) // output [127 : 0] spo
-	 );
-	 async_rom_6 mem6 (
-      .a(index_Y), // input [6 : 0] a
-      .spo(data6) // output [127 : 0] spo
-    );
-	 async_rom_7 mem7 (
-      .a(index_Y), // input [6 : 0] a
-      .spo(data7) // output [127 : 0] spo
-	 );
-	 async_rom_8 mem8 (
-      .a(index_Y), // input [6 : 0] a
-      .spo(data8) // output [127 : 0] spo
-    );
 	 
-	 wire writeEnable;
-	 card_mem card_memory (
-		.a({selectRow, selectCol}),
-		.d(),
-		.spo(),
-		.we(writeEnable),
-		.clk(clk)
-	 );
+	 wire [5:0] memory_value;
+	 
+	 /*card_memory_3 card_memory (
+	  .clka(clk), // input clka
+	  .wea(writeEnable), // input [0 : 0] wea
+	  .addra(selectCard), // input [3 : 0] addra
+	  .dina(newData), // input [5 : 0] dina
+	  .clkb(clk), // input clkb
+	  .addrb(cardAddr), // input [3 : 0] addrb
+	  .doutb(memory_value) // output [5 : 0] doutb
+	);*/
+	wire [4:0] addrB = writeEnable ? newDataLoc : selectCard;
+	card_memory_4 card_memory (
+	  .clka(clk), // input clka
+	  .wea(1'b0), // input [0 : 0] wea
+	  .addra(cardAddr), // input [3 : 0] addra
+	  .dina(), // input [5 : 0] dina
+	  .douta(memory_value), // output [5 : 0] douta
+	  .clkb(clk), // input clkb
+	  .web(writeEnable), // input [0 : 0] web
+	  .addrb(addrB), // input [3 : 0] addrb
+	  .dinb(newData), // input [5 : 0] dinb
+	  .doutb(selectCardData) // output [5 : 0] doutb
+	);
+	 
+	 reg [3:0] card_data;
+	 always @ (memory_value, card_data)
+	 begin
+		//if it should be empty, be empty
+		if(memory_value[5])
+			card_data <= 4'b1111; 
+		else if(memory_value[4])
+			card_data <= 4'b0000;
+		else
+			card_data <= memory_value[3:0];
+	 end
+  
+	memory_mux mem_mux(
+		.digit(card_data), 
+		.index_Y(index_Y), 
+		.spo(data)
+    );
   
     // INST_TAG_END ------ End INSTANTIATION Template ---------
 	always @(posedge clk)
@@ -208,18 +285,17 @@ module vga_demo(ClkPort, vga_h_sync, vga_v_sync, vga_r, vga_g, vga_b, Sw0, Sw1,
 	begin
 		if (inDisplayArea) // 640 x 480
 		begin
-			 case ( {selectEn, mem8En,mem7En,mem6En,mem5En,mem4En,mem3En,mem2En,mem1En} )
-			     9'b0_0000_0001 : {vga_r,vga_g,vga_b} <= data1[index_X] ? 3'b111 : 3'b000;
-			     9'b0_0000_0010 : {vga_r,vga_g,vga_b} <= data2[index_X] ? 3'b111 : 3'b000;
-				  9'b0_0000_0100 : {vga_r,vga_g,vga_b} <= data3[index_X] ? 3'b111 : 3'b000;
-			     9'b0_0000_1000 : {vga_r,vga_g,vga_b} <= data4[index_X] ? 3'b111 : 3'b000;
-				  9'b0_0001_0000 : {vga_r,vga_g,vga_b} <= data5[index_X] ? 3'b111 : 3'b000;
-			     9'b0_0010_0000 : {vga_r,vga_g,vga_b} <= data6[index_X] ? 3'b111 : 3'b000;
-				  9'b0_0100_0000 : {vga_r,vga_g,vga_b} <= data7[index_X] ? 3'b111 : 3'b000;
-			     9'b0_1000_0000 : {vga_r,vga_g,vga_b} <= data8[index_X] ? 3'b111 : 3'b000;
-				  9'b1_0000_0000 : {vga_r,vga_g,vga_b} <= 3'b001;
-				  default : {vga_r,vga_g,vga_b} <= 3'b000;
-			 endcase
+			if(valid)
+				begin
+					if(memory_value[5])
+						{vga_r, vga_g, vga_b} <= 3'b000;
+					else
+						{vga_r,vga_g,vga_b} <= data[index_X] ? 3'b111 : 3'b100;
+				end
+			else if(selectEn) //draw the box
+				{vga_r,vga_g,vga_b} <= 3'b001;
+			else
+				{vga_r,vga_g,vga_b} <= 3'b000;
 		end
 		else
 		begin	//All black background vga = 0x00
@@ -243,19 +319,9 @@ module vga_demo(ClkPort, vga_h_sync, vga_v_sync, vga_r, vga_g, vga_b, Sw0, Sw1,
 	
 	reg [3:0] p2_score;
 	reg [3:0] p1_score;
-	reg [1:0] state;
 	wire LD0, LD1, LD2, LD3, LD4, LD5, LD6, LD7;
-	
-	assign LD0 = (p1_score == 4'b1010);
-	assign LD1 = (p2_score == 4'b1010);
-	
-	assign LD2 = start;
-	assign LD4 = reset;
-	
-	assign LD3 = (state == `QI);
-	assign LD5 = (state == `QGAME_1);	
-	assign LD6 = (state == `QGAME_2);
-	assign LD7 = (state == `QDONE);
+
+	assign {LD7, LD6, LD5, LD4, LD3, LD2, LD1, LD0} = state;
 	
 	/////////////////////////////////////////////////////////////////
 	//////////////  	  LD control ends here 	 	////////////////////
@@ -275,13 +341,18 @@ module vga_demo(ClkPort, vga_h_sync, vga_v_sync, vga_r, vga_g, vga_b, Sw0, Sw1,
 	
 	lsfr_8bit_rand_num_gen    rand_num_1
 			(.clk(clk),.reset(reset),.ce(ce),.lfsr(q),.lsfr_done(lsfr_done));
-	
-	assign SSD3 = q > 8'h80 ? 1'b1 : 1'b0;
-	assign SSD2 = {3'b000, ce};
+	reg change;
+	always @(writeEnable, change)
+	begin
+		if(writeEnable)
+			change <= 1;
+	end
+	assign SSD3 = {3'b000, change};
+	assign SSD2 = {selectCardData[3:0]};
 	//assign SSD1 = q[7:4];
 	//assign SSD0 = q[3:0];
-	assign SSD1 = {2'b00, selectCol};
-	assign SSD0 = {2'b00, selectRow};
+	assign SSD1 = state[7:4];
+	assign SSD0 = state[3:0];
 	
 	// need a scan clk for the seven segment display 
 	// 191Hz (50MHz / 2^18) works well

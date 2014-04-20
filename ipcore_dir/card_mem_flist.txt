@@ -32,7 +32,9 @@ card_mem/simulation/timing/simulate_mti.do
 card_mem/simulation/timing/simulate_mti.sh
 card_mem.asy
 card_mem.gise
+card_mem.mif
 card_mem.ngc
+card_mem.sym
 card_mem.v
 card_mem.veo
 card_mem.xco
