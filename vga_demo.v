@@ -135,15 +135,15 @@ module vga_demo(ClkPort, vga_h_sync, vga_v_sync, vga_r, vga_g, vga_b,
 	wire [8:0] width = 8'd64;
 	wire [9:0] offset = 10'd10;
 
-	wire row1 = CounterY >= (positionY+width*0) && CounterY < (positionY+width*1);
-	wire row2 = CounterY >= (positionY+width*1+offset) && CounterY < (positionY+width*2+offset);
-	wire row3 = CounterY >= (positionY+width*2+offset*2) && CounterY < (positionY+width*3+offset*2);
-	wire row4 = CounterY >= (positionY+width*3+offset*3) && CounterY < (positionY+width*4+offset*3);
+	wire row1 = CounterY >= (positionY+width*0) && CounterY <= (positionY+width*1+1);
+	wire row2 = CounterY >= (positionY+width*1+offset) && CounterY <= (positionY+width*2+offset+1);
+	wire row3 = CounterY >= (positionY+width*2+offset*2) && CounterY <= (positionY+width*3+offset*2+1);
+	wire row4 = CounterY >= (positionY+width*3+offset*3) && CounterY <= (positionY+width*4+offset*3+1);
 	
-	wire col1 = CounterX >= (positionX+width*0) && CounterX < (positionX+width*1);
-	wire col2 = CounterX >= (positionX+width*1+offset) && CounterX < (positionX+width*2+offset);
-	wire col3 = CounterX >= (positionX+width*2+offset*2) && CounterX < (positionX+width*3+offset*2);
-	wire col4 = CounterX >= (positionX+width*3+offset*3) && CounterX < (positionX+width*4+offset*3);
+	wire col1 = CounterX >= (positionX+width*0) && CounterX <= (positionX+width*1);
+	wire col2 = CounterX >= (positionX+width*1+offset) && CounterX <= (positionX+width*2+offset+1);
+	wire col3 = CounterX >= (positionX+width*2+offset*2) && CounterX <= (positionX+width*3+offset*2+1);
+	wire col4 = CounterX >= (positionX+width*3+offset*3) && CounterX <= (positionX+width*4+offset*3+1);
 
    wire mem1En =  row1 && col1;
    wire mem2En = row1 && col2;
@@ -242,8 +242,8 @@ module vga_demo(ClkPort, vga_h_sync, vga_v_sync, vga_r, vga_g, vga_b,
 	  .doutb(selectCardData) // output [5 : 0] doutb
 	);
 	 
-	 reg [3:0] card_data;
-	 always @ (memory_value, card_data)
+	 wire [3:0] card_data;
+	 /*always @ (memory_value, card_data)
 	 begin
 		//if it should be empty, be empty
 		if(memory_value[5])
@@ -252,7 +252,9 @@ module vga_demo(ClkPort, vga_h_sync, vga_v_sync, vga_r, vga_g, vga_b,
 			card_data <= 4'b0000;
 		else
 			card_data <= memory_value[3:0];
-	 end
+	 end*/
+	 
+	 assign card_data = memory_value[5] ? 4'b1111 : (memory_value[4] ? 4'b0000 : memory_value[3:0]);
   
 	memory_mux mem_mux(
 		.digit(card_data), 
@@ -263,23 +265,23 @@ module vga_demo(ClkPort, vga_h_sync, vga_v_sync, vga_r, vga_g, vga_b,
     // INST_TAG_END ------ End INSTANTIATION Template ---------
 	always @(posedge clk)
 	begin
-	   if (CounterY == 10'd480 ||
-			 CounterY == (positionY) ||
-			 CounterY == (positionY+(width+offset)*1) ||
-			 CounterY == (positionY+(width+offset)*2) ||
-			 CounterY == (positionY+(width+offset)*3) )
+	   if (CounterY == 10'd479 ||
+			 CounterY == (positionY-1) ||
+			 CounterY == (positionY+(width+offset)*1-1) ||
+			 CounterY == (positionY+(width+offset)*2-1) ||
+			 CounterY == (positionY+(width+offset)*3-1) )
 		    index_Y <= 7'b0;
-		else if (CounterX == 10'd640)
+		else if (CounterX == 10'd639)
 		begin
 		    index_Y <= index_Y + 1'b1;
 			 index_X <= 0;
 		end
 			
-		if (CounterX == (positionX) || 
-			CounterX == (positionX+(width+offset)*1) ||
-			CounterX == (positionX+(width+offset)*2) ||
-			CounterX == (positionX+(width+offset)*3))
-			index_X <=6'd63;
+		if (CounterX == (positionX-1) || 
+			CounterX == (positionX+(width+offset)*1-1) ||
+			CounterX == (positionX+(width+offset)*2-1) ||
+			CounterX == (positionX+(width+offset)*3-1))
+			index_X <= 6'd63;
 		else
 			index_X <= index_X - 1'b1;
 	end
@@ -343,7 +345,7 @@ module vga_demo(ClkPort, vga_h_sync, vga_v_sync, vga_r, vga_g, vga_b,
 	wire	[7:0] q;
 	wire			lsfr_done;
 	
-	assign SSD3 = {selectCardData[3:0]};
+	assign SSD3 = selectCardData[3:0]+1;
 	//assign SSD2 = {3'b000, CENTER};
 	//assign SSD1 = 4'b0000;
 	//assign SSD1 = q[7:4];

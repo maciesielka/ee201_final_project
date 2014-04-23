@@ -28,28 +28,29 @@ module lsfr_8bit_rand_num_gen(
     );
 	input clk, reset, ce;
 	input [7:0] seed;
-	output [7:0] lfsr;
+	output [15:0] lfsr;
 	output lsfr_done;
-	reg [7:0] lfsr, lfsr_done;
+	reg [15:0] lfsr, lfsr_done;
 	wire d0,lfsr_equal;
 	
-	xnor(d0,lfsr[7],lfsr[5],lfsr[4],lfsr[3]);
-	assign lfsr_equal = (lfsr == 8'h80);
-	reg [7:0] counter;
+	xnor(d0,lfsr[15],lfsr[14],lfsr[12],lfsr[3]);
+	assign lfsr_equal = (lfsr == 16'h8000);
+	reg [15:0] counter;
 	
 	always @(posedge clk, posedge reset)
 	begin
 		if (reset) 
 		begin
-			lfsr <= seed+counter;
+			counter <= 15'dX;
+			lfsr <= counter+{8'd0,seed};
 			lfsr_done <= 1'b0;
 		end
 		else
 		begin
-			counter <= counter + 1;
+			counter <= counter + 1'b1;
 			if (ce)
 			begin
-				lfsr <= lfsr_equal ? (seed+counter) : {lfsr[6:0],d0};
+				lfsr <= lfsr_equal ? (counter+{8'd0,seed}) : {lfsr[14:0],d0};
 			end
 			
 			lfsr_done <= lfsr_equal;

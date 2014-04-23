@@ -63,10 +63,8 @@ localparam
 	UNK			= 10'bXXXXXXXXXX;
 
 //----------------------STATE ASSIGNMENT----------------//
-wire [7:0] random;
-wire random_done;
-wire [3:0] temp_random;
-reg flag;
+wire [15:0] random;
+reg flag1, flag2, flag3, flag4;
 reg done_random;
 reg [3:0] addr [0:15];
 reg [3:0] nums_generated;
@@ -76,15 +74,18 @@ reg [1:0] temp_count;
 integer i;
 reg [63:0] random_numbers;
 reg seed_enable;
+//wire random_enable = ~flag1 || ~flag2 || ~flag3 || ~flag4;
 lsfr_8bit_rand_num_gen    rand_generator
 		  (.clk(Clk),
-			.reset(Start),
-			.ce(Clk), 
+			.reset(QInit),
+			.ce(QRandomize), 
 			.seed(seed), 
 			.lfsr(random),
-			.lsfr_done(random_done));
-			
-
+			.lsfr_done());
+wire [3:0] temp_random1 = {random[15], random[11], random[7], random[3]};
+wire [3:0] temp_random2 = {random[14], random[10], random[6], random[2]};
+wire [3:0] temp_random3 = {random[13], random[9], random[5], random[1]};
+wire [3:0] temp_random4 = {random[12], random[8], random[4], random[0]};
 
 always @ (posedge Clk, posedge Reset)
 	begin
@@ -129,17 +130,45 @@ always @ (posedge Clk, posedge Reset)
 						if(!done_random)
 						begin: CHECK_IF_RANDOM_EXISTS
 							integer i;
-							flag = 0;
+							flag1 = 0;
+							flag2 = 0;
+							flag3 = 0;
+							flag4 = 0;
 							//$display("doing my best");
 							for(i = 0; i < address_count; i = i+1)
 							begin
 								//$display("Addr[i]: %d\tRandom[3:0]: %d", addr[i], random[3:0]);
-								if(addr[i] == random[3:0])
-									flag = 1;
+								if(addr[i] == temp_random1)
+									flag1 = 1;
+								if(addr[i] == temp_random2)
+									flag2 = 1;
+								if(addr[i] == temp_random3)
+									flag3 = 1;
+								if(addr[i] == temp_random4)
+									flag4 = 1;
 							end
-							if(!flag)
+							
+							if(!flag1)
 							begin
-								addr[address_count] <= random[3:0];
+								addr[address_count] <= temp_random1;
+								address_count <= address_count+1;
+								if(address_count == 4'b1111)
+									done_random <= 1;
+							end else if(!flag2)
+							begin
+								addr[address_count] <= temp_random2;
+								address_count <= address_count+1;
+								if(address_count == 4'b1111)
+									done_random <= 1;
+							end else if(!flag3)
+							begin
+								addr[address_count] <= temp_random3;
+								address_count <= address_count+1;
+								if(address_count == 4'b1111)
+									done_random <= 1;
+							end else if(!flag4)
+							begin
+								addr[address_count] <= temp_random4;
 								address_count <= address_count+1;
 								if(address_count == 4'b1111)
 									done_random <= 1;

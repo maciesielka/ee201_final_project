@@ -10,7 +10,7 @@ Analyzing Verilog file "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into li
 Starting static elaboration
 Completed static elaboration
 Fuse Memory Usage: 95668 KB
-Fuse CPU Usage: 1150 ms
+Fuse CPU Usage: 3630 ms
 Compiling module lsfr_8bit_rand_num_gen
 Compiling module gameplay_sm
 Compiling module gameplay_sm_tb3
@@ -19,6 +19,6 @@ Time Resolution for simulation is 1ps.
 Waiting for 1 sub-compilation(s) to finish...
 Compiled 4 Verilog Units
 Built simulation executable /home/student/Desktop/EE201/ee201_final_project/gameplay_sm_tb3_isim_beh.exe
-Fuse Memory Usage: 393948 KB
-Fuse CPU Usage: 1180 ms
-GCC CPU Usage: 490 ms
+Fuse Memory Usage: 393952 KB
+Fuse CPU Usage: 3730 ms
+GCC CPU Usage: 1900 ms
