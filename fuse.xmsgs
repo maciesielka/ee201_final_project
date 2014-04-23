@@ -5,8 +5,5 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="751" delta="unknown" >"/home/chris/Documents/USC/2013/3_Fall/EE201_Introduction_to_Digital_Ciruits/X3_rom_square_vga_example/rom_example/lsfr_8bit_rand_num_gen.v" Line 29: Redeclaration of ansi port <arg fmt="%s" index="1">lfsr</arg> is not allowed
-</msg>
-
 </messages>
 

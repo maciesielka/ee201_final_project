@@ -51,8 +51,8 @@
     <!--                                                                                  -->
     <property xil_pn:name="PROP_DesignName" xil_pn:value="card_memory_4" xil_pn:valueState="non-default"/>
     <property xil_pn:name="PROP_DevFamilyPMName" xil_pn:value="spartan6" xil_pn:valueState="default"/>
-    <property xil_pn:name="PROP_intProjectCreationTimestamp" xil_pn:value="2014-04-19T14:50:16" xil_pn:valueState="non-default"/>
-    <property xil_pn:name="PROP_intWbtProjectID" xil_pn:value="3747F7230C52B7417324BBB7F464BD88" xil_pn:valueState="non-default"/>
+    <property xil_pn:name="PROP_intProjectCreationTimestamp" xil_pn:value="2014-04-22T18:33:23" xil_pn:valueState="non-default"/>
+    <property xil_pn:name="PROP_intWbtProjectID" xil_pn:value="204D7D421654EC1B315DA54C46C6B287" xil_pn:valueState="non-default"/>
     <property xil_pn:name="PROP_intWorkingDirLocWRTProjDir" xil_pn:value="Same" xil_pn:valueState="non-default"/>
     <property xil_pn:name="PROP_intWorkingDirUsed" xil_pn:value="No" xil_pn:valueState="non-default"/>
   </properties>

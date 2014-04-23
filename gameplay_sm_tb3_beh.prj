@@ -1,0 +1,4 @@
+verilog work "lsfr_8bit_rand_num_gen.v"
+verilog work "gameplay_sm.v"
+verilog work "gameplay_sm_tb3.v"
+verilog work "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

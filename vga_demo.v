@@ -3,12 +3,13 @@
 // VGA verilog template
 // Author:  Da Cheng
 //////////////////////////////////////////////////////////////////////////////////
-module vga_demo(ClkPort, vga_h_sync, vga_v_sync, vga_r, vga_g, vga_b, Sw0, Sw1, 
+module vga_demo(ClkPort, vga_h_sync, vga_v_sync, vga_r, vga_g, vga_b,
 					 BtnU, BtnD, BtnR, BtnL, BtnC, St_ce_bar, St_rp_bar, Mt_ce_bar, Mt_St_oe_bar,
 					 Mt_St_we_bar, An0, An1, An2, An3, Ca, Cb, Cc, Cd, Ce, Cf, Cg, Dp,
-					 LD0, LD1, LD2, LD3, LD4, LD5, LD6, LD7);
+					 LD0, LD1, LD2, LD3, LD4, LD5, LD6, LD7,
+					 Sw0, Sw1, Sw2, Sw3, Sw4, Sw5, Sw6, Sw7);
 	
-	input ClkPort, BtnU, BtnD, BtnR, BtnL, BtnC, Sw0, Sw1;
+	input ClkPort, BtnU, BtnD, BtnR, BtnL, BtnC, Sw0, Sw1, Sw2, Sw3, Sw4, Sw5, Sw6, Sw7;
 	output St_ce_bar, St_rp_bar, Mt_ce_bar, Mt_St_oe_bar, Mt_St_we_bar;
 	output vga_h_sync, vga_v_sync, vga_r, vga_g, vga_b;
 	output An0, An1, An2, An3, Ca, Cb, Cc, Cd, Ce, Cf, Cg, Dp;
@@ -21,10 +22,12 @@ module vga_demo(ClkPort, vga_h_sync, vga_v_sync, vga_r, vga_g, vga_b, Sw0, Sw1,
 	/*  LOCAL SIGNALS */
 	wire	reset, start, ce, ClkPort, board_clk, clk, button_clk;
 	
-	BUF BUF1 (board_clk, ClkPort); 	
+	BUFGP BUF1 (board_clk, ClkPort); 	
 	BUF BUF2 (reset, Sw0);
 	BUF BUF3 (start, Sw1);
 	
+	//assign reset = Sw0;
+	//assign start = Sw1;
 	reg [27:0]	DIV_CLK;
 	always @ (posedge board_clk)  
 	begin : CLOCK_DIVIDER
@@ -41,6 +44,8 @@ module vga_demo(ClkPort, vga_h_sync, vga_v_sync, vga_r, vga_g, vga_b, Sw0, Sw1,
 	wire inDisplayArea;
 	wire [9:0] CounterX;
 	wire [9:0] CounterY;
+	
+	wire [7:0] seed = {Sw7, Sw6, Sw5, Sw4, Sw3, Sw2, Sw1, Sw0};
 
 	hvsync_generator syncgen(.clk(clk), .reset(reset),.vga_h_sync(vga_h_sync), .vga_v_sync(vga_v_sync), .inDisplayArea(inDisplayArea), .CounterX(CounterX), .CounterY(CounterY));
 	
@@ -57,39 +62,38 @@ module vga_demo(ClkPort, vga_h_sync, vga_v_sync, vga_r, vga_g, vga_b, Sw0, Sw1,
 	wire [3:0] selectCard = {selectRow, selectCol};
 	
 	wire UP, DOWN, LEFT, RIGHT, CENTER, CENTER_bar;
-	ee201_debouncer #(.N_dc(25)) UP_debounce
+	ee201_debouncer #(.N_dc(23)) UP_debounce
 			(.CLK(clk), .RESET(reset), .PB(BtnU), .DPB( ), .SCEN(UP), .MCEN(), .CCEN( ));
-	ee201_debouncer #(.N_dc(25)) DOWN_debounce
+	ee201_debouncer #(.N_dc(23)) DOWN_debounce
 			(.CLK(clk), .RESET(reset), .PB(BtnD), .DPB( ), .SCEN(DOWN), .MCEN(), .CCEN( ));
-	ee201_debouncer #(.N_dc(25)) LEFT_debounce
+	ee201_debouncer #(.N_dc(23)) LEFT_debounce
 			(.CLK(clk), .RESET(reset), .PB(BtnL), .DPB( ), .SCEN(LEFT), .MCEN(), .CCEN( ));
-	ee201_debouncer #(.N_dc(25)) RIGHT_debounce
+	ee201_debouncer #(.N_dc(23)) RIGHT_debounce
 			(.CLK(clk), .RESET(reset), .PB(BtnR), .DPB( ), .SCEN(RIGHT), .MCEN(), .CCEN( ));
-	ee201_debouncer #(.N_dc(25)) CENTER_debounce
-			(.CLK(clk), .RESET(reset), .PB(BtnC), .DPB( ), .SCEN(CENTER), .MCEN(), .CCEN( ));
-	ee201_debouncer #(.N_dc(25)) CENTER_bar_debounce
-			(.CLK(clk), .RESET(reset), .PB(~BtnC), .DPB( ), .SCEN(CENTER_bar), .MCEN(), .CCEN( ));
+	ee201_debouncer #(.N_dc(23)) CENTER_debounce
+			(.CLK(clk), .RESET(reset), .PB(BtnC), .DPB(), .SCEN(CENTER), .MCEN(), .CCEN( ));
 	
 	wire writeEnable;
 	wire SELECT = CENTER && (~selectCardData[5] && selectCardData[4]);
 	 wire [5:0] newData;
 	 wire [5:0] selectCardData;
-	 wire [7:0] state;
+	 wire [8:0] state;
 	 wire [3:0] newDataLoc;
+	 wire [3:0] numMatches;
 	gameplay_sm state_machine(
 		.Clk(clk), 
-		.Start(start), 
-		.Reset(reset), 
+		.Start(CENTER), 
+		.Reset(reset),
+		.seed(seed),
 		.Select(SELECT), 
 		.CardSelectLoc(selectCard),
 		.CardSelectData(selectCardData), 
 		.Ack(CENTER), 
 		.state(state),
 		.WriteEnable(writeEnable),
-		.CARD1(),
-		.CARD2(),
 		.dataOut(newData),
-		.dataLoc(newDataLoc)
+		.dataLoc(newDataLoc),
+		.numMatches(numMatches)
     );
 	
 	
@@ -152,48 +156,47 @@ module vga_demo(ClkPort, vga_h_sync, vga_v_sync, vga_r, vga_g, vga_b, Sw0, Sw1,
 	wire mem8En = row2 && col4;
 	
 	reg [3:0] tempCardAddr;
-	wire [3:0] cardAddr;
+	reg [3:0] cardAddr;
 	wire valid = (row1 || row2 || row3 || row4) && (col1 || col2 || col3 || col4);
 	
-	always @ (row1, row2, row3, row4, col1, col2, col3, col4)
+	always @ (row1, row2, row3, row4, col1, col2, col3, col4, cardAddr, tempCardAddr)
 	begin
 		if(row1)
 		begin
 			case({col4, col3, col2, col1})
-				4'b0001: tempCardAddr = 4'b0000;
-				4'b0010: tempCardAddr = 4'b0001;
-				4'b0100: tempCardAddr = 4'b0010;
-				4'b1000: tempCardAddr = 4'b0011;
+				4'b0001: tempCardAddr <= 4'b0000;
+				4'b0010: tempCardAddr <= 4'b0001;
+				4'b0100: tempCardAddr <= 4'b0010;
+				4'b1000: tempCardAddr <= 4'b0011;
 			endcase
 		end
 		else if(row2)
 		begin
 			case({col4, col3, col2, col1})
-				4'b0001: tempCardAddr = 4'b0100;
-				4'b0010: tempCardAddr = 4'b0101;
-				4'b0100: tempCardAddr = 4'b0110;
-				4'b1000: tempCardAddr = 4'b0111;
+				4'b0001: tempCardAddr <= 4'b0100;
+				4'b0010: tempCardAddr <= 4'b0101;
+				4'b0100: tempCardAddr <= 4'b0110;
+				4'b1000: tempCardAddr <= 4'b0111;
 			endcase
 		end else if(row3)
 		begin
 			case({col4, col3, col2, col1})
-				4'b0001: tempCardAddr = 4'b1000;
-				4'b0010: tempCardAddr = 4'b1001;
-				4'b0100: tempCardAddr = 4'b1010;
-				4'b1000: tempCardAddr = 4'b1011;
+				4'b0001: tempCardAddr <= 4'b1000;
+				4'b0010: tempCardAddr <= 4'b1001;
+				4'b0100: tempCardAddr <= 4'b1010;
+				4'b1000: tempCardAddr <= 4'b1011;
 			endcase
 		end else if(row4)
 		begin
 			case({col4, col3, col2, col1})
-				4'b0001: tempCardAddr = 4'b1100;
-				4'b0010: tempCardAddr = 4'b1101;
-				4'b0100: tempCardAddr = 4'b1110;
-				4'b1000: tempCardAddr = 4'b1111;
+				4'b0001: tempCardAddr <= 4'b1100;
+				4'b0010: tempCardAddr <= 4'b1101;
+				4'b0100: tempCardAddr <= 4'b1110;
+				4'b1000: tempCardAddr <= 4'b1111;
 			endcase
 		end
+		cardAddr <= tempCardAddr;
 	end
-	
-	assign cardAddr = tempCardAddr;
 	
 	//cursor box
 	wire [9:0] selectStartX = positionX - selectWidth;
@@ -276,7 +279,7 @@ module vga_demo(ClkPort, vga_h_sync, vga_v_sync, vga_r, vga_g, vga_b, Sw0, Sw1,
 			CounterX == (positionX+(width+offset)*1) ||
 			CounterX == (positionX+(width+offset)*2) ||
 			CounterX == (positionX+(width+offset)*3))
-			index_X <=7'd127;
+			index_X <=6'd63;
 		else
 			index_X <= index_X - 1'b1;
 	end
@@ -290,7 +293,10 @@ module vga_demo(ClkPort, vga_h_sync, vga_v_sync, vga_r, vga_g, vga_b, Sw0, Sw1,
 					if(memory_value[5])
 						{vga_r, vga_g, vga_b} <= 3'b000;
 					else
-						{vga_r,vga_g,vga_b} <= data[index_X] ? 3'b111 : 3'b100;
+						begin
+							{vga_r,vga_g,vga_b} <= data[index_X] ? 3'b111 : 3'b100;
+						end
+						
 				end
 			else if(selectEn) //draw the box
 				{vga_r,vga_g,vga_b} <= 3'b001;
@@ -319,9 +325,10 @@ module vga_demo(ClkPort, vga_h_sync, vga_v_sync, vga_r, vga_g, vga_b, Sw0, Sw1,
 	
 	reg [3:0] p2_score;
 	reg [3:0] p1_score;
+	//wire useless = CENTER;
 	wire LD0, LD1, LD2, LD3, LD4, LD5, LD6, LD7;
-
-	assign {LD7, LD6, LD5, LD4, LD3, LD2, LD1, LD0} = state;
+	//assign LD7 = CENTER;
+	assign {LD7, LD6, LD5, LD4, LD3, LD2, LD1, LD0} = state[7:0];
 	
 	/////////////////////////////////////////////////////////////////
 	//////////////  	  LD control ends here 	 	////////////////////
@@ -336,35 +343,28 @@ module vga_demo(ClkPort, vga_h_sync, vga_v_sync, vga_r, vga_g, vga_b, Sw0, Sw1,
 	wire	[7:0] q;
 	wire			lsfr_done;
 	
-	ee201_debouncer #(.N_dc(25)) ee201_debouncer_1 
-			(.CLK(clk), .RESET(reset), .PB(BtnC), .DPB( ), .SCEN(ce ), .MCEN(), .CCEN( ));
-	
-	lsfr_8bit_rand_num_gen    rand_num_1
-			(.clk(clk),.reset(reset),.ce(ce),.lfsr(q),.lsfr_done(lsfr_done));
-	reg change;
-	always @(writeEnable, change)
-	begin
-		if(writeEnable)
-			change <= 1;
-	end
-	assign SSD3 = {3'b000, change};
-	assign SSD2 = {selectCardData[3:0]};
+	assign SSD3 = {selectCardData[3:0]};
+	//assign SSD2 = {3'b000, CENTER};
+	//assign SSD1 = 4'b0000;
 	//assign SSD1 = q[7:4];
 	//assign SSD0 = q[3:0];
-	assign SSD1 = state[7:4];
-	assign SSD0 = state[3:0];
+	//assign SSD1 = 4'b;
+	assign SSD0 = numMatches;
 	
 	// need a scan clk for the seven segment display 
 	// 191Hz (50MHz / 2^18) works well
 	assign ssdscan_clk = DIV_CLK[19:18];	
 	assign An0	= !(~(ssdscan_clk[1]) && ~(ssdscan_clk[0]));  // when ssdscan_clk = 00
-	assign An1	= !(~(ssdscan_clk[1]) &&  (ssdscan_clk[0]));  // when ssdscan_clk = 01
-	assign An2	= !( (ssdscan_clk[1]) && ~(ssdscan_clk[0]));  // when ssdscan_clk = 10
-	assign An3	= !( (ssdscan_clk[1]) &&  (ssdscan_clk[0]));  // when ssdscan_clk = 11
+	//assign An1	= !(~(ssdscan_clk[1]) &&  (ssdscan_clk[0]));  // when ssdscan_clk = 01
+	assign An1 = 1'b1;
+	assign An2 = 1'b1;
+	//assign An2	= !( (ssdscan_clk[1]) && ~(ssdscan_clk[0]));  // when ssdscan_clk = 10
+	assign An3	= Sw1 ? (!( (ssdscan_clk[1]) &&  (ssdscan_clk[0]))) : 1'b1;  // when ssdscan_clk = 11
 	
 	//SSD 2 is always off...
 	//assign An2 = 1'b1;
-	
+	//assign An1 = 1'b1;
+	//assign An2 = 1'b1;
 	always @ (ssdscan_clk, SSD0, SSD1, SSD2, SSD3)
 	begin : SSD_SCAN_OUT
 		case (ssdscan_clk) 

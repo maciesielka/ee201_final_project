@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.06 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.06 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> 
 Reading design: vga_demo.prj
@@ -113,7 +113,6 @@ Cores Search Directories           : {"ipcore_dir"  }
 =========================================================================
 Analyzing Verilog file "/home/student/Desktop/EE201/ee201_final_project/lsfr_8bit_rand_num_gen.v" into library work
 Parsing module <lsfr_8bit_rand_num_gen>.
-WARNING:HDLCompiler:751 - "/home/student/Desktop/EE201/ee201_final_project/lsfr_8bit_rand_num_gen.v" Line 29: Redeclaration of ansi port lfsr is not allowed
 Analyzing Verilog file "/home/student/Desktop/EE201/ee201_final_project/ipcore_dir/async_rom_9.v" into library work
 Parsing module <async_rom_9>.
 Analyzing Verilog file "/home/student/Desktop/EE201/ee201_final_project/ipcore_dir/async_rom_8.v" into library work
@@ -151,43 +150,49 @@ Parsing module <vga_demo>.
 
 Elaborating module <vga_demo>.
 
+Elaborating module <BUFGP>.
+
 Elaborating module <BUF>.
-WARNING:HDLCompiler:1127 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" Line 37: Assignment to btn_clk ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" Line 27: Assignment to start ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" Line 40: Assignment to btn_clk ignored, since the identifier is never used
 
 Elaborating module <hvsync_generator>.
 WARNING:HDLCompiler:413 - "/home/student/Desktop/EE201/ee201_final_project/hvsync_generator.v" Line 34: Result of 11-bit expression is truncated to fit in 10-bit target.
 WARNING:HDLCompiler:413 - "/home/student/Desktop/EE201/ee201_final_project/hvsync_generator.v" Line 44: Result of 11-bit expression is truncated to fit in 10-bit target.
 
-Elaborating module <ee201_debouncer(N_dc=25)>.
-WARNING:HDLCompiler:413 - "/home/student/Desktop/EE201/ee201_final_project/ee201_debounce_DPB_SCEN_CCEN_MCEN.v" Line 145: Result of 32-bit expression is truncated to fit in 25-bit target.
-WARNING:HDLCompiler:413 - "/home/student/Desktop/EE201/ee201_final_project/ee201_debounce_DPB_SCEN_CCEN_MCEN.v" Line 162: Result of 26-bit expression is truncated to fit in 25-bit target.
+Elaborating module <ee201_debouncer(N_dc=23)>.
+WARNING:HDLCompiler:413 - "/home/student/Desktop/EE201/ee201_final_project/ee201_debounce_DPB_SCEN_CCEN_MCEN.v" Line 145: Result of 32-bit expression is truncated to fit in 23-bit target.
+WARNING:HDLCompiler:413 - "/home/student/Desktop/EE201/ee201_final_project/ee201_debounce_DPB_SCEN_CCEN_MCEN.v" Line 162: Result of 24-bit expression is truncated to fit in 23-bit target.
 WARNING:HDLCompiler:413 - "/home/student/Desktop/EE201/ee201_final_project/ee201_debounce_DPB_SCEN_CCEN_MCEN.v" Line 175: Result of 5-bit expression is truncated to fit in 4-bit target.
-WARNING:HDLCompiler:413 - "/home/student/Desktop/EE201/ee201_final_project/ee201_debounce_DPB_SCEN_CCEN_MCEN.v" Line 181: Result of 26-bit expression is truncated to fit in 25-bit target.
+WARNING:HDLCompiler:413 - "/home/student/Desktop/EE201/ee201_final_project/ee201_debounce_DPB_SCEN_CCEN_MCEN.v" Line 181: Result of 24-bit expression is truncated to fit in 23-bit target.
 WARNING:HDLCompiler:413 - "/home/student/Desktop/EE201/ee201_final_project/ee201_debounce_DPB_SCEN_CCEN_MCEN.v" Line 195: Result of 5-bit expression is truncated to fit in 4-bit target.
-WARNING:HDLCompiler:413 - "/home/student/Desktop/EE201/ee201_final_project/ee201_debounce_DPB_SCEN_CCEN_MCEN.v" Line 201: Result of 26-bit expression is truncated to fit in 25-bit target.
-WARNING:HDLCompiler:413 - "/home/student/Desktop/EE201/ee201_final_project/ee201_debounce_DPB_SCEN_CCEN_MCEN.v" Line 236: Result of 26-bit expression is truncated to fit in 25-bit target.
-WARNING:HDLCompiler:1127 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" Line 71: Assignment to CENTER_bar ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "/home/student/Desktop/EE201/ee201_final_project/ee201_debounce_DPB_SCEN_CCEN_MCEN.v" Line 201: Result of 24-bit expression is truncated to fit in 23-bit target.
+WARNING:HDLCompiler:413 - "/home/student/Desktop/EE201/ee201_final_project/ee201_debounce_DPB_SCEN_CCEN_MCEN.v" Line 236: Result of 24-bit expression is truncated to fit in 23-bit target.
 
 Elaborating module <gameplay_sm>.
-WARNING:HDLCompiler:1127 - "/home/student/Desktop/EE201/ee201_final_project/gameplay_sm.v" Line 41: Assignment to QInit ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/student/Desktop/EE201/ee201_final_project/gameplay_sm.v" Line 40: Assignment to QInit ignored, since the identifier is never used
 
 Elaborating module <lsfr_8bit_rand_num_gen>.
-WARNING:HDLCompiler:1127 - "/home/student/Desktop/EE201/ee201_final_project/lsfr_8bit_rand_num_gen.v" Line 35: Assignment to lfsr_done ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/student/Desktop/EE201/ee201_final_project/gameplay_sm.v" Line 75: Assignment to random ignored, since the identifier is never used
-WARNING:HDLCompiler:413 - "/home/student/Desktop/EE201/ee201_final_project/gameplay_sm.v" Line 99: Result of 6-bit expression is truncated to fit in 5-bit target.
-WARNING:HDLCompiler:413 - "/home/student/Desktop/EE201/ee201_final_project/gameplay_sm.v" Line 101: Result of 5-bit expression is truncated to fit in 4-bit target.
-WARNING:HDLCompiler:413 - "/home/student/Desktop/EE201/ee201_final_project/gameplay_sm.v" Line 176: Result of 26-bit expression is truncated to fit in 25-bit target.
-WARNING:HDLCompiler:413 - "/home/student/Desktop/EE201/ee201_final_project/gameplay_sm.v" Line 198: Result of 5-bit expression is truncated to fit in 4-bit target.
-WARNING:HDLCompiler:413 - "/home/student/Desktop/EE201/ee201_final_project/gameplay_sm.v" Line 201: Result of 3-bit expression is truncated to fit in 2-bit target.
-WARNING:HDLCompiler:413 - "/home/student/Desktop/EE201/ee201_final_project/gameplay_sm.v" Line 222: Result of 3-bit expression is truncated to fit in 2-bit target.
-WARNING:HDLCompiler:413 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" Line 118: Result of 3-bit expression is truncated to fit in 2-bit target.
-WARNING:HDLCompiler:413 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" Line 120: Result of 32-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:413 - "/home/student/Desktop/EE201/ee201_final_project/lsfr_8bit_rand_num_gen.v" Line 49: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:1127 - "/home/student/Desktop/EE201/ee201_final_project/lsfr_8bit_rand_num_gen.v" Line 40: Assignment to lfsr_done ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/student/Desktop/EE201/ee201_final_project/gameplay_sm.v" Line 85: Assignment to random_done ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "/home/student/Desktop/EE201/ee201_final_project/gameplay_sm.v" Line 143: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "/home/student/Desktop/EE201/ee201_final_project/gameplay_sm.v" Line 166: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "/home/student/Desktop/EE201/ee201_final_project/gameplay_sm.v" Line 170: Result of 3-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:413 - "/home/student/Desktop/EE201/ee201_final_project/gameplay_sm.v" Line 174: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "/home/student/Desktop/EE201/ee201_final_project/gameplay_sm.v" Line 206: Result of 26-bit expression is truncated to fit in 25-bit target.
+WARNING:HDLCompiler:413 - "/home/student/Desktop/EE201/ee201_final_project/gameplay_sm.v" Line 231: Result of 3-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:413 - "/home/student/Desktop/EE201/ee201_final_project/gameplay_sm.v" Line 235: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "/home/student/Desktop/EE201/ee201_final_project/gameplay_sm.v" Line 252: Result of 3-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:189 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" Line 92: Size mismatch in connection of port <state>. Formal port size is 10-bit while actual signal size is 9-bit.
 WARNING:HDLCompiler:413 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" Line 122: Result of 3-bit expression is truncated to fit in 2-bit target.
 WARNING:HDLCompiler:413 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" Line 124: Result of 32-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:413 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" Line 126: Result of 3-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:413 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" Line 128: Result of 32-bit expression is truncated to fit in 2-bit target.
 
 Elaborating module <card_memory_4>.
 WARNING:HDLCompiler:1499 - "/home/student/Desktop/EE201/ee201_final_project/ipcore_dir/card_memory_4.v" Line 39: Empty module <card_memory_4> remains a black box.
-WARNING:HDLCompiler:189 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" Line 237: Size mismatch in connection of port <addrb>. Formal port size is 4-bit while actual signal size is 5-bit.
+WARNING:HDLCompiler:189 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" Line 240: Size mismatch in connection of port <addrb>. Formal port size is 4-bit while actual signal size is 5-bit.
 
 Elaborating module <memory_mux>.
 
@@ -217,13 +222,8 @@ WARNING:HDLCompiler:1499 - "/home/student/Desktop/EE201/ee201_final_project/ipco
 
 Elaborating module <async_rom_9>.
 WARNING:HDLCompiler:1499 - "/home/student/Desktop/EE201/ee201_final_project/ipcore_dir/async_rom_9.v" Line 39: Empty module <async_rom_9> remains a black box.
-WARNING:HDLCompiler:413 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" Line 279: Result of 7-bit expression is truncated to fit in 6-bit target.
-WARNING:HDLCompiler:1127 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" Line 343: Assignment to q ignored, since the identifier is never used
-WARNING:HDLCompiler:552 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" Line 229: Input port dina[5] is not connected on this instance
-WARNING:Xst:2972 - "/home/student/Desktop/EE201/ee201_final_project/gameplay_sm.v" line 74. All outputs of instance <rand_num_generator> of block <lsfr_8bit_rand_num_gen> are unconnected in block <gameplay_sm>. Underlying logic will be removed.
-WARNING:Xst:2972 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" line 70. All outputs of instance <CENTER_bar_debounce> of block <ee201_debouncer> are unconnected in block <vga_demo>. Underlying logic will be removed.
-WARNING:Xst:2972 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" line 339. All outputs of instance <ee201_debouncer_1> of block <ee201_debouncer> are unconnected in block <vga_demo>. Underlying logic will be removed.
-WARNING:Xst:2972 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" line 342. All outputs of instance <rand_num_1> of block <lsfr_8bit_rand_num_gen> are unconnected in block <vga_demo>. Underlying logic will be removed.
+WARNING:HDLCompiler:634 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" Line 341: Net <SSD1[3]> does not have a driver.
+WARNING:HDLCompiler:552 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" Line 232: Input port dina[5] is not connected on this instance
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -231,32 +231,23 @@ WARNING:Xst:2972 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" 
 
 Synthesizing Unit <vga_demo>.
     Related source file is "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v".
-INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" line 60: Output port <DPB> of the instance <UP_debounce> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" line 60: Output port <MCEN> of the instance <UP_debounce> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" line 60: Output port <CCEN> of the instance <UP_debounce> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" line 62: Output port <DPB> of the instance <DOWN_debounce> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" line 62: Output port <MCEN> of the instance <DOWN_debounce> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" line 62: Output port <CCEN> of the instance <DOWN_debounce> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" line 64: Output port <DPB> of the instance <LEFT_debounce> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" line 64: Output port <MCEN> of the instance <LEFT_debounce> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" line 64: Output port <CCEN> of the instance <LEFT_debounce> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" line 66: Output port <DPB> of the instance <RIGHT_debounce> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" line 66: Output port <MCEN> of the instance <RIGHT_debounce> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" line 66: Output port <CCEN> of the instance <RIGHT_debounce> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" line 68: Output port <DPB> of the instance <CENTER_debounce> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" line 68: Output port <MCEN> of the instance <CENTER_debounce> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" line 68: Output port <CCEN> of the instance <CENTER_debounce> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" line 70: Output port <DPB> of the instance <CENTER_bar_debounce> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" line 70: Output port <SCEN> of the instance <CENTER_bar_debounce> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" line 70: Output port <MCEN> of the instance <CENTER_bar_debounce> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" line 70: Output port <CCEN> of the instance <CENTER_bar_debounce> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" line 79: Output port <CARD1> of the instance <state_machine> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" line 79: Output port <CARD2> of the instance <state_machine> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" line 339: Output port <DPB> of the instance <ee201_debouncer> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" line 339: Output port <MCEN> of the instance <ee201_debouncer> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" line 339: Output port <CCEN> of the instance <ee201_debouncer> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" line 342: Output port <lfsr> of the instance <rand_num_1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" line 342: Output port <lsfr_done> of the instance <rand_num_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" line 65: Output port <DPB> of the instance <UP_debounce> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" line 65: Output port <MCEN> of the instance <UP_debounce> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" line 65: Output port <CCEN> of the instance <UP_debounce> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" line 67: Output port <DPB> of the instance <DOWN_debounce> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" line 67: Output port <MCEN> of the instance <DOWN_debounce> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" line 67: Output port <CCEN> of the instance <DOWN_debounce> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" line 69: Output port <DPB> of the instance <LEFT_debounce> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" line 69: Output port <MCEN> of the instance <LEFT_debounce> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" line 69: Output port <CCEN> of the instance <LEFT_debounce> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" line 71: Output port <DPB> of the instance <RIGHT_debounce> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" line 71: Output port <MCEN> of the instance <RIGHT_debounce> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" line 71: Output port <CCEN> of the instance <RIGHT_debounce> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" line 73: Output port <DPB> of the instance <CENTER_debounce> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" line 73: Output port <MCEN> of the instance <CENTER_debounce> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" line 73: Output port <CCEN> of the instance <CENTER_debounce> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <SSD1> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <SSD2> is used but never assigned. This sourceless signal will be automatically connected to value GND.
     Found 2-bit register for signal <selectRow>.
     Found 2-bit register for signal <selectCol>.
     Found 10-bit register for signal <positionX>.
@@ -267,62 +258,62 @@ INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" lin
     Found 1-bit register for signal <vga_g>.
     Found 1-bit register for signal <vga_r>.
     Found 28-bit register for signal <DIV_CLK>.
-    Found 10-bit subtractor for signal <selectStartX> created at line 199.
-    Found 10-bit subtractor for signal <selectStartY> created at line 200.
-    Found 6-bit subtractor for signal <index_X[5]_GND_1_o_sub_215_OUT> created at line 281.
-    Found 28-bit adder for signal <DIV_CLK[27]_GND_1_o_add_1_OUT> created at line 34.
-    Found 2-bit adder for signal <selectRow[1]_GND_1_o_add_8_OUT> created at line 118.
-    Found 2-bit adder for signal <selectCol[1]_GND_1_o_add_10_OUT> created at line 122.
-    Found 11-bit adder for signal <n0360> created at line 134.
-    Found 12-bit adder for signal <n0362> created at line 135.
-    Found 11-bit adder for signal <n0464[10:0]> created at line 135.
-    Found 12-bit adder for signal <n0366> created at line 135.
-    Found 12-bit adder for signal <n0368> created at line 136.
-    Found 12-bit adder for signal <n0471[11:0]> created at line 136.
-    Found 13-bit adder for signal <n0373> created at line 136.
-    Found 13-bit adder for signal <n0375> created at line 137.
-    Found 12-bit adder for signal <n0478[11:0]> created at line 137.
-    Found 13-bit adder for signal <n0380> created at line 137.
-    Found 11-bit adder for signal <n0382> created at line 139.
-    Found 12-bit adder for signal <n0384> created at line 140.
-    Found 11-bit adder for signal <n0487[10:0]> created at line 140.
-    Found 12-bit adder for signal <n0388> created at line 140.
-    Found 12-bit adder for signal <n0390> created at line 141.
-    Found 12-bit adder for signal <n0494[11:0]> created at line 141.
-    Found 13-bit adder for signal <n0395> created at line 141.
-    Found 13-bit adder for signal <n0397> created at line 142.
-    Found 12-bit adder for signal <n0501[11:0]> created at line 142.
-    Found 13-bit adder for signal <n0402> created at line 142.
-    Found 10-bit adder for signal <boxX> created at line 201.
-    Found 10-bit adder for signal <boxY> created at line 202.
-    Found 10-bit adder for signal <boxX[9]_selectWidth[9]_add_148_OUT> created at line 204.
-    Found 11-bit adder for signal <n0515[10:0]> created at line 204.
-    Found 12-bit adder for signal <n0414> created at line 204.
-    Found 11-bit adder for signal <n0519[10:0]> created at line 205.
-    Found 10-bit adder for signal <boxX[9]_selectWidth[9]_add_155_OUT> created at line 205.
-    Found 12-bit adder for signal <n0524[11:0]> created at line 205.
-    Found 13-bit adder for signal <n0418> created at line 205.
-    Found 10-bit adder for signal <boxY[9]_selectWidth[9]_add_165_OUT> created at line 206.
-    Found 12-bit adder for signal <n0421> created at line 206.
-    Found 10-bit adder for signal <boxY[9]_selectWidth[9]_add_172_OUT> created at line 207.
-    Found 12-bit adder for signal <n0536[11:0]> created at line 207.
-    Found 13-bit adder for signal <n0425> created at line 207.
-    Found 12-bit adder for signal <_n0584> created at line 265.
-    Found 13-bit adder for signal <_n0587> created at line 266.
-    Found 14-bit adder for signal <_n0590> created at line 267.
-    Found 6-bit adder for signal <index_Y[5]_GND_1_o_add_198_OUT> created at line 271.
-    Found 12-bit adder for signal <_n0575> created at line 276.
-    Found 13-bit adder for signal <_n0578> created at line 277.
-    Found 14-bit adder for signal <_n0581> created at line 278.
-    Found 2-bit subtractor for signal <GND_1_o_GND_1_o_sub_10_OUT<1:0>> created at line 120.
-    Found 2-bit subtractor for signal <GND_1_o_GND_1_o_sub_12_OUT<1:0>> created at line 124.
-    Found 9x2-bit multiplier for signal <width[8]_PWR_1_o_MuLt_40_OUT> created at line 136.
-    Found 10x2-bit multiplier for signal <offset[9]_PWR_1_o_MuLt_46_OUT> created at line 137.
-    Found 10x2-bit multiplier for signal <n0325> created at line 201.
-    Found 10x2-bit multiplier for signal <n0326> created at line 202.
-    Found 11x2-bit multiplier for signal <BUS_0056_PWR_1_o_MuLt_194_OUT> created at line 267.
+    Found 10-bit subtractor for signal <selectStartX> created at line 202.
+    Found 10-bit subtractor for signal <selectStartY> created at line 203.
+    Found 6-bit subtractor for signal <index_X[5]_GND_1_o_sub_200_OUT> created at line 284.
+    Found 28-bit adder for signal <DIV_CLK[27]_GND_1_o_add_1_OUT> created at line 37.
+    Found 2-bit adder for signal <selectRow[1]_GND_1_o_add_9_OUT> created at line 122.
+    Found 2-bit adder for signal <selectCol[1]_GND_1_o_add_11_OUT> created at line 126.
+    Found 11-bit adder for signal <n0349> created at line 138.
+    Found 12-bit adder for signal <n0351> created at line 139.
+    Found 11-bit adder for signal <n0449[10:0]> created at line 139.
+    Found 12-bit adder for signal <n0355> created at line 139.
+    Found 12-bit adder for signal <n0357> created at line 140.
+    Found 12-bit adder for signal <n0456[11:0]> created at line 140.
+    Found 13-bit adder for signal <n0362> created at line 140.
+    Found 13-bit adder for signal <n0364> created at line 141.
+    Found 12-bit adder for signal <n0463[11:0]> created at line 141.
+    Found 13-bit adder for signal <n0369> created at line 141.
+    Found 11-bit adder for signal <n0371> created at line 143.
+    Found 12-bit adder for signal <n0373> created at line 144.
+    Found 11-bit adder for signal <n0472[10:0]> created at line 144.
+    Found 12-bit adder for signal <n0377> created at line 144.
+    Found 12-bit adder for signal <n0379> created at line 145.
+    Found 12-bit adder for signal <n0479[11:0]> created at line 145.
+    Found 13-bit adder for signal <n0384> created at line 145.
+    Found 13-bit adder for signal <n0386> created at line 146.
+    Found 12-bit adder for signal <n0486[11:0]> created at line 146.
+    Found 13-bit adder for signal <n0391> created at line 146.
+    Found 10-bit adder for signal <boxX> created at line 204.
+    Found 10-bit adder for signal <boxY> created at line 205.
+    Found 10-bit adder for signal <boxX[9]_selectWidth[9]_add_133_OUT> created at line 207.
+    Found 11-bit adder for signal <n0500[10:0]> created at line 207.
+    Found 12-bit adder for signal <n0400> created at line 207.
+    Found 11-bit adder for signal <n0504[10:0]> created at line 208.
+    Found 10-bit adder for signal <boxX[9]_selectWidth[9]_add_140_OUT> created at line 208.
+    Found 12-bit adder for signal <n0509[11:0]> created at line 208.
+    Found 13-bit adder for signal <n0404> created at line 208.
+    Found 10-bit adder for signal <boxY[9]_selectWidth[9]_add_150_OUT> created at line 209.
+    Found 12-bit adder for signal <n0407> created at line 209.
+    Found 10-bit adder for signal <boxY[9]_selectWidth[9]_add_157_OUT> created at line 210.
+    Found 12-bit adder for signal <n0521[11:0]> created at line 210.
+    Found 13-bit adder for signal <n0411> created at line 210.
+    Found 12-bit adder for signal <_n0569> created at line 268.
+    Found 13-bit adder for signal <_n0572> created at line 269.
+    Found 14-bit adder for signal <_n0575> created at line 270.
+    Found 6-bit adder for signal <index_Y[5]_GND_1_o_add_183_OUT> created at line 274.
+    Found 12-bit adder for signal <_n0560> created at line 279.
+    Found 13-bit adder for signal <_n0563> created at line 280.
+    Found 14-bit adder for signal <_n0566> created at line 281.
+    Found 2-bit subtractor for signal <GND_1_o_GND_1_o_sub_11_OUT<1:0>> created at line 124.
+    Found 2-bit subtractor for signal <GND_1_o_GND_1_o_sub_13_OUT<1:0>> created at line 128.
+    Found 9x2-bit multiplier for signal <width[8]_PWR_1_o_MuLt_41_OUT> created at line 140.
+    Found 10x2-bit multiplier for signal <offset[9]_PWR_1_o_MuLt_47_OUT> created at line 141.
+    Found 10x2-bit multiplier for signal <n0313> created at line 204.
+    Found 10x2-bit multiplier for signal <n0314> created at line 205.
+    Found 11x2-bit multiplier for signal <BUS_0056_PWR_1_o_MuLt_179_OUT> created at line 270.
     Found 16x8-bit Read Only RAM for signal <SSD_CATHODES>
-    Found 1-bit 64-to-1 multiplexer for signal <index_X[5]_data[63]_Mux_219_o> created at line 293.
+    Found 1-bit 64-to-1 multiplexer for signal <index_X[5]_data[63]_Mux_204_o> created at line 297.
     Found 1-bit 4-to-1 multiplexer for signal <SSD<3>> created at line 388.
     Found 1-bit 4-to-1 multiplexer for signal <SSD<2>> created at line 388.
     Found 1-bit 4-to-1 multiplexer for signal <SSD<1>> created at line 388.
@@ -331,40 +322,40 @@ WARNING:Xst:737 - Found 1-bit latch for signal <tempCardAddr<3>>. Latches may be
 WARNING:Xst:737 - Found 1-bit latch for signal <tempCardAddr<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <tempCardAddr<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <tempCardAddr<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-    Found 10-bit comparator lessequal for signal <n0039> created at line 134
-    Found 11-bit comparator greater for signal <GND_1_o_BUS_0004_LessThan_31_o> created at line 134
-    Found 12-bit comparator lessequal for signal <n0045> created at line 135
-    Found 12-bit comparator greater for signal <GND_1_o_BUS_0008_LessThan_37_o> created at line 135
-    Found 12-bit comparator lessequal for signal <n0052> created at line 136
-    Found 13-bit comparator greater for signal <GND_1_o_BUS_0012_LessThan_44_o> created at line 136
-    Found 13-bit comparator lessequal for signal <n0061> created at line 137
-    Found 13-bit comparator greater for signal <GND_1_o_BUS_0016_LessThan_53_o> created at line 137
-    Found 10-bit comparator lessequal for signal <n0067> created at line 139
-    Found 11-bit comparator greater for signal <GND_1_o_BUS_0017_LessThan_56_o> created at line 139
-    Found 12-bit comparator lessequal for signal <n0073> created at line 140
-    Found 12-bit comparator greater for signal <GND_1_o_BUS_0021_LessThan_62_o> created at line 140
-    Found 12-bit comparator lessequal for signal <n0080> created at line 141
-    Found 13-bit comparator greater for signal <GND_1_o_BUS_0025_LessThan_69_o> created at line 141
-    Found 13-bit comparator lessequal for signal <n0087> created at line 142
-    Found 13-bit comparator greater for signal <GND_1_o_BUS_0029_LessThan_78_o> created at line 142
-    Found 10-bit comparator lessequal for signal <n0141> created at line 204
-    Found 10-bit comparator greater for signal <CounterX[9]_boxX[9]_LessThan_150_o> created at line 204
-    Found 10-bit comparator lessequal for signal <n0146> created at line 204
-    Found 12-bit comparator greater for signal <GND_1_o_BUS_0036_LessThan_154_o> created at line 204
-    Found 10-bit comparator lessequal for signal <n0155> created at line 205
-    Found 13-bit comparator greater for signal <GND_1_o_BUS_0040_LessThan_160_o> created at line 205
-    Found 10-bit comparator greater for signal <CounterY[9]_boxY[9]_LessThan_167_o> created at line 206
-    Found 12-bit comparator greater for signal <GND_1_o_BUS_0045_LessThan_171_o> created at line 206
-    Found 10-bit comparator lessequal for signal <n0173> created at line 207
-    Found 13-bit comparator greater for signal <GND_1_o_BUS_0049_LessThan_177_o> created at line 207
-    Found 10-bit comparator equal for signal <CounterY[9]_positionY[9]_equal_187_o> created at line 264
-    Found 10-bit comparator equal for signal <CounterX[9]_positionX[9]_equal_204_o> created at line 275
-    Found 12-bit comparator equal for signal <GND_1_o_GND_1_o_equal_207_o> created at line 276
-    Found 13-bit comparator equal for signal <GND_1_o_GND_1_o_equal_210_o> created at line 277
-    Found 14-bit comparator equal for signal <GND_1_o_GND_1_o_equal_214_o> created at line 278
-    Found 12-bit comparator equal for signal <GND_1_o_GND_1_o_equal_190_o> created at line 265
-    Found 13-bit comparator equal for signal <GND_1_o_GND_1_o_equal_193_o> created at line 266
-    Found 14-bit comparator equal for signal <GND_1_o_GND_1_o_equal_197_o> created at line 267
+    Found 10-bit comparator lessequal for signal <n0039> created at line 138
+    Found 11-bit comparator greater for signal <GND_1_o_BUS_0004_LessThan_32_o> created at line 138
+    Found 12-bit comparator lessequal for signal <n0045> created at line 139
+    Found 12-bit comparator greater for signal <GND_1_o_BUS_0008_LessThan_38_o> created at line 139
+    Found 12-bit comparator lessequal for signal <n0052> created at line 140
+    Found 13-bit comparator greater for signal <GND_1_o_BUS_0012_LessThan_45_o> created at line 140
+    Found 13-bit comparator lessequal for signal <n0061> created at line 141
+    Found 13-bit comparator greater for signal <GND_1_o_BUS_0016_LessThan_54_o> created at line 141
+    Found 10-bit comparator lessequal for signal <n0067> created at line 143
+    Found 11-bit comparator greater for signal <GND_1_o_BUS_0017_LessThan_57_o> created at line 143
+    Found 12-bit comparator lessequal for signal <n0073> created at line 144
+    Found 12-bit comparator greater for signal <GND_1_o_BUS_0021_LessThan_63_o> created at line 144
+    Found 12-bit comparator lessequal for signal <n0080> created at line 145
+    Found 13-bit comparator greater for signal <GND_1_o_BUS_0025_LessThan_70_o> created at line 145
+    Found 13-bit comparator lessequal for signal <n0087> created at line 146
+    Found 13-bit comparator greater for signal <GND_1_o_BUS_0029_LessThan_79_o> created at line 146
+    Found 10-bit comparator lessequal for signal <n0130> created at line 207
+    Found 10-bit comparator greater for signal <CounterX[9]_boxX[9]_LessThan_135_o> created at line 207
+    Found 10-bit comparator lessequal for signal <n0135> created at line 207
+    Found 12-bit comparator greater for signal <GND_1_o_BUS_0036_LessThan_139_o> created at line 207
+    Found 10-bit comparator lessequal for signal <n0144> created at line 208
+    Found 13-bit comparator greater for signal <GND_1_o_BUS_0040_LessThan_145_o> created at line 208
+    Found 10-bit comparator greater for signal <CounterY[9]_boxY[9]_LessThan_152_o> created at line 209
+    Found 12-bit comparator greater for signal <GND_1_o_BUS_0045_LessThan_156_o> created at line 209
+    Found 10-bit comparator lessequal for signal <n0162> created at line 210
+    Found 13-bit comparator greater for signal <GND_1_o_BUS_0049_LessThan_162_o> created at line 210
+    Found 10-bit comparator equal for signal <CounterY[9]_positionY[9]_equal_172_o> created at line 267
+    Found 10-bit comparator equal for signal <CounterX[9]_positionX[9]_equal_189_o> created at line 278
+    Found 12-bit comparator equal for signal <GND_1_o_GND_1_o_equal_192_o> created at line 279
+    Found 13-bit comparator equal for signal <GND_1_o_GND_1_o_equal_195_o> created at line 280
+    Found 14-bit comparator equal for signal <GND_1_o_GND_1_o_equal_199_o> created at line 281
+    Found 12-bit comparator equal for signal <GND_1_o_GND_1_o_equal_175_o> created at line 268
+    Found 13-bit comparator equal for signal <GND_1_o_GND_1_o_equal_178_o> created at line 269
+    Found 14-bit comparator equal for signal <GND_1_o_GND_1_o_equal_182_o> created at line 270
     Summary:
 	inferred   1 RAM(s).
 	inferred   5 Multiplier(s).
@@ -372,7 +363,7 @@ WARNING:Xst:737 - Found 1-bit latch for signal <tempCardAddr<0>>. Latches may be
 	inferred  67 D-type flip-flop(s).
 	inferred   4 Latch(s).
 	inferred  34 Comparator(s).
-	inferred  25 Multiplexer(s).
+	inferred  26 Multiplexer(s).
 Unit <vga_demo> synthesized.
 
 Synthesizing Unit <hvsync_generator>.
@@ -382,12 +373,12 @@ Synthesizing Unit <hvsync_generator>.
     Found 1-bit register for signal <inDisplayArea>.
     Found 1-bit register for signal <vga_HS>.
     Found 1-bit register for signal <vga_VS>.
-    Found 10-bit adder for signal <CounterX[9]_GND_3_o_add_1_OUT> created at line 34.
-    Found 10-bit adder for signal <CounterY[9]_GND_3_o_add_6_OUT> created at line 44.
-    Found 10-bit comparator greater for signal <PWR_3_o_CounterX[9]_LessThan_12_o> created at line 49
-    Found 10-bit comparator greater for signal <CounterX[9]_PWR_3_o_LessThan_13_o> created at line 49
-    Found 10-bit comparator greater for signal <CounterX[9]_PWR_3_o_LessThan_16_o> created at line 58
-    Found 10-bit comparator greater for signal <CounterY[9]_GND_3_o_LessThan_17_o> created at line 58
+    Found 10-bit adder for signal <CounterX[9]_GND_4_o_add_1_OUT> created at line 34.
+    Found 10-bit adder for signal <CounterY[9]_GND_4_o_add_6_OUT> created at line 44.
+    Found 10-bit comparator greater for signal <PWR_4_o_CounterX[9]_LessThan_12_o> created at line 49
+    Found 10-bit comparator greater for signal <CounterX[9]_PWR_4_o_LessThan_13_o> created at line 49
+    Found 10-bit comparator greater for signal <CounterX[9]_PWR_4_o_LessThan_16_o> created at line 58
+    Found 10-bit comparator greater for signal <CounterY[9]_GND_4_o_LessThan_17_o> created at line 58
     Summary:
 	inferred   2 Adder/Subtractor(s).
 	inferred  23 D-type flip-flop(s).
@@ -397,10 +388,10 @@ Unit <hvsync_generator> synthesized.
 
 Synthesizing Unit <ee201_debouncer>.
     Related source file is "/home/student/Desktop/EE201/ee201_final_project/ee201_debounce_DPB_SCEN_CCEN_MCEN.v".
-        N_dc = 25
+        N_dc = 23
     Set property "fsm_encoding = user" for signal <state>.
     Found 6-bit register for signal <state>.
-    Found 25-bit register for signal <debounce_count>.
+    Found 23-bit register for signal <debounce_count>.
     Found 4-bit register for signal <MCEN_count>.
     Found finite state machine <FSM_0> for signal <state>.
     -----------------------------------------------------------------------
@@ -415,11 +406,11 @@ Synthesizing Unit <ee201_debouncer>.
     | Encoding           | user                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 25-bit adder for signal <debounce_count[24]_GND_4_o_add_2_OUT> created at line 162.
-    Found 4-bit adder for signal <MCEN_count[3]_GND_4_o_add_5_OUT> created at line 175.
+    Found 23-bit adder for signal <debounce_count[22]_GND_5_o_add_2_OUT> created at line 162.
+    Found 4-bit adder for signal <MCEN_count[3]_GND_5_o_add_5_OUT> created at line 175.
     Summary:
 	inferred   2 Adder/Subtractor(s).
-	inferred  29 D-type flip-flop(s).
+	inferred  27 D-type flip-flop(s).
 	inferred   1 Finite State Machine(s).
 Unit <ee201_debouncer> synthesized.
 
@@ -427,23 +418,21 @@ Synthesizing Unit <gameplay_sm>.
     Related source file is "/home/student/Desktop/EE201/ee201_final_project/gameplay_sm.v".
         num_matches = 8
 WARNING:Xst:647 - Input <CardSelectData<5:4>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/gameplay_sm.v" line 74: Output port <lfsr> of the instance <rand_num_generator> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/gameplay_sm.v" line 74: Output port <lsfr_done> of the instance <rand_num_generator> is unconnected or connected to loadless signal.
-    Found 5-bit register for signal <addresses_written>.
-    Found 8-bit register for signal <state>.
+INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/gameplay_sm.v" line 79: Output port <lsfr_done> of the instance <rand_generator> is unconnected or connected to loadless signal.
     Found 4-bit register for signal <NUM_MATCHES>.
+    Found 10-bit register for signal <state>.
+    Found 4-bit register for signal <CARD1>.
+    Found 4-bit register for signal <CARD2>.
     Found 2-bit register for signal <state_counter>.
+    Found 4-bit register for signal <nums_written>.
+    Found 4-bit register for signal <address_count>.
+    Found 2-bit register for signal <temp_count>.
+    Found 1-bit register for signal <done_random>.
+    Found 6-bit register for signal <dataOut>.
     Found 4-bit register for signal <dataLoc>.
+    Found 64-bit register for signal <n0228[63:0]>.
     Found 4-bit register for signal <CARD1_loc>.
     Found 4-bit register for signal <CARD2_loc>.
-    Found 1-bit register for signal <CARD1<3>>.
-    Found 1-bit register for signal <CARD1<2>>.
-    Found 1-bit register for signal <CARD1<1>>.
-    Found 1-bit register for signal <CARD1<0>>.
-    Found 1-bit register for signal <CARD2<3>>.
-    Found 1-bit register for signal <CARD2<2>>.
-    Found 1-bit register for signal <CARD2<1>>.
-    Found 1-bit register for signal <CARD2<0>>.
     Found 1-bit register for signal <clock_counter<24>>.
     Found 1-bit register for signal <clock_counter<23>>.
     Found 1-bit register for signal <clock_counter<22>>.
@@ -469,37 +458,84 @@ INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/gameplay_sm.v" 
     Found 1-bit register for signal <clock_counter<2>>.
     Found 1-bit register for signal <clock_counter<1>>.
     Found 1-bit register for signal <clock_counter<0>>.
-    Found 1-bit register for signal <dataOut<5>>.
-    Found 1-bit register for signal <dataOut<4>>.
-    Found 1-bit register for signal <dataOut<3>>.
-    Found 1-bit register for signal <dataOut<2>>.
-    Found 1-bit register for signal <dataOut<1>>.
-    Found 1-bit register for signal <dataOut<0>>.
     Found finite state machine <FSM_1> for signal <state>.
     -----------------------------------------------------------------------
-    | States             | 8                                              |
-    | Transitions        | 20                                             |
-    | Inputs             | 9                                              |
-    | Outputs            | 16                                             |
+    | States             | 10                                             |
+    | Transitions        | 23                                             |
+    | Inputs             | 10                                             |
+    | Outputs            | 20                                             |
     | Clock              | Clk (rising_edge)                              |
     | Reset              | Reset (positive)                               |
     | Reset type         | asynchronous                                   |
-    | Reset State        | 00000001                                       |
+    | Reset State        | 0000000001                                     |
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 5-bit adder for signal <addresses_written[4]_GND_5_o_add_1_OUT> created at line 99.
-    Found 25-bit adder for signal <clock_counter[24]_GND_5_o_add_15_OUT> created at line 176.
-    Found 4-bit adder for signal <NUM_MATCHES[3]_GND_5_o_add_22_OUT> created at line 198.
-    Found 2-bit adder for signal <state_counter[1]_GND_5_o_add_23_OUT> created at line 201.
-    Found 4-bit comparator equal for signal <n0016> created at line 181
+    Found 4-bit adder for signal <address_count[3]_GND_6_o_add_64_OUT> created at line 143.
+    Found 2-bit adder for signal <temp_count[1]_GND_6_o_add_80_OUT> created at line 170.
+    Found 4-bit adder for signal <nums_written[3]_GND_6_o_add_82_OUT> created at line 174.
+    Found 25-bit adder for signal <clock_counter[24]_GND_6_o_add_96_OUT> created at line 206.
+    Found 2-bit adder for signal <state_counter[1]_GND_6_o_add_103_OUT> created at line 231.
+    Found 4-bit adder for signal <NUM_MATCHES[3]_GND_6_o_add_105_OUT> created at line 235.
+    Found 4-bit 16-to-1 multiplexer for signal <address_count[3]_addr[15][3]_wide_mux_79_OUT> created at line 167.
+    Found 4-bit comparator lessequal for signal <GND_6_o_address_count[3]_LessThan_3_o> created at line 134
+    Found 4-bit comparator equal for signal <addr[0][3]_random[3]_equal_4_o> created at line 137
+    Found 4-bit comparator lessequal for signal <GND_6_o_address_count[3]_LessThan_5_o> created at line 134
+    Found 4-bit comparator equal for signal <addr[1][3]_random[3]_equal_7_o> created at line 137
+    Found 4-bit comparator lessequal for signal <GND_6_o_address_count[3]_LessThan_8_o> created at line 134
+    Found 4-bit comparator equal for signal <addr[2][3]_random[3]_equal_10_o> created at line 137
+    Found 4-bit comparator lessequal for signal <GND_6_o_address_count[3]_LessThan_11_o> created at line 134
+    Found 4-bit comparator equal for signal <addr[3][3]_random[3]_equal_13_o> created at line 137
+    Found 4-bit comparator lessequal for signal <GND_6_o_address_count[3]_LessThan_14_o> created at line 134
+    Found 4-bit comparator equal for signal <addr[4][3]_random[3]_equal_16_o> created at line 137
+    Found 4-bit comparator lessequal for signal <GND_6_o_address_count[3]_LessThan_17_o> created at line 134
+    Found 4-bit comparator equal for signal <addr[5][3]_random[3]_equal_19_o> created at line 137
+    Found 4-bit comparator lessequal for signal <GND_6_o_address_count[3]_LessThan_20_o> created at line 134
+    Found 4-bit comparator equal for signal <addr[6][3]_random[3]_equal_22_o> created at line 137
+    Found 4-bit comparator lessequal for signal <GND_6_o_address_count[3]_LessThan_23_o> created at line 134
+    Found 4-bit comparator equal for signal <addr[7][3]_random[3]_equal_25_o> created at line 137
+    Found 4-bit comparator lessequal for signal <PWR_6_o_address_count[3]_LessThan_26_o> created at line 134
+    Found 4-bit comparator equal for signal <addr[8][3]_random[3]_equal_28_o> created at line 137
+    Found 4-bit comparator lessequal for signal <PWR_6_o_address_count[3]_LessThan_29_o> created at line 134
+    Found 4-bit comparator equal for signal <addr[9][3]_random[3]_equal_31_o> created at line 137
+    Found 4-bit comparator lessequal for signal <PWR_6_o_address_count[3]_LessThan_32_o> created at line 134
+    Found 4-bit comparator equal for signal <addr[10][3]_random[3]_equal_34_o> created at line 137
+    Found 4-bit comparator lessequal for signal <PWR_6_o_address_count[3]_LessThan_35_o> created at line 134
+    Found 4-bit comparator equal for signal <addr[11][3]_random[3]_equal_37_o> created at line 137
+    Found 4-bit comparator lessequal for signal <PWR_6_o_address_count[3]_LessThan_38_o> created at line 134
+    Found 4-bit comparator equal for signal <addr[12][3]_random[3]_equal_40_o> created at line 137
+    Found 4-bit comparator lessequal for signal <PWR_6_o_address_count[3]_LessThan_41_o> created at line 134
+    Found 4-bit comparator equal for signal <addr[13][3]_random[3]_equal_43_o> created at line 137
+    Found 4-bit comparator lessequal for signal <PWR_6_o_address_count[3]_LessThan_44_o> created at line 134
+    Found 4-bit comparator equal for signal <addr[14][3]_random[3]_equal_46_o> created at line 137
+    Found 4-bit comparator equal for signal <n0143> created at line 211
     Summary:
-	inferred   4 Adder/Subtractor(s).
-	inferred  62 D-type flip-flop(s).
-	inferred   1 Comparator(s).
-	inferred   8 Multiplexer(s).
+	inferred   6 Adder/Subtractor(s).
+	inferred 132 D-type flip-flop(s).
+	inferred  31 Comparator(s).
+	inferred  67 Multiplexer(s).
 	inferred   1 Finite State Machine(s).
 Unit <gameplay_sm> synthesized.
+
+Synthesizing Unit <lsfr_8bit_rand_num_gen>.
+    Related source file is "/home/student/Desktop/EE201/ee201_final_project/lsfr_8bit_rand_num_gen.v".
+WARNING:Xst:653 - Signal <lsfr_done> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Found 8-bit register for signal <counter>.
+    Found 1-bit register for signal <lfsr<7>>.
+    Found 1-bit register for signal <lfsr<6>>.
+    Found 1-bit register for signal <lfsr<5>>.
+    Found 1-bit register for signal <lfsr<4>>.
+    Found 1-bit register for signal <lfsr<3>>.
+    Found 1-bit register for signal <lfsr<2>>.
+    Found 1-bit register for signal <lfsr<1>>.
+    Found 1-bit register for signal <lfsr<0>>.
+    Found 8-bit adder for signal <counter[7]_GND_7_o_add_4_OUT> created at line 49.
+    Found 8-bit adder for signal <seed[7]_counter[7]_add_5_OUT> created at line 52.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  16 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <lsfr_8bit_rand_num_gen> synthesized.
 
 Synthesizing Unit <memory_mux>.
     Related source file is "/home/student/Desktop/EE201/ee201_final_project/memory_mux.v".
@@ -518,33 +554,35 @@ Macro Statistics
  10x2-bit multiplier                                   : 3
  11x2-bit multiplier                                   : 1
  9x2-bit multiplier                                    : 1
-# Adders/Subtractors                                   : 63
+# Adders/Subtractors                                   : 67
  10-bit adder                                          : 8
  10-bit subtractor                                     : 2
  11-bit adder                                          : 6
  12-bit adder                                          : 16
  13-bit adder                                          : 10
  14-bit adder                                          : 2
- 2-bit adder                                           : 1
+ 2-bit adder                                           : 2
  2-bit addsub                                          : 2
- 25-bit adder                                          : 6
+ 23-bit adder                                          : 5
+ 25-bit adder                                          : 1
  28-bit adder                                          : 1
- 4-bit adder                                           : 6
- 5-bit adder                                           : 1
+ 4-bit adder                                           : 8
  6-bit adder                                           : 1
  6-bit subtractor                                      : 1
-# Registers                                            : 70
- 1-bit register                                        : 45
+ 8-bit adder                                           : 2
+# Registers                                            : 72
+ 1-bit register                                        : 40
  10-bit register                                       : 4
- 2-bit register                                        : 3
- 25-bit register                                       : 5
+ 2-bit register                                        : 4
+ 23-bit register                                       : 5
  28-bit register                                       : 1
- 4-bit register                                        : 9
- 5-bit register                                        : 1
- 6-bit register                                        : 2
+ 4-bit register                                        : 13
+ 6-bit register                                        : 3
+ 64-bit register                                       : 1
+ 8-bit register                                        : 1
 # Latches                                              : 4
  1-bit latch                                           : 4
-# Comparators                                          : 39
+# Comparators                                          : 69
  10-bit comparator equal                               : 2
  10-bit comparator greater                             : 6
  10-bit comparator lessequal                           : 6
@@ -556,19 +594,24 @@ Macro Statistics
  13-bit comparator greater                             : 6
  13-bit comparator lessequal                           : 2
  14-bit comparator equal                               : 2
- 4-bit comparator equal                                : 1
-# Multiplexers                                         : 36
- 1-bit 2-to-1 multiplexer                              : 17
+ 4-bit comparator equal                                : 16
+ 4-bit comparator lessequal                            : 15
+# Multiplexers                                         : 98
+ 1-bit 2-to-1 multiplexer                              : 50
  1-bit 4-to-1 multiplexer                              : 4
  1-bit 64-to-1 multiplexer                             : 1
  10-bit 2-to-1 multiplexer                             : 2
- 2-bit 2-to-1 multiplexer                              : 1
+ 2-bit 2-to-1 multiplexer                              : 3
  25-bit 2-to-1 multiplexer                             : 1
- 4-bit 2-to-1 multiplexer                              : 6
+ 4-bit 16-to-1 multiplexer                             : 1
+ 4-bit 2-to-1 multiplexer                              : 29
  5-bit 2-to-1 multiplexer                              : 1
- 6-bit 2-to-1 multiplexer                              : 2
+ 6-bit 2-to-1 multiplexer                              : 3
  64-bit 12-to-1 multiplexer                            : 1
+ 8-bit 2-to-1 multiplexer                              : 2
 # FSMs                                                 : 6
+# Xors                                                 : 1
+ 1-bit xor4                                            : 1
 
 =========================================================================
 
@@ -617,14 +660,14 @@ WARNING:Xst:1710 - FF/Latch <positionX_2> (without init value) has a constant va
 WARNING:Xst:1710 - FF/Latch <positionX_1> (without init value) has a constant value of 0 in block <vga_demo>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <positionX_0> (without init value) has a constant value of 0 in block <vga_demo>. This FF/Latch will be trimmed during the optimization process.
 
-Synthesizing (advanced) Unit <gameplay_sm>.
-The following registers are absorbed into counter <addresses_written>: 1 register on signal <addresses_written>.
-Unit <gameplay_sm> synthesized (advanced).
-
 Synthesizing (advanced) Unit <hvsync_generator>.
 The following registers are absorbed into counter <CounterX>: 1 register on signal <CounterX>.
 The following registers are absorbed into counter <CounterY>: 1 register on signal <CounterY>.
 Unit <hvsync_generator> synthesized (advanced).
+
+Synthesizing (advanced) Unit <lsfr_8bit_rand_num_gen>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+Unit <lsfr_8bit_rand_num_gen> synthesized (advanced).
 
 Synthesizing (advanced) Unit <vga_demo>.
 The following registers are absorbed into counter <DIV_CLK>: 1 register on signal <DIV_CLK>.
@@ -632,8 +675,8 @@ The following registers are absorbed into counter <selectRow>: 1 register on sig
 The following registers are absorbed into counter <selectCol>: 1 register on signal <selectCol>.
 The following registers are absorbed into counter <index_X>: 1 register on signal <index_X>.
 The following registers are absorbed into counter <index_Y>: 1 register on signal <index_Y>.
-	Multiplier <Mmult_n0325> in block <vga_demo> and adder/subtractor <Madd_boxX> in block <vga_demo> are combined into a MAC<Maddsub_n0325>.
-	Multiplier <Mmult_n0326> in block <vga_demo> and adder/subtractor <Madd_boxY> in block <vga_demo> are combined into a MAC<Maddsub_n0326>.
+	Multiplier <Mmult_n0313> in block <vga_demo> and adder/subtractor <Madd_boxX> in block <vga_demo> are combined into a MAC<Maddsub_n0313>.
+	Multiplier <Mmult_n0314> in block <vga_demo> and adder/subtractor <Madd_boxY> in block <vga_demo> are combined into a MAC<Maddsub_n0314>.
 INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_SSD_CATHODES> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
@@ -658,26 +701,28 @@ Macro Statistics
 # Multipliers                                          : 3
  5x2-bit multiplier                                    : 1
  8x2-bit multiplier                                    : 2
-# Adders/Subtractors                                   : 51
+# Adders/Subtractors                                   : 55
  10-bit adder                                          : 4
  10-bit subtractor                                     : 2
  11-bit adder                                          : 6
  12-bit adder                                          : 14
  13-bit adder                                          : 10
  14-bit adder                                          : 2
- 2-bit adder                                           : 1
- 25-bit adder                                          : 6
- 4-bit adder                                           : 6
+ 2-bit adder                                           : 2
+ 23-bit adder                                          : 5
+ 25-bit adder                                          : 1
+ 4-bit adder                                           : 8
+ 8-bit adder                                           : 1
 # Counters                                             : 8
  10-bit up counter                                     : 2
  2-bit updown counter                                  : 2
  28-bit up counter                                     : 1
- 5-bit up counter                                      : 1
  6-bit down counter                                    : 1
  6-bit up counter                                      : 1
-# Registers                                            : 228
- Flip-Flops                                            : 228
-# Comparators                                          : 39
+ 8-bit up counter                                      : 1
+# Registers                                            : 301
+ Flip-Flops                                            : 301
+# Comparators                                          : 69
  10-bit comparator equal                               : 2
  10-bit comparator greater                             : 6
  10-bit comparator lessequal                           : 6
@@ -689,18 +734,23 @@ Macro Statistics
  13-bit comparator greater                             : 6
  13-bit comparator lessequal                           : 2
  14-bit comparator equal                               : 2
- 4-bit comparator equal                                : 1
-# Multiplexers                                         : 34
- 1-bit 2-to-1 multiplexer                              : 17
+ 4-bit comparator equal                                : 16
+ 4-bit comparator lessequal                            : 15
+# Multiplexers                                         : 102
+ 1-bit 16-to-1 multiplexer                             : 4
+ 1-bit 2-to-1 multiplexer                              : 54
  1-bit 4-to-1 multiplexer                              : 4
  1-bit 64-to-1 multiplexer                             : 1
- 2-bit 2-to-1 multiplexer                              : 1
+ 2-bit 2-to-1 multiplexer                              : 3
  25-bit 2-to-1 multiplexer                             : 1
- 4-bit 2-to-1 multiplexer                              : 6
+ 4-bit 2-to-1 multiplexer                              : 28
  5-bit 2-to-1 multiplexer                              : 1
- 6-bit 2-to-1 multiplexer                              : 2
+ 6-bit 2-to-1 multiplexer                              : 3
  64-bit 12-to-1 multiplexer                            : 1
+ 8-bit 2-to-1 multiplexer                              : 2
 # FSMs                                                 : 6
+# Xors                                                 : 1
+ 1-bit xor4                                            : 1
 
 =========================================================================
 
@@ -746,19 +796,21 @@ Optimizing FSM <CENTER_debounce/FSM_0> on signal <state[1:6]> with user encoding
  100010 | 100010
 --------------------
 Analyzing FSM <MFsm> for best encoding.
-Optimizing FSM <state_machine/FSM_1> on signal <state[1:8]> with user encoding.
-----------------------
- State    | Encoding
-----------------------
- 00000001 | 00000001
- 00000010 | 00000010
- 00000100 | 00000100
- 00001000 | 00001000
- 00010000 | 00010000
- 00100000 | 00100000
- 01000000 | 01000000
- 10000000 | 10000000
-----------------------
+Optimizing FSM <state_machine/FSM_1> on signal <state[1:10]> with user encoding.
+--------------------------
+ State      | Encoding
+--------------------------
+ 0000000001 | 0000000001
+ 0000000010 | 0000000010
+ 0000000100 | 0000000100
+ 0000001000 | 0000001000
+ 0000010000 | 0000010000
+ 0000100000 | 0000100000
+ 0001000000 | 0001000000
+ 0010000000 | 0010000000
+ 0100000000 | 0100000000
+ 1000000000 | 1000000000
+--------------------------
 WARNING:Xst:2677 - Node <DIV_CLK_20> of sequential type is unconnected in block <vga_demo>.
 WARNING:Xst:2677 - Node <DIV_CLK_21> of sequential type is unconnected in block <vga_demo>.
 WARNING:Xst:2677 - Node <DIV_CLK_22> of sequential type is unconnected in block <vga_demo>.
@@ -790,27 +842,35 @@ WARNING:Xst:3002 - This design contains one or more registers/latches that are d
   Please refer to http://www.xilinx.com search string "Spartan6 asynchronous set/reset" for more details.
 
   List of register instances with asynchronous set and reset:
-    dataOut_1 in unit <gameplay_sm>
-    dataOut_2 in unit <gameplay_sm>
-    dataOut_0 in unit <gameplay_sm>
-    dataOut_3 in unit <gameplay_sm>
+    lfsr_7 in unit <lsfr_8bit_rand_num_gen>
+    lfsr_0 in unit <lsfr_8bit_rand_num_gen>
+    lfsr_1 in unit <lsfr_8bit_rand_num_gen>
+    lfsr_3 in unit <lsfr_8bit_rand_num_gen>
+    lfsr_4 in unit <lsfr_8bit_rand_num_gen>
+    lfsr_2 in unit <lsfr_8bit_rand_num_gen>
+    lfsr_5 in unit <lsfr_8bit_rand_num_gen>
+    lfsr_6 in unit <lsfr_8bit_rand_num_gen>
 
 
 Optimizing unit <vga_demo> ...
 
 Optimizing unit <ee201_debouncer> ...
 
-Optimizing unit <hvsync_generator> ...
-
 Optimizing unit <gameplay_sm> ...
 WARNING:Xst:1710 - FF/Latch <state_counter_1> (without init value) has a constant value of 0 in block <gameplay_sm>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <temp_count_1> (without init value) has a constant value of 0 in block <gameplay_sm>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <state_counter_1> (without init value) has a constant value of 0 in block <gameplay_sm>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <temp_count_1> (without init value) has a constant value of 0 in block <gameplay_sm>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <lsfr_8bit_rand_num_gen> ...
+
+Optimizing unit <hvsync_generator> ...
 
 Optimizing unit <memory_mux> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block vga_demo, actual ratio is 15.
+Found area constraint ratio of 100 (+ 5) on block vga_demo, actual ratio is 18.
 
 Final Macro Processing ...
 
@@ -818,8 +878,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 310
- Flip-Flops                                            : 310
+# Registers                                            : 391
+ Flip-Flops                                            : 391
 
 =========================================================================
 
@@ -842,38 +902,39 @@ Top Level Output File Name         : vga_demo.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 1856
-#      BUF                         : 3
+# BELS                             : 2049
+#      BUF                         : 2
 #      GND                         : 2
 #      INV                         : 20
-#      LUT1                        : 163
-#      LUT2                        : 32
-#      LUT3                        : 64
-#      LUT4                        : 134
-#      LUT5                        : 247
+#      LUT1                        : 160
+#      LUT2                        : 46
+#      LUT3                        : 81
+#      LUT4                        : 137
+#      LUT5                        : 321
 #      LUT6                        : 760
-#      MUXCY                       : 234
-#      MUXF7                       : 4
+#      MUXCY                       : 237
+#      MUXF7                       : 80
+#      MUXF8                       : 4
 #      VCC                         : 3
-#      XORCY                       : 190
-# FlipFlops/Latches                : 318
-#      FD                          : 181
-#      FDC                         : 56
-#      FDCE                        : 15
-#      FDE                         : 12
-#      FDP                         : 6
+#      XORCY                       : 196
+# FlipFlops/Latches                : 403
+#      FD                          : 189
+#      FDC                         : 63
+#      FDCE                        : 10
+#      FDE                         : 80
+#      FDP                         : 9
 #      FDR                         : 24
 #      FDRE                        : 10
 #      FDS                         : 6
 #      LD                          : 4
-#      LDC                         : 4
+#      LDC                         : 8
 # RAMS                             : 1
 #      RAMB8BWER                   : 1
 # Clock Buffers                    : 2
 #      BUFG                        : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 37
-#      IBUF                        : 7
+# IO Buffers                       : 43
+#      IBUF                        : 13
 #      OBUF                        : 30
 # DSPs                             : 6
 #      DSP48A1                     : 6
@@ -885,20 +946,20 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             318  out of  18224     1%  
- Number of Slice LUTs:                 1420  out of   9112    15%  
-    Number used as Logic:              1420  out of   9112    15%  
+ Number of Slice Registers:             403  out of  18224     2%  
+ Number of Slice LUTs:                 1525  out of   9112    16%  
+    Number used as Logic:              1525  out of   9112    16%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   1445
-   Number with an unused Flip Flop:    1127  out of   1445    77%  
-   Number with an unused LUT:            25  out of   1445     1%  
-   Number of fully used LUT-FF pairs:   293  out of   1445    20%  
-   Number of unique control sets:        28
+ Number of LUT Flip Flop pairs used:   1556
+   Number with an unused Flip Flop:    1153  out of   1556    74%  
+   Number with an unused LUT:            31  out of   1556     1%  
+   Number of fully used LUT-FF pairs:   372  out of   1556    23%  
+   Number of unique control sets:        40
 
 IO Utilization: 
- Number of IOs:                          38
- Number of bonded IOBs:                  38  out of    232    16%  
+ Number of IOs:                          44
+ Number of bonded IOBs:                  44  out of    232    18%  
 
 Specific Feature Utilization:
  Number of Block RAM/FIFO:                1  out of     32     3%  
@@ -924,19 +985,23 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
--------------------------------------------------------------------------------------------------+-------------------------------------+-------+
-Clock Signal                                                                                     | Clock buffer(FF name)               | Load  |
--------------------------------------------------------------------------------------------------+-------------------------------------+-------+
-row4_col4_MUX_136_o(Mmux_row4_col4_MUX_136_o11:O)                                                | NONE(*)(tempCardAddr_3)             | 4     |
-DIV_CLK_1                                                                                        | BUFG                                | 293   |
-ClkPort                                                                                          | BUFGP                               | 20    |
-Madd_n0380_cy<0>8                                                                                | NONE(Msub_selectStartX1)            | 4     |
-state_machine/Reset_CardSelectData[1]_AND_30_o(state_machine/Reset_CardSelectData[1]_AND_30_o1:O)| NONE(*)(state_machine/dataOut_1_LDC)| 1     |
-state_machine/Reset_CardSelectData[2]_AND_28_o(state_machine/Reset_CardSelectData[2]_AND_28_o1:O)| NONE(*)(state_machine/dataOut_2_LDC)| 1     |
-state_machine/Reset_CardSelectData[0]_AND_32_o(state_machine/Reset_CardSelectData[0]_AND_32_o1:O)| NONE(*)(state_machine/dataOut_0_LDC)| 1     |
-state_machine/Reset_CardSelectData[3]_AND_26_o(state_machine/Reset_CardSelectData[3]_AND_26_o1:O)| NONE(*)(state_machine/dataOut_3_LDC)| 1     |
--------------------------------------------------------------------------------------------------+-------------------------------------+-------+
-(*) These 5 clock signal(s) are generated by combinatorial logic,
+-----------------------------------------------------------------------------------------------------------+-------------------------------------------------+-------+
+Clock Signal                                                                                               | Clock buffer(FF name)                           | Load  |
+-----------------------------------------------------------------------------------------------------------+-------------------------------------------------+-------+
+row4_col4_MUX_279_o(Mmux_row4_col4_MUX_279_o13:O)                                                          | NONE(*)(tempCardAddr_3)                         | 4     |
+DIV_CLK_1                                                                                                  | BUFG                                            | 374   |
+ClkPort                                                                                                    | BUFGP                                           | 20    |
+Madd_n0369_cy<0>8                                                                                          | NONE(Msub_selectStartX1)                        | 4     |
+state_machine/rand_generator/reset_seed[7]_AND_15_o(state_machine/rand_generator/reset_seed[7]_AND_15_o1:O)| NONE(*)(state_machine/rand_generator/lfsr_7_LDC)| 1     |
+state_machine/rand_generator/reset_seed[7]_AND_29_o(state_machine/rand_generator/reset_seed[7]_AND_29_o1:O)| NONE(*)(state_machine/rand_generator/lfsr_0_LDC)| 1     |
+state_machine/rand_generator/reset_seed[7]_AND_27_o(state_machine/rand_generator/reset_seed[7]_AND_27_o1:O)| NONE(*)(state_machine/rand_generator/lfsr_1_LDC)| 1     |
+state_machine/rand_generator/reset_seed[7]_AND_23_o(state_machine/rand_generator/reset_seed[7]_AND_23_o1:O)| NONE(*)(state_machine/rand_generator/lfsr_3_LDC)| 1     |
+state_machine/rand_generator/reset_seed[7]_AND_21_o(state_machine/rand_generator/reset_seed[7]_AND_21_o1:O)| NONE(*)(state_machine/rand_generator/lfsr_4_LDC)| 1     |
+state_machine/rand_generator/reset_seed[7]_AND_25_o(state_machine/rand_generator/reset_seed[7]_AND_25_o1:O)| NONE(*)(state_machine/rand_generator/lfsr_2_LDC)| 1     |
+state_machine/rand_generator/reset_seed[7]_AND_19_o(state_machine/rand_generator/reset_seed[7]_AND_19_o1:O)| NONE(*)(state_machine/rand_generator/lfsr_5_LDC)| 1     |
+state_machine/rand_generator/reset_seed[7]_AND_17_o(state_machine/rand_generator/reset_seed[7]_AND_17_o1:O)| NONE(*)(state_machine/rand_generator/lfsr_6_LDC)| 1     |
+-----------------------------------------------------------------------------------------------------------+-------------------------------------------------+-------+
+(*) These 9 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
 Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
@@ -949,89 +1014,61 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 12.949ns (Maximum Frequency: 77.229MHz)
-   Minimum input arrival time before clock: 5.616ns
-   Maximum output required time after clock: 7.401ns
-   Maximum combinational path delay: No path found
+   Minimum period: 11.702ns (Maximum Frequency: 85.455MHz)
+   Minimum input arrival time before clock: 6.662ns
+   Maximum output required time after clock: 6.544ns
+   Maximum combinational path delay: 5.456ns
 
 Timing Details:
 ---------------
 All values displayed in nanoseconds (ns)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'row4_col4_MUX_136_o'
-  Clock period: 1.699ns (frequency: 588.495MHz)
-  Total number of paths / destination ports: 4 / 4
--------------------------------------------------------------------------
-Delay:               1.699ns (Levels of Logic = 1)
-  Source:            tempCardAddr_3 (LATCH)
-  Destination:       tempCardAddr_3 (LATCH)
-  Source Clock:      row4_col4_MUX_136_o falling
-  Destination Clock: row4_col4_MUX_136_o falling
-
-  Data Path: tempCardAddr_3 to tempCardAddr_3
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     LD:G->Q               2   0.498   0.961  tempCardAddr_3 (tempCardAddr_3)
-     LUT5:I0->O            1   0.203   0.000  Mmux_tempCardAddr[3]_col4_MUX_135_o1 (tempCardAddr[3]_col4_MUX_135_o)
-     LD:D                      0.037          tempCardAddr_3
-    ----------------------------------------
-    Total                      1.699ns (0.738ns logic, 0.961ns route)
-                                       (43.4% logic, 56.6% route)
-
-=========================================================================
 Timing constraint: Default period analysis for Clock 'DIV_CLK_1'
-  Clock period: 12.949ns (frequency: 77.229MHz)
-  Total number of paths / destination ports: 48997 / 365
+  Clock period: 11.702ns (frequency: 85.455MHz)
+  Total number of paths / destination ports: 72564 / 521
 -------------------------------------------------------------------------
-Delay:               12.949ns (Levels of Logic = 12)
-  Source:            card_memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/TRUE_DP.PRIM9.ram (RAM)
+Delay:               11.702ns (Levels of Logic = 7)
+  Source:            Maddsub_n0313 (DSP)
   Destination:       vga_b (FF)
   Source Clock:      DIV_CLK_1 rising
   Destination Clock: DIV_CLK_1 rising
 
-  Data Path: card_memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/TRUE_DP.PRIM9.ram to vga_b
+  Data Path: Maddsub_n0313 to vga_b
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     RAMB8BWER:CLKAWRCLK->DOADO9   20   1.650   1.197  U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/TRUE_DP.PRIM9.ram (douta<4>)
-     end scope: 'card_memory:douta<4>'
-     LUT3:I1->O          131   0.203   2.063  Mmux_card_data21 (card_data<1>)
-     LUT6:I4->O            1   0.203   0.684  mem_mux/Mmux_temp742 (mem_mux/Mmux_temp741)
-     LUT6:I4->O            1   0.203   0.580  mem_mux/Mmux_temp743 (mem_mux/Mmux_temp742)
-     LUT6:I5->O            1   0.205   0.827  mem_mux/Mmux_temp744 (data<42>)
-     LUT6:I2->O            1   0.203   0.827  Mmux_index_X[5]_data[63]_Mux_219_o_124 (Mmux_index_X[5]_data[63]_Mux_219_o_124)
-     LUT6:I2->O            1   0.203   0.827  Mmux_index_X[5]_data[63]_Mux_219_o_71 (Mmux_index_X[5]_data[63]_Mux_219_o_71)
-     LUT6:I2->O            2   0.203   0.617  Mmux_PWR_1_o_GND_1_o_MUX_245_o1 (PWR_1_o_GND_1_o_MUX_245_o)
-     LUT6:I5->O            5   0.205   0.715  Mmux_selectEn_PWR_1_o_MUX_247_o11 (Mmux_selectEn_PWR_1_o_MUX_247_o1)
-     LUT2:I1->O            1   0.205   0.000  Mmux_selectEn_PWR_1_o_MUX_247_o15_SW0_G (N45)
-     MUXF7:I1->O           1   0.140   0.684  Mmux_selectEn_PWR_1_o_MUX_247_o15_SW0 (N40)
-     LUT6:I4->O            1   0.203   0.000  Mmux_selectEn_PWR_1_o_MUX_247_o16 (selectEn_PWR_1_o_MUX_247_o)
+     DSP48A1:CLK->P5      10   5.013   1.201  Maddsub_n0313 (Madd_boxX[9]_selectWidth[9]_add_140_OUT_lut<5>)
+     LUT5:I0->O            4   0.203   0.684  Madd_n04041_xor<9>121 (Madd_n04041_xor<9>12)
+     LUT4:I3->O            4   0.205   1.028  Madd_n0407_xor<8>11 (n0407<8>)
+     LUT5:I0->O            1   0.203   0.000  Mcompar_GND_1_o_BUS_0040_LessThan_145_o_lut<4> (Mcompar_GND_1_o_BUS_0040_LessThan_145_o_lut<4>)
+     MUXCY:S->O            2   0.366   0.721  Mcompar_GND_1_o_BUS_0040_LessThan_145_o_cy<4> (Mcompar_GND_1_o_BUS_0040_LessThan_145_o_cy<4>)
+     LUT4:I2->O            1   0.203   0.684  Mmux_selectEn_PWR_1_o_MUX_363_o11 (Mmux_selectEn_PWR_1_o_MUX_363_o1)
+     LUT6:I4->O            1   0.203   0.684  Mmux_selectEn_PWR_1_o_MUX_363_o13_SW1 (N67)
+     LUT6:I4->O            1   0.203   0.000  Mmux_selectEn_PWR_1_o_MUX_363_o14 (selectEn_PWR_1_o_MUX_363_o)
      FDR:D                     0.102          vga_b
     ----------------------------------------
-    Total                     12.949ns (3.928ns logic, 9.021ns route)
-                                       (30.3% logic, 69.7% route)
+    Total                     11.702ns (6.701ns logic, 5.001ns route)
+                                       (57.3% logic, 42.7% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'ClkPort'
-  Clock period: 2.028ns (frequency: 493.133MHz)
+  Clock period: 2.259ns (frequency: 442.723MHz)
   Total number of paths / destination ports: 210 / 20
 -------------------------------------------------------------------------
-Delay:               2.028ns (Levels of Logic = 21)
-  Source:            DIV_CLK_0 (FF)
+Delay:               2.259ns (Levels of Logic = 20)
+  Source:            DIV_CLK_1 (FF)
   Destination:       DIV_CLK_19 (FF)
   Source Clock:      ClkPort rising
   Destination Clock: ClkPort rising
 
-  Data Path: DIV_CLK_0 to DIV_CLK_19
+  Data Path: DIV_CLK_1 to DIV_CLK_19
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              1   0.447   0.579  DIV_CLK_0 (DIV_CLK_0)
-     INV:I->O              1   0.206   0.000  Mcount_DIV_CLK_lut<0>_INV_0 (Mcount_DIV_CLK_lut<0>)
-     MUXCY:S->O            1   0.172   0.000  Mcount_DIV_CLK_cy<0> (Mcount_DIV_CLK_cy<0>)
-     MUXCY:CI->O           1   0.019   0.000  Mcount_DIV_CLK_cy<1> (Mcount_DIV_CLK_cy<1>)
+     FDR:C->Q              9   0.447   0.830  DIV_CLK_1 (DIV_CLK_1)
+     LUT1:I0->O            1   0.205   0.000  Mcount_DIV_CLK_cy<1>_rt (Mcount_DIV_CLK_cy<1>_rt)
+     MUXCY:S->O            1   0.172   0.000  Mcount_DIV_CLK_cy<1> (Mcount_DIV_CLK_cy<1>)
      MUXCY:CI->O           1   0.019   0.000  Mcount_DIV_CLK_cy<2> (Mcount_DIV_CLK_cy<2>)
      MUXCY:CI->O           1   0.019   0.000  Mcount_DIV_CLK_cy<3> (Mcount_DIV_CLK_cy<3>)
      MUXCY:CI->O           1   0.019   0.000  Mcount_DIV_CLK_cy<4> (Mcount_DIV_CLK_cy<4>)
@@ -1052,35 +1089,35 @@ Delay:               2.028ns (Levels of Logic = 21)
      XORCY:CI->O           1   0.180   0.000  Mcount_DIV_CLK_xor<19> (Result<19>)
      FDR:D                     0.102          DIV_CLK_19
     ----------------------------------------
-    Total                      2.028ns (1.449ns logic, 0.579ns route)
-                                       (71.5% logic, 28.5% route)
+    Total                      2.259ns (1.429ns logic, 0.830ns route)
+                                       (63.3% logic, 36.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'DIV_CLK_1'
-  Total number of paths / destination ports: 132 / 127
+  Total number of paths / destination ports: 435 / 206
 -------------------------------------------------------------------------
-Offset:              5.616ns (Levels of Logic = 3)
+Offset:              6.662ns (Levels of Logic = 3)
   Source:            Sw0 (PAD)
-  Destination:       state_machine/dataOut_1_C_1 (FF)
+  Destination:       state_machine/addr_15_63 (FF)
   Destination Clock: DIV_CLK_1 rising
 
-  Data Path: Sw0 to state_machine/dataOut_1_C_1
+  Data Path: Sw0 to state_machine/addr_15_63
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             1   1.222   0.579  Sw0_IBUF (Sw0_IBUF)
-     BUF:I->O            106   0.568   1.998  BUF2 (reset)
-     LUT2:I0->O            2   0.203   0.616  state_machine/Reset_CardSelectData[0]_AND_33_o1 (state_machine/Reset_CardSelectData[0]_AND_33_o)
-     FDC:CLR                   0.430          state_machine/dataOut_0_C_0
+     IBUF:I->O             2   1.222   0.616  Sw0_IBUF (Sw0_IBUF)
+     BUF:I->O             95   0.568   2.092  BUF2 (reset)
+     LUT4:I0->O           64   0.203   1.639  state_machine/state__n0589_inv1 (state_machine/_n0589_inv)
+     FDE:CE                    0.322          state_machine/addr_15_0
     ----------------------------------------
-    Total                      5.616ns (2.423ns logic, 3.193ns route)
-                                       (43.1% logic, 56.9% route)
+    Total                      6.662ns (2.315ns logic, 4.347ns route)
+                                       (34.7% logic, 65.3% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'ClkPort'
   Total number of paths / destination ports: 20 / 20
 -------------------------------------------------------------------------
-Offset:              4.691ns (Levels of Logic = 2)
+Offset:              4.680ns (Levels of Logic = 2)
   Source:            Sw0 (PAD)
   Destination:       DIV_CLK_0 (FF)
   Destination Clock: ClkPort rising
@@ -1089,139 +1126,272 @@ Offset:              4.691ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             1   1.222   0.579  Sw0_IBUF (Sw0_IBUF)
-     BUF:I->O            106   0.568   1.893  BUF2 (reset)
+     IBUF:I->O             2   1.222   0.616  Sw0_IBUF (Sw0_IBUF)
+     BUF:I->O             95   0.568   1.844  BUF2 (reset)
      FDR:R                     0.430          DIV_CLK_0
     ----------------------------------------
-    Total                      4.691ns (2.220ns logic, 2.471ns route)
-                                       (47.3% logic, 52.7% route)
+    Total                      4.680ns (2.220ns logic, 2.460ns route)
+                                       (47.4% logic, 52.6% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'state_machine/Reset_CardSelectData[1]_AND_30_o'
-  Total number of paths / destination ports: 1 / 1
+Timing constraint: Default OFFSET IN BEFORE for Clock 'state_machine/rand_generator/reset_seed[7]_AND_15_o'
+  Total number of paths / destination ports: 15 / 1
 -------------------------------------------------------------------------
-Offset:              5.616ns (Levels of Logic = 3)
-  Source:            Sw0 (PAD)
-  Destination:       state_machine/dataOut_1_LDC (LATCH)
-  Destination Clock: state_machine/Reset_CardSelectData[1]_AND_30_o falling
+Offset:              4.530ns (Levels of Logic = 10)
+  Source:            Sw1 (PAD)
+  Destination:       state_machine/rand_generator/lfsr_7_LDC (LATCH)
+  Destination Clock: state_machine/rand_generator/reset_seed[7]_AND_15_o falling
 
-  Data Path: Sw0 to state_machine/dataOut_1_LDC
+  Data Path: Sw1 to state_machine/rand_generator/lfsr_7_LDC
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             1   1.222   0.579  Sw0_IBUF (Sw0_IBUF)
-     BUF:I->O            106   0.568   1.998  BUF2 (reset)
-     LUT2:I0->O            2   0.203   0.616  state_machine/Reset_CardSelectData[1]_AND_31_o1 (state_machine/Reset_CardSelectData[1]_AND_31_o)
-     LDC:CLR                   0.430          state_machine/dataOut_1_LDC
+     IBUF:I->O             3   1.222   0.755  Sw1_IBUF (Sw1_IBUF)
+     LUT2:I0->O            1   0.203   0.000  state_machine/rand_generator/Madd_seed[7]_counter[7]_add_5_OUT_lut<1> (state_machine/rand_generator/Madd_seed[7]_counter[7]_add_5_OUT_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  state_machine/rand_generator/Madd_seed[7]_counter[7]_add_5_OUT_cy<1> (state_machine/rand_generator/Madd_seed[7]_counter[7]_add_5_OUT_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  state_machine/rand_generator/Madd_seed[7]_counter[7]_add_5_OUT_cy<2> (state_machine/rand_generator/Madd_seed[7]_counter[7]_add_5_OUT_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  state_machine/rand_generator/Madd_seed[7]_counter[7]_add_5_OUT_cy<3> (state_machine/rand_generator/Madd_seed[7]_counter[7]_add_5_OUT_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  state_machine/rand_generator/Madd_seed[7]_counter[7]_add_5_OUT_cy<4> (state_machine/rand_generator/Madd_seed[7]_counter[7]_add_5_OUT_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  state_machine/rand_generator/Madd_seed[7]_counter[7]_add_5_OUT_cy<5> (state_machine/rand_generator/Madd_seed[7]_counter[7]_add_5_OUT_cy<5>)
+     MUXCY:CI->O           0   0.019   0.000  state_machine/rand_generator/Madd_seed[7]_counter[7]_add_5_OUT_cy<6> (state_machine/rand_generator/Madd_seed[7]_counter[7]_add_5_OUT_cy<6>)
+     XORCY:CI->O           3   0.180   0.651  state_machine/rand_generator/Madd_seed[7]_counter[7]_add_5_OUT_xor<7> (state_machine/rand_generator/seed[7]_counter[7]_add_5_OUT<7>)
+     LUT2:I1->O            2   0.205   0.616  state_machine/rand_generator/reset_seed[7]_AND_16_o1 (state_machine/rand_generator/reset_seed[7]_AND_16_o)
+     LDC:CLR                   0.430          state_machine/rand_generator/lfsr_7_LDC
     ----------------------------------------
-    Total                      5.616ns (2.423ns logic, 3.193ns route)
-                                       (43.1% logic, 56.9% route)
+    Total                      4.530ns (2.507ns logic, 2.023ns route)
+                                       (55.3% logic, 44.7% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'state_machine/Reset_CardSelectData[2]_AND_28_o'
+Timing constraint: Default OFFSET IN BEFORE for Clock 'state_machine/rand_generator/reset_seed[7]_AND_29_o'
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
-Offset:              5.616ns (Levels of Logic = 3)
+Offset:              4.185ns (Levels of Logic = 4)
   Source:            Sw0 (PAD)
-  Destination:       state_machine/dataOut_2_LDC (LATCH)
-  Destination Clock: state_machine/Reset_CardSelectData[2]_AND_28_o falling
+  Destination:       state_machine/rand_generator/lfsr_0_LDC (LATCH)
+  Destination Clock: state_machine/rand_generator/reset_seed[7]_AND_29_o falling
 
-  Data Path: Sw0 to state_machine/dataOut_2_LDC
+  Data Path: Sw0 to state_machine/rand_generator/lfsr_0_LDC
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             1   1.222   0.579  Sw0_IBUF (Sw0_IBUF)
-     BUF:I->O            106   0.568   1.998  BUF2 (reset)
-     LUT2:I0->O            2   0.203   0.616  state_machine/Reset_CardSelectData[2]_AND_29_o1 (state_machine/Reset_CardSelectData[2]_AND_29_o)
-     LDC:CLR                   0.430          state_machine/dataOut_2_LDC
+     IBUF:I->O             2   1.222   0.721  Sw0_IBUF (Sw0_IBUF)
+     LUT2:I0->O            1   0.203   0.000  state_machine/rand_generator/Madd_seed[7]_counter[7]_add_5_OUT_lut<0> (state_machine/rand_generator/Madd_seed[7]_counter[7]_add_5_OUT_lut<0>)
+     XORCY:LI->O           3   0.136   0.651  state_machine/rand_generator/Madd_seed[7]_counter[7]_add_5_OUT_xor<0> (state_machine/rand_generator/seed[7]_counter[7]_add_5_OUT<0>)
+     LUT2:I1->O            2   0.205   0.616  state_machine/rand_generator/reset_seed[7]_AND_30_o1 (state_machine/rand_generator/reset_seed[7]_AND_30_o)
+     LDC:CLR                   0.430          state_machine/rand_generator/lfsr_0_LDC
     ----------------------------------------
-    Total                      5.616ns (2.423ns logic, 3.193ns route)
-                                       (43.1% logic, 56.9% route)
+    Total                      4.185ns (2.196ns logic, 1.989ns route)
+                                       (52.5% logic, 47.5% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'state_machine/Reset_CardSelectData[0]_AND_32_o'
-  Total number of paths / destination ports: 1 / 1
+Timing constraint: Default OFFSET IN BEFORE for Clock 'state_machine/rand_generator/reset_seed[7]_AND_27_o'
+  Total number of paths / destination ports: 3 / 1
 -------------------------------------------------------------------------
-Offset:              5.616ns (Levels of Logic = 3)
+Offset:              4.401ns (Levels of Logic = 5)
   Source:            Sw0 (PAD)
-  Destination:       state_machine/dataOut_0_LDC (LATCH)
-  Destination Clock: state_machine/Reset_CardSelectData[0]_AND_32_o falling
+  Destination:       state_machine/rand_generator/lfsr_1_LDC (LATCH)
+  Destination Clock: state_machine/rand_generator/reset_seed[7]_AND_27_o falling
 
-  Data Path: Sw0 to state_machine/dataOut_0_LDC
+  Data Path: Sw0 to state_machine/rand_generator/lfsr_1_LDC
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             1   1.222   0.579  Sw0_IBUF (Sw0_IBUF)
-     BUF:I->O            106   0.568   1.998  BUF2 (reset)
-     LUT2:I0->O            2   0.203   0.616  state_machine/Reset_CardSelectData[0]_AND_33_o1 (state_machine/Reset_CardSelectData[0]_AND_33_o)
-     LDC:CLR                   0.430          state_machine/dataOut_0_LDC
+     IBUF:I->O             2   1.222   0.721  Sw0_IBUF (Sw0_IBUF)
+     LUT2:I0->O            1   0.203   0.000  state_machine/rand_generator/Madd_seed[7]_counter[7]_add_5_OUT_lut<0> (state_machine/rand_generator/Madd_seed[7]_counter[7]_add_5_OUT_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  state_machine/rand_generator/Madd_seed[7]_counter[7]_add_5_OUT_cy<0> (state_machine/rand_generator/Madd_seed[7]_counter[7]_add_5_OUT_cy<0>)
+     XORCY:CI->O           3   0.180   0.651  state_machine/rand_generator/Madd_seed[7]_counter[7]_add_5_OUT_xor<1> (state_machine/rand_generator/seed[7]_counter[7]_add_5_OUT<1>)
+     LUT2:I1->O            2   0.205   0.616  state_machine/rand_generator/reset_seed[7]_AND_28_o1 (state_machine/rand_generator/reset_seed[7]_AND_28_o)
+     LDC:CLR                   0.430          state_machine/rand_generator/lfsr_1_LDC
     ----------------------------------------
-    Total                      5.616ns (2.423ns logic, 3.193ns route)
-                                       (43.1% logic, 56.9% route)
+    Total                      4.401ns (2.412ns logic, 1.989ns route)
+                                       (54.8% logic, 45.2% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'state_machine/Reset_CardSelectData[3]_AND_26_o'
-  Total number of paths / destination ports: 1 / 1
+Timing constraint: Default OFFSET IN BEFORE for Clock 'state_machine/rand_generator/reset_seed[7]_AND_23_o'
+  Total number of paths / destination ports: 7 / 1
 -------------------------------------------------------------------------
-Offset:              5.616ns (Levels of Logic = 3)
-  Source:            Sw0 (PAD)
-  Destination:       state_machine/dataOut_3_LDC (LATCH)
-  Destination Clock: state_machine/Reset_CardSelectData[3]_AND_26_o falling
+Offset:              4.454ns (Levels of Logic = 6)
+  Source:            Sw1 (PAD)
+  Destination:       state_machine/rand_generator/lfsr_3_LDC (LATCH)
+  Destination Clock: state_machine/rand_generator/reset_seed[7]_AND_23_o falling
 
-  Data Path: Sw0 to state_machine/dataOut_3_LDC
+  Data Path: Sw1 to state_machine/rand_generator/lfsr_3_LDC
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             1   1.222   0.579  Sw0_IBUF (Sw0_IBUF)
-     BUF:I->O            106   0.568   1.998  BUF2 (reset)
-     LUT2:I0->O            2   0.203   0.616  state_machine/Reset_CardSelectData[3]_AND_27_o1 (state_machine/Reset_CardSelectData[3]_AND_27_o)
-     LDC:CLR                   0.430          state_machine/dataOut_3_LDC
+     IBUF:I->O             3   1.222   0.755  Sw1_IBUF (Sw1_IBUF)
+     LUT2:I0->O            1   0.203   0.000  state_machine/rand_generator/Madd_seed[7]_counter[7]_add_5_OUT_lut<1> (state_machine/rand_generator/Madd_seed[7]_counter[7]_add_5_OUT_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  state_machine/rand_generator/Madd_seed[7]_counter[7]_add_5_OUT_cy<1> (state_machine/rand_generator/Madd_seed[7]_counter[7]_add_5_OUT_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  state_machine/rand_generator/Madd_seed[7]_counter[7]_add_5_OUT_cy<2> (state_machine/rand_generator/Madd_seed[7]_counter[7]_add_5_OUT_cy<2>)
+     XORCY:CI->O           3   0.180   0.651  state_machine/rand_generator/Madd_seed[7]_counter[7]_add_5_OUT_xor<3> (state_machine/rand_generator/seed[7]_counter[7]_add_5_OUT<3>)
+     LUT2:I1->O            2   0.205   0.616  state_machine/rand_generator/reset_seed[7]_AND_24_o1 (state_machine/rand_generator/reset_seed[7]_AND_24_o)
+     LDC:CLR                   0.430          state_machine/rand_generator/lfsr_3_LDC
     ----------------------------------------
-    Total                      5.616ns (2.423ns logic, 3.193ns route)
-                                       (43.1% logic, 56.9% route)
+    Total                      4.454ns (2.431ns logic, 2.023ns route)
+                                       (54.6% logic, 45.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'state_machine/rand_generator/reset_seed[7]_AND_21_o'
+  Total number of paths / destination ports: 9 / 1
+-------------------------------------------------------------------------
+Offset:              4.473ns (Levels of Logic = 7)
+  Source:            Sw1 (PAD)
+  Destination:       state_machine/rand_generator/lfsr_4_LDC (LATCH)
+  Destination Clock: state_machine/rand_generator/reset_seed[7]_AND_21_o falling
+
+  Data Path: Sw1 to state_machine/rand_generator/lfsr_4_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   1.222   0.755  Sw1_IBUF (Sw1_IBUF)
+     LUT2:I0->O            1   0.203   0.000  state_machine/rand_generator/Madd_seed[7]_counter[7]_add_5_OUT_lut<1> (state_machine/rand_generator/Madd_seed[7]_counter[7]_add_5_OUT_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  state_machine/rand_generator/Madd_seed[7]_counter[7]_add_5_OUT_cy<1> (state_machine/rand_generator/Madd_seed[7]_counter[7]_add_5_OUT_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  state_machine/rand_generator/Madd_seed[7]_counter[7]_add_5_OUT_cy<2> (state_machine/rand_generator/Madd_seed[7]_counter[7]_add_5_OUT_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  state_machine/rand_generator/Madd_seed[7]_counter[7]_add_5_OUT_cy<3> (state_machine/rand_generator/Madd_seed[7]_counter[7]_add_5_OUT_cy<3>)
+     XORCY:CI->O           3   0.180   0.651  state_machine/rand_generator/Madd_seed[7]_counter[7]_add_5_OUT_xor<4> (state_machine/rand_generator/seed[7]_counter[7]_add_5_OUT<4>)
+     LUT2:I1->O            2   0.205   0.616  state_machine/rand_generator/reset_seed[7]_AND_22_o1 (state_machine/rand_generator/reset_seed[7]_AND_22_o)
+     LDC:CLR                   0.430          state_machine/rand_generator/lfsr_4_LDC
+    ----------------------------------------
+    Total                      4.473ns (2.450ns logic, 2.023ns route)
+                                       (54.8% logic, 45.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'state_machine/rand_generator/reset_seed[7]_AND_25_o'
+  Total number of paths / destination ports: 5 / 1
+-------------------------------------------------------------------------
+Offset:              4.435ns (Levels of Logic = 5)
+  Source:            Sw1 (PAD)
+  Destination:       state_machine/rand_generator/lfsr_2_LDC (LATCH)
+  Destination Clock: state_machine/rand_generator/reset_seed[7]_AND_25_o falling
+
+  Data Path: Sw1 to state_machine/rand_generator/lfsr_2_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   1.222   0.755  Sw1_IBUF (Sw1_IBUF)
+     LUT2:I0->O            1   0.203   0.000  state_machine/rand_generator/Madd_seed[7]_counter[7]_add_5_OUT_lut<1> (state_machine/rand_generator/Madd_seed[7]_counter[7]_add_5_OUT_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  state_machine/rand_generator/Madd_seed[7]_counter[7]_add_5_OUT_cy<1> (state_machine/rand_generator/Madd_seed[7]_counter[7]_add_5_OUT_cy<1>)
+     XORCY:CI->O           3   0.180   0.651  state_machine/rand_generator/Madd_seed[7]_counter[7]_add_5_OUT_xor<2> (state_machine/rand_generator/seed[7]_counter[7]_add_5_OUT<2>)
+     LUT2:I1->O            2   0.205   0.616  state_machine/rand_generator/reset_seed[7]_AND_26_o1 (state_machine/rand_generator/reset_seed[7]_AND_26_o)
+     LDC:CLR                   0.430          state_machine/rand_generator/lfsr_2_LDC
+    ----------------------------------------
+    Total                      4.435ns (2.412ns logic, 2.023ns route)
+                                       (54.4% logic, 45.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'state_machine/rand_generator/reset_seed[7]_AND_19_o'
+  Total number of paths / destination ports: 11 / 1
+-------------------------------------------------------------------------
+Offset:              4.492ns (Levels of Logic = 8)
+  Source:            Sw1 (PAD)
+  Destination:       state_machine/rand_generator/lfsr_5_LDC (LATCH)
+  Destination Clock: state_machine/rand_generator/reset_seed[7]_AND_19_o falling
+
+  Data Path: Sw1 to state_machine/rand_generator/lfsr_5_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   1.222   0.755  Sw1_IBUF (Sw1_IBUF)
+     LUT2:I0->O            1   0.203   0.000  state_machine/rand_generator/Madd_seed[7]_counter[7]_add_5_OUT_lut<1> (state_machine/rand_generator/Madd_seed[7]_counter[7]_add_5_OUT_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  state_machine/rand_generator/Madd_seed[7]_counter[7]_add_5_OUT_cy<1> (state_machine/rand_generator/Madd_seed[7]_counter[7]_add_5_OUT_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  state_machine/rand_generator/Madd_seed[7]_counter[7]_add_5_OUT_cy<2> (state_machine/rand_generator/Madd_seed[7]_counter[7]_add_5_OUT_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  state_machine/rand_generator/Madd_seed[7]_counter[7]_add_5_OUT_cy<3> (state_machine/rand_generator/Madd_seed[7]_counter[7]_add_5_OUT_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  state_machine/rand_generator/Madd_seed[7]_counter[7]_add_5_OUT_cy<4> (state_machine/rand_generator/Madd_seed[7]_counter[7]_add_5_OUT_cy<4>)
+     XORCY:CI->O           3   0.180   0.651  state_machine/rand_generator/Madd_seed[7]_counter[7]_add_5_OUT_xor<5> (state_machine/rand_generator/seed[7]_counter[7]_add_5_OUT<5>)
+     LUT2:I1->O            2   0.205   0.616  state_machine/rand_generator/reset_seed[7]_AND_20_o1 (state_machine/rand_generator/reset_seed[7]_AND_20_o)
+     LDC:CLR                   0.430          state_machine/rand_generator/lfsr_5_LDC
+    ----------------------------------------
+    Total                      4.492ns (2.469ns logic, 2.023ns route)
+                                       (55.0% logic, 45.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'state_machine/rand_generator/reset_seed[7]_AND_17_o'
+  Total number of paths / destination ports: 13 / 1
+-------------------------------------------------------------------------
+Offset:              4.511ns (Levels of Logic = 9)
+  Source:            Sw1 (PAD)
+  Destination:       state_machine/rand_generator/lfsr_6_LDC (LATCH)
+  Destination Clock: state_machine/rand_generator/reset_seed[7]_AND_17_o falling
+
+  Data Path: Sw1 to state_machine/rand_generator/lfsr_6_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   1.222   0.755  Sw1_IBUF (Sw1_IBUF)
+     LUT2:I0->O            1   0.203   0.000  state_machine/rand_generator/Madd_seed[7]_counter[7]_add_5_OUT_lut<1> (state_machine/rand_generator/Madd_seed[7]_counter[7]_add_5_OUT_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  state_machine/rand_generator/Madd_seed[7]_counter[7]_add_5_OUT_cy<1> (state_machine/rand_generator/Madd_seed[7]_counter[7]_add_5_OUT_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  state_machine/rand_generator/Madd_seed[7]_counter[7]_add_5_OUT_cy<2> (state_machine/rand_generator/Madd_seed[7]_counter[7]_add_5_OUT_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  state_machine/rand_generator/Madd_seed[7]_counter[7]_add_5_OUT_cy<3> (state_machine/rand_generator/Madd_seed[7]_counter[7]_add_5_OUT_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  state_machine/rand_generator/Madd_seed[7]_counter[7]_add_5_OUT_cy<4> (state_machine/rand_generator/Madd_seed[7]_counter[7]_add_5_OUT_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  state_machine/rand_generator/Madd_seed[7]_counter[7]_add_5_OUT_cy<5> (state_machine/rand_generator/Madd_seed[7]_counter[7]_add_5_OUT_cy<5>)
+     XORCY:CI->O           3   0.180   0.651  state_machine/rand_generator/Madd_seed[7]_counter[7]_add_5_OUT_xor<6> (state_machine/rand_generator/seed[7]_counter[7]_add_5_OUT<6>)
+     LUT2:I1->O            2   0.205   0.616  state_machine/rand_generator/reset_seed[7]_AND_18_o1 (state_machine/rand_generator/reset_seed[7]_AND_18_o)
+     LDC:CLR                   0.430          state_machine/rand_generator/lfsr_6_LDC
+    ----------------------------------------
+    Total                      4.511ns (2.488ns logic, 2.023ns route)
+                                       (55.2% logic, 44.8% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'DIV_CLK_1'
-  Total number of paths / destination ports: 97 / 20
+  Total number of paths / destination ports: 69 / 20
 -------------------------------------------------------------------------
-Offset:              7.401ns (Levels of Logic = 4)
+Offset:              6.544ns (Levels of Logic = 4)
   Source:            card_memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/TRUE_DP.PRIM9.ram (RAM)
-  Destination:       Ca (PAD)
+  Destination:       Cg (PAD)
   Source Clock:      DIV_CLK_1 rising
 
-  Data Path: card_memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/TRUE_DP.PRIM9.ram to Ca
+  Data Path: card_memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/TRUE_DP.PRIM9.ram to Cg
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     RAMB8BWER:CLKBRDCLK->DOBDO0    6   1.850   0.973  U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/TRUE_DP.PRIM9.ram (doutb<0>)
-     end scope: 'card_memory:doutb<0>'
-     LUT5:I2->O            7   0.205   1.021  Mmux_SSD<0>11 (SSD<0>)
-     LUT4:I0->O            1   0.203   0.579  Mram_SSD_CATHODES31 (Ce_OBUF)
-     OBUF:I->O                 2.571          Ce_OBUF (Ce)
+     RAMB8BWER:CLKBRDCLK->DOBDO8   10   1.850   1.201  U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/TRUE_DP.PRIM9.ram (doutb<3>)
+     end scope: 'card_memory:doutb<3>'
+     LUT5:I0->O            1   0.203   0.000  Mram_SSD_CATHODES113_G (N92)
+     MUXF7:I1->O           1   0.140   0.579  Mram_SSD_CATHODES113 (Cg_OBUF)
+     OBUF:I->O                 2.571          Cg_OBUF (Cg)
     ----------------------------------------
-    Total                      7.401ns (4.829ns logic, 2.572ns route)
-                                       (65.2% logic, 34.8% route)
+    Total                      6.544ns (4.764ns logic, 1.780ns route)
+                                       (72.8% logic, 27.2% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'ClkPort'
-  Total number of paths / destination ports: 64 / 11
+  Total number of paths / destination ports: 31 / 9
 -------------------------------------------------------------------------
-Offset:              6.197ns (Levels of Logic = 3)
-  Source:            DIV_CLK_19 (FF)
+Offset:              6.124ns (Levels of Logic = 3)
+  Source:            DIV_CLK_18 (FF)
   Destination:       Ca (PAD)
   Source Clock:      ClkPort rising
 
-  Data Path: DIV_CLK_19 to Ca
+  Data Path: DIV_CLK_18 to Ca
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              9   0.447   1.174  DIV_CLK_19 (DIV_CLK_19)
-     LUT5:I0->O            7   0.203   1.021  Mmux_SSD<3>11 (SSD<3>)
-     LUT4:I0->O            1   0.203   0.579  Mram_SSD_CATHODES21 (Cf_OBUF)
+     FDR:C->Q             12   0.447   1.013  DIV_CLK_18 (DIV_CLK_18)
+     LUT2:I0->O            6   0.203   1.109  Mram_SSD_CATHODES62 (Mram_SSD_CATHODES21)
+     LUT6:I0->O            1   0.203   0.579  Mram_SSD_CATHODES23 (Cf_OBUF)
      OBUF:I->O                 2.571          Cf_OBUF (Cf)
     ----------------------------------------
-    Total                      6.197ns (3.424ns logic, 2.773ns route)
-                                       (55.3% logic, 44.7% route)
+    Total                      6.124ns (3.424ns logic, 2.700ns route)
+                                       (55.9% logic, 44.1% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               5.456ns (Levels of Logic = 3)
+  Source:            Sw1 (PAD)
+  Destination:       An3 (PAD)
+
+  Data Path: Sw1 to An3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   1.222   0.879  Sw1_IBUF (Sw1_IBUF)
+     LUT3:I0->O            1   0.205   0.579  Mmux_An311 (An3_OBUF)
+     OBUF:I->O                 2.571          An3_OBUF (An3)
+    ----------------------------------------
+    Total                      5.456ns (3.998ns logic, 1.458ns route)
+                                       (73.3% logic, 26.7% route)
 
 =========================================================================
 
@@ -1233,23 +1403,28 @@ Clock to Setup on destination clock ClkPort
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-ClkPort        |    2.028|         |         |         |
+ClkPort        |    2.259|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock DIV_CLK_1
-----------------------------------------------+---------+---------+---------+---------+
-                                              | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock                                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
-----------------------------------------------+---------+---------+---------+---------+
-DIV_CLK_1                                     |   12.949|         |         |         |
-row4_col4_MUX_136_o                           |         |    1.464|         |         |
-state_machine/Reset_CardSelectData[0]_AND_32_o|         |    2.797|         |         |
-state_machine/Reset_CardSelectData[1]_AND_30_o|         |    2.797|         |         |
-state_machine/Reset_CardSelectData[2]_AND_28_o|         |    2.797|         |         |
-state_machine/Reset_CardSelectData[3]_AND_26_o|         |    2.797|         |         |
-----------------------------------------------+---------+---------+---------+---------+
+---------------------------------------------------+---------+---------+---------+---------+
+                                                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------------------------------------+---------+---------+---------+---------+
+ClkPort                                            |    1.946|         |         |         |
+DIV_CLK_1                                          |   11.702|         |         |         |
+row4_col4_MUX_279_o                                |         |    1.427|         |         |
+state_machine/rand_generator/reset_seed[7]_AND_15_o|         |    3.924|         |         |
+state_machine/rand_generator/reset_seed[7]_AND_17_o|         |    4.946|         |         |
+state_machine/rand_generator/reset_seed[7]_AND_19_o|         |    3.802|         |         |
+state_machine/rand_generator/reset_seed[7]_AND_21_o|         |    4.636|         |         |
+state_machine/rand_generator/reset_seed[7]_AND_23_o|         |   10.199|         |         |
+state_machine/rand_generator/reset_seed[7]_AND_25_o|         |   10.264|         |         |
+state_machine/rand_generator/reset_seed[7]_AND_27_o|         |   10.873|         |         |
+state_machine/rand_generator/reset_seed[7]_AND_29_o|         |   10.440|         |         |
+---------------------------------------------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock Madd_n0380_cy<0>8
+Clock to Setup on destination clock Madd_n0369_cy<0>8
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
@@ -1257,59 +1432,90 @@ Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 DIV_CLK_1      |    6.462|         |         |         |
 ---------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock row4_col4_MUX_136_o
--------------------+---------+---------+---------+---------+
-                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
--------------------+---------+---------+---------+---------+
-DIV_CLK_1          |         |         |    6.313|         |
-row4_col4_MUX_136_o|         |         |    1.699|         |
--------------------+---------+---------+---------+---------+
-
-Clock to Setup on destination clock state_machine/Reset_CardSelectData[0]_AND_32_o
+Clock to Setup on destination clock row4_col4_MUX_279_o
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-DIV_CLK_1      |         |         |    3.846|         |
+DIV_CLK_1      |         |         |    6.490|         |
 ---------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock state_machine/Reset_CardSelectData[1]_AND_30_o
+Clock to Setup on destination clock state_machine/rand_generator/reset_seed[7]_AND_15_o
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-DIV_CLK_1      |         |         |    3.846|         |
+DIV_CLK_1      |         |         |    3.638|         |
 ---------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock state_machine/Reset_CardSelectData[2]_AND_28_o
+Clock to Setup on destination clock state_machine/rand_generator/reset_seed[7]_AND_17_o
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-DIV_CLK_1      |         |         |    3.846|         |
+DIV_CLK_1      |         |         |    3.619|         |
 ---------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock state_machine/Reset_CardSelectData[3]_AND_26_o
+Clock to Setup on destination clock state_machine/rand_generator/reset_seed[7]_AND_19_o
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-DIV_CLK_1      |         |         |    3.846|         |
+DIV_CLK_1      |         |         |    3.600|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock state_machine/rand_generator/reset_seed[7]_AND_21_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+DIV_CLK_1      |         |         |    3.581|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock state_machine/rand_generator/reset_seed[7]_AND_23_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+DIV_CLK_1      |         |         |    3.562|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock state_machine/rand_generator/reset_seed[7]_AND_25_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+DIV_CLK_1      |         |         |    3.543|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock state_machine/rand_generator/reset_seed[7]_AND_27_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+DIV_CLK_1      |         |         |    3.524|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock state_machine/rand_generator/reset_seed[7]_AND_29_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+DIV_CLK_1      |         |         |    3.308|         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 14.00 secs
-Total CPU time to Xst completion: 12.67 secs
+Total REAL time to Xst completion: 49.00 secs
+Total CPU time to Xst completion: 46.50 secs
  
 --> 
 
 
-Total memory usage is 414152 kilobytes
+Total memory usage is 418296 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   99 (   0 filtered)
-Number of infos    :   30 (   0 filtered)
+Number of warnings :  102 (   0 filtered)
+Number of infos    :   18 (   0 filtered)
 

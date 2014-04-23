@@ -84,16 +84,16 @@ async_rom_9 mem9 (
 always @ (digit, data1, data2, data3, data4, data5, data6, data7, data8, data9)
 begin
 	case(digit)
-		4'b0000: temp = data1; //blank
-		4'b0001: temp = data2;
-		4'b0010: temp = data3;
-		4'b0011: temp = data4;
-		4'b0100: temp = data5;
-		4'b0101: temp = data6;
-		4'b0110: temp = data7;
-		4'b0111: temp = data8;
-		4'b1000: temp = data9;
-		default: temp = 127'd0;
+		4'b0000: temp <= data1; //blank
+		4'b0001: temp <= data2;
+		4'b0010: temp <= data3;
+		4'b0011: temp <= data4;
+		4'b0100: temp <= data5;
+		4'b0101: temp <= data6;
+		4'b0110: temp <= data7;
+		4'b0111: temp <= data8;
+		4'b1000: temp <= data9;
+		default: temp <= 127'd0;
 	endcase
 end
 

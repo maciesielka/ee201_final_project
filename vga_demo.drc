@@ -1,32 +1,48 @@
 Release 14.7 Drc P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Sat Apr 19 19:13:55 2014
+Tue Apr 22 21:23:59 2014
 
 drc -z vga_demo.ncd vga_demo.pcf
 
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   state_machine/Reset_CardSelectData[3]_AND_26_o is sourced by a combinatorial
-   pin. This is not good design practice. Use the CE pin to control the loading
-   of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net row4_col4_MUX_136_o is
+   state_machine/rand_generator/reset_seed[7]_AND_19_o is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   state_machine/rand_generator/reset_seed[7]_AND_29_o is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   state_machine/rand_generator/reset_seed[7]_AND_21_o is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   state_machine/rand_generator/reset_seed[7]_AND_23_o is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   state_machine/rand_generator/reset_seed[7]_AND_15_o is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   state_machine/rand_generator/reset_seed[7]_AND_25_o is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   state_machine/rand_generator/reset_seed[7]_AND_17_o is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   state_machine/rand_generator/reset_seed[7]_AND_27_o is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net row4_col4_MUX_279_o is
    sourced by a combinatorial pin. This is not good design practice. Use the CE
    pin to control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   state_machine/Reset_CardSelectData[0]_AND_32_o is sourced by a combinatorial
-   pin. This is not good design practice. Use the CE pin to control the loading
-   of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   state_machine/Reset_CardSelectData[1]_AND_30_o is sourced by a combinatorial
-   pin. This is not good design practice. Use the CE pin to control the loading
-   of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   state_machine/Reset_CardSelectData[2]_AND_28_o is sourced by a combinatorial
-   pin. This is not good design practice. Use the CE pin to control the loading
-   of data into the flip-flop.
 WARNING:PhysDesignRules:2410 - This design is using one or more 9K Block RAMs
    (RAMB8BWER).  9K Block RAM initialization data, both user defined and
    default, may be incorrect and should not be used.  For more information,
    please reference Xilinx Answer Record 39999.
-DRC detected 0 errors and 6 warnings.  Please see the previously displayed
+DRC detected 0 errors and 10 warnings.  Please see the previously displayed
 individual error or warning messages for more details.

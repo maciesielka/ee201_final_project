@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Sat Apr 19 19:13:29 2014
+// Written by: Map P.20131013 on Tue Apr 22 21:22:45 2014
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -25,6 +25,12 @@ COMP "An2" LOCATE = SITE "P18" LEVEL 1;
 COMP "An3" LOCATE = SITE "P17" LEVEL 1;
 COMP "Sw0" LOCATE = SITE "T10" LEVEL 1;
 COMP "Sw1" LOCATE = SITE "T9" LEVEL 1;
+COMP "Sw2" LOCATE = SITE "V9" LEVEL 1;
+COMP "Sw3" LOCATE = SITE "M8" LEVEL 1;
+COMP "Sw4" LOCATE = SITE "N8" LEVEL 1;
+COMP "Sw5" LOCATE = SITE "U8" LEVEL 1;
+COMP "Sw6" LOCATE = SITE "V8" LEVEL 1;
+COMP "Sw7" LOCATE = SITE "T5" LEVEL 1;
 COMP "ClkPort" LOCATE = SITE "V10" LEVEL 1;
 COMP "BtnC" LOCATE = SITE "B8" LEVEL 1;
 COMP "BtnD" LOCATE = SITE "C9" LEVEL 1;
@@ -46,7 +52,7 @@ TIMEGRP sys_clk_pin = BEL "DIV_CLK_0" BEL "DIV_CLK_1" BEL "DIV_CLK_2" BEL
         "DIV_CLK_7" BEL "DIV_CLK_8" BEL "DIV_CLK_9" BEL "DIV_CLK_10" BEL
         "DIV_CLK_11" BEL "DIV_CLK_12" BEL "DIV_CLK_13" BEL "DIV_CLK_14" BEL
         "DIV_CLK_15" BEL "DIV_CLK_16" BEL "DIV_CLK_17" BEL "DIV_CLK_18" BEL
-        "DIV_CLK_19" BEL "ClkPort_BUFGP/BUFG";
+        "DIV_CLK_19" BEL "BUF1/BUFG";
 TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
 SCHEMATIC END;
 
