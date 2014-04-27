@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
-// Engineer: 
+// Engineer: Michael Ciesielka & Henry Lau
 // 
 // Create Date:    17:25:30 04/10/2014 
 // Design Name: 
@@ -29,23 +29,26 @@ input [5:0] CardSelectData;
 input [3:0] CardSelectLoc;
 input [7:0] seed;
 
-wire QInit, QRandomize, QWrite, QS1C, QF1C, QS2C, QF2C, QRemCards, QHideCards, QWin;
 output WriteEnable;
 output [3:0] dataLoc;
 output [5:0] dataOut;
+output [3:0] numMatches;
+output [9:0] state;
+
+wire QInit, QRandomize, QWrite, QS1C, QF1C, QS2C, QF2C, QRemCards, QHideCards, QWin;
+
 reg [3:0] dataLoc;
 reg [5:0] dataOut;
-output [9:0] state;
 reg [9:0] state;
+
 assign {QWin, QHideCards, QRemCards, QF2C, QS2C, QF1C, QS1C, QWrite, QRandomize, QInit} = state;
 
+//placeholders for the selected cards' data
 reg [3:0] CARD1;
 reg [3:0] CARD1_loc;
 reg [3:0] CARD2;
 reg [3:0] CARD2_loc;
-
-reg [3:0] NUM_MATCHES;
-output [3:0] numMatches;
+reg [3:0] numMatches;
 reg[1:0] state_counter;
 reg[24:0] clock_counter;
 
@@ -66,15 +69,13 @@ localparam
 wire [15:0] random;
 reg flag1, flag2, flag3, flag4;
 reg done_random;
+//4-bit wide array of 16 addresses -> for random numbers
 reg [3:0] addr [0:15];
-reg [3:0] nums_generated;
-reg [3:0] nums_written;
-reg [3:0] address_count;
-reg [1:0] temp_count;
-integer i;
-reg [63:0] random_numbers;
-reg seed_enable;
-//wire random_enable = ~flag1 || ~flag2 || ~flag3 || ~flag4;
+reg [3:0] nums_written; // the card number we're writing to the RAM
+reg [3:0] address_count; //the number of addresses we've filled in the array
+reg [1:0] temp_count; //counter for writing
+
+//pseudo-random number generator
 lsfr_8bit_rand_num_gen    rand_generator
 		  (.clk(Clk),
 			.reset(QInit),
@@ -82,21 +83,25 @@ lsfr_8bit_rand_num_gen    rand_generator
 			.seed(seed), 
 			.lfsr(random),
 			.lsfr_done());
+			
+//parse 4-pseudorandom numbers from the 16-bit number
 wire [3:0] temp_random1 = {random[15], random[11], random[7], random[3]};
 wire [3:0] temp_random2 = {random[14], random[10], random[6], random[2]};
 wire [3:0] temp_random3 = {random[13], random[9], random[5], random[1]};
 wire [3:0] temp_random4 = {random[12], random[8], random[4], random[0]};
 
+//main state machine
 always @ (posedge Clk, posedge Reset)
 	begin
 		if(Reset)
 			begin
 				state <= INIT;
+				
+				//prevent recirculating muxes
 				CARD1 <= 4'bXXX;
 				CARD2 <= 4'bXXX;
-				NUM_MATCHES <= 4'bXXXX;
+				numMatches <= 4'bXXXX;
 				state_counter <= 2'bXX;
-				NUM_MATCHES <= 4'b0000;
 				state_counter <= 2'bXX;
 				clock_counter <= 24'dX;
 				nums_written <= 4'bXXXX;
@@ -111,9 +116,10 @@ always @ (posedge Clk, posedge Reset)
 			case(state)
 				INIT:
 					begin
+						//intialization
 						CARD1 <= 4'b0000;
 						CARD2 <= 4'b0000;
-						NUM_MATCHES <= 4'b0000;
+						numMatches <= 4'b0000;
 						state_counter <= 2'b00;
 						clock_counter <= 24'd0;
 						nums_written <= 4'b0000;
@@ -125,19 +131,22 @@ always @ (posedge Clk, posedge Reset)
 						if(Start)
 							state <= RANDOMIZE;
 					end
-				RANDOMIZE:
-					begin
+				RANDOMIZE: //this state randomizes and deposits numbers
+					begin: GENERATE_ALL_NUMBERS
 						if(!done_random)
-						begin: CHECK_IF_RANDOM_EXISTS
+						begin: KEEP_GENERATING_RANDOMS
 							integer i;
+							//set flags for the four random numbers
 							flag1 = 0;
 							flag2 = 0;
 							flag3 = 0;
 							flag4 = 0;
-							//$display("doing my best");
+							
+							//address_count is how many numbers are in the array
 							for(i = 0; i < address_count; i = i+1)
 							begin
-								//$display("Addr[i]: %d\tRandom[3:0]: %d", addr[i], random[3:0]);
+								//if any random number already exists in the array
+								//we can't use it
 								if(addr[i] == temp_random1)
 									flag1 = 1;
 								if(addr[i] == temp_random2)
@@ -148,6 +157,7 @@ always @ (posedge Clk, posedge Reset)
 									flag4 = 1;
 							end
 							
+							//fill in one address appropriately
 							if(!flag1)
 							begin
 								addr[address_count] <= temp_random1;
@@ -175,10 +185,12 @@ always @ (posedge Clk, posedge Reset)
 							end
 						end
 						
+						//if we've generated all addresses 4'b0000-4'b1111
 						if(done_random)
 						begin
 							state <= WRITE;
 							address_count <= 4'b0001;
+							
 							//setup for first write
 							dataLoc <= addr[0];
 							dataOut <= {2'b01, 4'b0001};
@@ -189,14 +201,19 @@ always @ (posedge Clk, posedge Reset)
 					end
 				WRITE:
 					begin
+						//we enter the state ready to perform this the 0th operation,
+						//so address_count is already set to 4'b0001
+						//if we wrap around, writing has finished
 						if(address_count == 4'b0000)
 							state <= S1C;
 						
 						address_count <= address_count + 1;
 						dataLoc <= addr[address_count];
-						dataOut <= {2'b01, nums_written};
-						//dataOut <= {2'b01, seed[7:4]};
+						dataOut <= {2'b01, nums_written}; //cards are initially hidden
 						temp_count <= temp_count + 1;
+						
+						//allocate 2 instances of each value 2-9 to 
+						//the randomly generated addresses in the array
 						if(temp_count == 2'b01)
 							begin
 								temp_count <= 2'b00;
@@ -204,35 +221,39 @@ always @ (posedge Clk, posedge Reset)
 							end
 					end
 				S1C:
-					begin
+					begin: SHOW_1ST_CARD
 						if(Select)
 						begin
 							state <= F1C;
 							CARD1 <= CardSelectData[3:0];
 							CARD1_loc <= CardSelectLoc;
+							//prepare to unflip the card on next clock
 							dataOut <= {2'b00, CardSelectData[3:0]};
 							dataLoc <= CardSelectLoc;
 						end
 					end
 				F1C:
-					begin
+					begin: FLIP_1ST_CARD
 						if(!Select)
 							state <= S2C;
 					end
 				S2C:
-					begin
+					begin: SELECT_2ND_CARD
 						if(Select)
 						begin
 							state <= F2C;
 							CARD2 <= CardSelectData[3:0];
 							CARD2_loc <= CardSelectLoc;
+							//prepare the card to unflip on next clock
 							dataOut <= {2'b00, CardSelectData[3:0]};
 							dataLoc <= CardSelectLoc;
 						end
 					end
 				F2C:
-					begin
+					begin: FLIP_2ND_CARD
 						clock_counter <= clock_counter+1;
+						//create a delay in flipping the card
+						//so the user can see what they've selected
 						if(clock_counter[24])
 						begin
 							clock_counter <= 24'd0;
@@ -257,18 +278,20 @@ always @ (posedge Clk, posedge Reset)
 						
 						dataOut <= {2'b10, CARD2};
 						dataLoc <= CARD2_loc;
+						
+						//requires two clocks -- removes two cards
 						state_counter <= state_counter + 1;
 						
 						if(state_counter == 2'b01)
 						begin
-							NUM_MATCHES <= NUM_MATCHES + 1;
-							if(NUM_MATCHES == num_matches-1)
-								begin
+							numMatches <= numMatches + 1;
+							if(numMatches == num_matches-1)
+								begin //if all cards are matched
 									state <= WIN;
 									state_counter <= 2'b00;
 								end
 							else 
-								begin 
+								begin //if the game is still on
 									state_counter <= 2'b00;
 									state <= S1C;
 								end
@@ -279,6 +302,7 @@ always @ (posedge Clk, posedge Reset)
 						dataOut <= {2'b01, CARD2};
 						dataLoc <= CARD2_loc;
 						state_counter <= state_counter + 1;
+						//requires two clocks to hide two cards
 						if(state_counter == 2'b01)
 							begin
 								state <= S1C;
@@ -299,5 +323,4 @@ always @ (posedge Clk, posedge Reset)
 
 
 	assign WriteEnable = QWrite || QF1C || QF2C || QHideCards || QRemCards;
-	assign numMatches = NUM_MATCHES;
 endmodule

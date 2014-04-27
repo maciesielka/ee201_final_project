@@ -1,0 +1,198 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -intstyle ise -v 3 -s 3 -n
+3 -fastpaths -xml memory_game.twx memory_game.ncd -o memory_game.twr
+memory_game.pcf
+
+Design file:              memory_game.ncd
+Physical constraint file: memory_game.pcf
+Device,package,speed:     xc6slx16,csg324,C,-3 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock ClkPort to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+An0         |         9.562(R)|      SLOW  |         5.118(R)|      FAST  |board_clk         |   0.000|
+An3         |        10.348(R)|      SLOW  |         5.625(R)|      FAST  |board_clk         |   0.000|
+Ca          |        12.222(R)|      SLOW  |         5.155(R)|      FAST  |board_clk         |   0.000|
+Cb          |        12.259(R)|      SLOW  |         4.862(R)|      FAST  |board_clk         |   0.000|
+Cc          |        12.043(R)|      SLOW  |         5.710(R)|      FAST  |board_clk         |   0.000|
+Cd          |        11.814(R)|      SLOW  |         4.913(R)|      FAST  |board_clk         |   0.000|
+Ce          |        11.879(R)|      SLOW  |         4.837(R)|      FAST  |board_clk         |   0.000|
+Cf          |        12.084(R)|      SLOW  |         5.788(R)|      FAST  |board_clk         |   0.000|
+Cg          |        12.322(R)|      SLOW  |         5.137(R)|      FAST  |board_clk         |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock to Setup on destination clock ClkPort
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+ClkPort        |    1.772|         |         |         |
+Sw0            |    2.859|    2.859|         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Sw0
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+Sw0            |         |         |    1.107|    1.107|
+Sw1            |         |         |    0.684|    0.684|
+Sw2            |         |         |    0.326|    0.326|
+Sw3            |         |         |    0.121|    0.121|
+Sw4            |         |         |    0.350|    0.350|
+Sw5            |         |         |    0.856|    0.856|
+Sw6            |         |         |   -0.120|   -0.120|
+Sw7            |         |         |    0.132|    0.132|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Sw1
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+Sw0            |         |         |    1.513|    1.513|
+Sw1            |         |         |    1.090|    1.090|
+Sw2            |         |         |    0.732|    0.732|
+Sw3            |         |         |    0.527|    0.527|
+Sw4            |         |         |    0.756|    0.756|
+Sw5            |         |         |    1.262|    1.262|
+Sw6            |         |         |    0.286|    0.286|
+Sw7            |         |         |    0.538|    0.538|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Sw2
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+Sw0            |         |         |    1.853|    1.853|
+Sw1            |         |         |    1.430|    1.430|
+Sw2            |         |         |    1.072|    1.072|
+Sw3            |         |         |    0.867|    0.867|
+Sw4            |         |         |    1.096|    1.096|
+Sw5            |         |         |    1.602|    1.602|
+Sw6            |         |         |    0.626|    0.626|
+Sw7            |         |         |    0.878|    0.878|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Sw3
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+Sw0            |         |         |    2.046|    2.046|
+Sw1            |         |         |    1.623|    1.623|
+Sw2            |         |         |    1.265|    1.265|
+Sw3            |         |         |    1.060|    1.060|
+Sw4            |         |         |    1.289|    1.289|
+Sw5            |         |         |    1.795|    1.795|
+Sw6            |         |         |    0.819|    0.819|
+Sw7            |         |         |    1.071|    1.071|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Sw4
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+Sw0            |         |         |    1.828|    1.828|
+Sw1            |         |         |    1.405|    1.405|
+Sw2            |         |         |    1.047|    1.047|
+Sw3            |         |         |    0.842|    0.842|
+Sw4            |         |         |    1.071|    1.071|
+Sw5            |         |         |    1.577|    1.577|
+Sw6            |         |         |    0.601|    0.601|
+Sw7            |         |         |    0.828|    0.828|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Sw5
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+Sw0            |         |         |    1.340|    1.340|
+Sw1            |         |         |    0.917|    0.917|
+Sw2            |         |         |    0.559|    0.559|
+Sw3            |         |         |    0.354|    0.354|
+Sw4            |         |         |    0.583|    0.583|
+Sw5            |         |         |    1.089|    1.089|
+Sw6            |         |         |    0.113|    0.113|
+Sw7            |         |         |    0.328|    0.328|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Sw6
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+Sw0            |         |         |    2.276|    2.276|
+Sw1            |         |         |    1.853|    1.853|
+Sw2            |         |         |    1.495|    1.495|
+Sw3            |         |         |    1.290|    1.290|
+Sw4            |         |         |    1.519|    1.519|
+Sw5            |         |         |    2.025|    2.025|
+Sw6            |         |         |    1.049|    1.049|
+Sw7            |         |         |    1.255|    1.255|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Sw7
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+Sw0            |         |         |    1.836|    1.836|
+Sw1            |         |         |    1.413|    1.413|
+Sw2            |         |         |    1.055|    1.055|
+Sw3            |         |         |    0.850|    0.850|
+Sw4            |         |         |    1.106|    1.106|
+Sw5            |         |         |    1.624|    1.624|
+Sw6            |         |         |    0.658|    0.658|
+Sw7            |         |         |    0.962|    0.962|
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+Sw1            |An3            |    7.758|
+---------------+---------------+---------+
+
+
+Analysis completed Sat Apr 26 19:15:03 2014 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 418 MB
+
+
+

@@ -35,7 +35,7 @@ module gameplay_sm_tb2;
 	reg [7:0] seed;
 
 	// Outputs
-	wire [7:0] state;
+	wire [9:0] state;
 	wire WriteEnable;
 	wire [3:0] CARD1;
 	wire [3:0] CARD2;

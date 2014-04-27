@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-ee201-vm::  Wed Apr 23 00:20:18 2014
+ee201-vm::  Sat Apr 26 17:29:57 2014
 
 par -w -intstyle ise -ol high -mt off vga_demo_map.ncd vga_demo.ncd
 vga_demo.pcf 
@@ -27,11 +27,11 @@ Slice Logic Utilization:
     Number used as Latches:                     20
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                      1,662 out of   9,112   18%
-    Number used as logic:                    1,653 out of   9,112   18%
-      Number using O6 output only:           1,348
+  Number of Slice LUTs:                      1,657 out of   9,112   18%
+    Number used as logic:                    1,648 out of   9,112   18%
+      Number using O6 output only:           1,337
       Number using O5 output only:             167
-      Number using O5 and O6:                  138
+      Number using O5 and O6:                  144
       Number used as ROM:                        0
     Number used as Memory:                       0 out of   2,176    0%
     Number used exclusively as route-thrus:      9
@@ -40,12 +40,12 @@ Slice Logic Utilization:
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                   595 out of   2,278   26%
+  Number of occupied Slices:                   668 out of   2,278   29%
   Number of MUXCYs used:                       304 out of   4,556    6%
-  Number of LUT Flip Flop pairs used:        1,678
-    Number with an unused Flip Flop:         1,249 out of   1,678   74%
-    Number with an unused LUT:                  16 out of   1,678    1%
-    Number of fully used LUT-FF pairs:         413 out of   1,678   24%
+  Number of LUT Flip Flop pairs used:        1,683
+    Number with an unused Flip Flop:         1,255 out of   1,683   74%
+    Number with an unused LUT:                  26 out of   1,683    1%
+    Number of fully used LUT-FF pairs:         402 out of   1,683   23%
     Number of slice register sites lost
       to control set restrictions:               0 out of  18,224    0%
 
@@ -88,35 +88,35 @@ Specific Feature Utilization:
 Overall effort level (-ol):   High 
 Router effort level (-rl):    High 
 
-Starting initial Timing Analysis.  REAL time: 9 secs 
-Finished initial Timing Analysis.  REAL time: 9 secs 
+Starting initial Timing Analysis.  REAL time: 4 secs 
+Finished initial Timing Analysis.  REAL time: 4 secs 
 
 Starting Router
 
 
-Phase  1  : 9671 unrouted;      REAL time: 9 secs 
+Phase  1  : 9667 unrouted;      REAL time: 4 secs 
 
-Phase  2  : 8388 unrouted;      REAL time: 11 secs 
+Phase  2  : 8391 unrouted;      REAL time: 5 secs 
 
-Phase  3  : 3740 unrouted;      REAL time: 15 secs 
+Phase  3  : 3884 unrouted;      REAL time: 6 secs 
 
-Phase  4  : 3740 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 17 secs 
+Phase  4  : 3884 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 7 secs 
 
 Updating file: vga_demo.ncd with current fully routed design.
 
-Phase  5  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 22 secs 
+Phase  5  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 11 secs 
 
-Phase  6  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 22 secs 
+Phase  6  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 11 secs 
 
-Phase  7  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 22 secs 
+Phase  7  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 11 secs 
 
-Phase  8  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 22 secs 
+Phase  8  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 11 secs 
 
-Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 22 secs 
+Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 11 secs 
 
-Phase 10  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 22 secs 
-Total REAL time to Router completion: 22 secs 
-Total CPU time to Router completion: 22 secs 
+Phase 10  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 11 secs 
+Total REAL time to Router completion: 11 secs 
+Total CPU time to Router completion: 11 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -134,75 +134,75 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
-|      DIV_CLK_1_BUFG |  BUFGMUX_X2Y3| No   |  174 |  0.058     |  0.904      |
+|      DIV_CLK_1_BUFG |  BUFGMUX_X2Y3| No   |  161 |  0.055     |  0.902      |
 +---------------------+--------------+------+------+------------+-------------+
-|           board_clk | BUFGMUX_X3Y13| No   |    5 |  0.008     |  0.884      |
+|           board_clk | BUFGMUX_X3Y13| No   |    5 |  0.005     |  0.878      |
 +---------------------+--------------+------+------+------------+-------------+
-| row4_col4_MUX_394_o |         Local|      |    1 |  0.000     |  0.915      |
-+---------------------+--------------+------+------+------------+-------------+
-|state_machine/rand_g |              |      |      |            |             |
-|enerator/reset_count |              |      |      |            |             |
-|     er[15]_AND_19_o |         Local|      |    2 |  0.000     |  0.867      |
+| row4_col4_MUX_394_o |         Local|      |    1 |  0.000     |  0.526      |
 +---------------------+--------------+------+------+------------+-------------+
 |state_machine/rand_g |              |      |      |            |             |
 |enerator/reset_count |              |      |      |            |             |
-|     er[15]_AND_29_o |         Local|      |    2 |  0.000     |  0.683      |
+|     er[15]_AND_19_o |         Local|      |    2 |  0.000     |  0.477      |
 +---------------------+--------------+------+------+------------+-------------+
 |state_machine/rand_g |              |      |      |            |             |
 |enerator/reset_count |              |      |      |            |             |
-|     er[15]_AND_21_o |         Local|      |    2 |  0.000     |  0.502      |
+|     er[15]_AND_29_o |         Local|      |    2 |  0.000     |  0.549      |
 +---------------------+--------------+------+------+------------+-------------+
 |state_machine/rand_g |              |      |      |            |             |
 |enerator/reset_count |              |      |      |            |             |
-|     er[15]_AND_39_o |         Local|      |    2 |  0.000     |  0.663      |
+|     er[15]_AND_21_o |         Local|      |    2 |  0.000     |  0.471      |
 +---------------------+--------------+------+------+------------+-------------+
 |state_machine/rand_g |              |      |      |            |             |
 |enerator/reset_count |              |      |      |            |             |
-|     er[15]_AND_31_o |         Local|      |    2 |  0.000     |  0.293      |
+|     er[15]_AND_39_o |         Local|      |    2 |  0.000     |  0.683      |
 +---------------------+--------------+------+------+------------+-------------+
 |state_machine/rand_g |              |      |      |            |             |
 |enerator/reset_count |              |      |      |            |             |
-|     er[15]_AND_23_o |         Local|      |    2 |  0.000     |  0.758      |
+|     er[15]_AND_31_o |         Local|      |    2 |  0.000     |  0.310      |
 +---------------------+--------------+------+------+------------+-------------+
 |state_machine/rand_g |              |      |      |            |             |
 |enerator/reset_count |              |      |      |            |             |
-|     er[15]_AND_15_o |         Local|      |    2 |  0.000     |  0.929      |
+|     er[15]_AND_23_o |         Local|      |    2 |  0.000     |  0.302      |
 +---------------------+--------------+------+------+------------+-------------+
 |state_machine/rand_g |              |      |      |            |             |
 |enerator/reset_count |              |      |      |            |             |
-|     er[15]_AND_41_o |         Local|      |    2 |  0.000     |  0.750      |
+|     er[15]_AND_15_o |         Local|      |    2 |  0.000     |  0.302      |
 +---------------------+--------------+------+------+------------+-------------+
 |state_machine/rand_g |              |      |      |            |             |
 |enerator/reset_count |              |      |      |            |             |
-|     er[15]_AND_33_o |         Local|      |    2 |  0.000     |  0.496      |
+|     er[15]_AND_41_o |         Local|      |    2 |  0.000     |  0.552      |
 +---------------------+--------------+------+------+------------+-------------+
 |state_machine/rand_g |              |      |      |            |             |
 |enerator/reset_count |              |      |      |            |             |
-|     er[15]_AND_25_o |         Local|      |    2 |  0.000     |  0.521      |
+|     er[15]_AND_33_o |         Local|      |    2 |  0.000     |  0.315      |
 +---------------------+--------------+------+------+------------+-------------+
 |state_machine/rand_g |              |      |      |            |             |
 |enerator/reset_count |              |      |      |            |             |
-|     er[15]_AND_17_o |         Local|      |    2 |  0.000     |  0.502      |
+|     er[15]_AND_25_o |         Local|      |    2 |  0.000     |  0.490      |
 +---------------------+--------------+------+------+------------+-------------+
 |state_machine/rand_g |              |      |      |            |             |
 |enerator/reset_count |              |      |      |            |             |
-|     er[15]_AND_43_o |         Local|      |    2 |  0.000     |  0.289      |
+|     er[15]_AND_17_o |         Local|      |    2 |  0.000     |  0.496      |
 +---------------------+--------------+------+------+------------+-------------+
 |state_machine/rand_g |              |      |      |            |             |
 |enerator/reset_count |              |      |      |            |             |
-|     er[15]_AND_35_o |         Local|      |    2 |  0.000     |  0.521      |
+|     er[15]_AND_43_o |         Local|      |    2 |  0.000     |  0.314      |
 +---------------------+--------------+------+------+------------+-------------+
 |state_machine/rand_g |              |      |      |            |             |
 |enerator/reset_count |              |      |      |            |             |
-|     er[15]_AND_27_o |         Local|      |    2 |  0.000     |  0.310      |
+|     er[15]_AND_35_o |         Local|      |    2 |  0.000     |  0.505      |
 +---------------------+--------------+------+------+------------+-------------+
 |state_machine/rand_g |              |      |      |            |             |
 |enerator/reset_count |              |      |      |            |             |
-|     er[15]_AND_45_o |         Local|      |    2 |  0.000     |  0.482      |
+|     er[15]_AND_27_o |         Local|      |    2 |  0.000     |  0.502      |
 +---------------------+--------------+------+------+------------+-------------+
 |state_machine/rand_g |              |      |      |            |             |
 |enerator/reset_count |              |      |      |            |             |
-|     er[15]_AND_37_o |         Local|      |    2 |  0.000     |  0.629      |
+|     er[15]_AND_45_o |         Local|      |    2 |  0.000     |  0.496      |
++---------------------+--------------+------+------+------------+-------------+
+|state_machine/rand_g |              |      |      |            |             |
+|enerator/reset_count |              |      |      |            |             |
+|     er[15]_AND_37_o |         Local|      |    2 |  0.000     |  0.521      |
 +---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing
@@ -222,7 +222,7 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_ | SETUP       |     8.243ns|     1.757ns|       0|           0
+  TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_ | SETUP       |     8.148ns|     1.852ns|       0|           0
   pin" 100 MHz HIGH 50%                     | HOLD        |     0.462ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
@@ -234,10 +234,10 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-Total REAL time to PAR completion: 24 secs 
-Total CPU time to PAR completion: 23 secs 
+Total REAL time to PAR completion: 12 secs 
+Total CPU time to PAR completion: 12 secs 
 
-Peak Memory Usage:  631 MB
+Peak Memory Usage:  632 MB
 
 Placer: Placement generated during map.
 Routing: Completed - No errors found.

@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> 
 Reading design: vga_demo.prj
@@ -141,7 +141,7 @@ Analyzing Verilog file "/home/student/Desktop/EE201/ee201_final_project/gameplay
 Parsing module <gameplay_sm>.
 Analyzing Verilog file "/home/student/Desktop/EE201/ee201_final_project/ee201_debounce_DPB_SCEN_CCEN_MCEN.v" into library work
 Parsing module <ee201_debouncer>.
-Analyzing Verilog file "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" into library work
+Analyzing Verilog file "/home/student/Desktop/EE201/ee201_final_project/memory_game.v" into library work
 Parsing module <vga_demo>.
 
 =========================================================================
@@ -153,8 +153,8 @@ Elaborating module <vga_demo>.
 Elaborating module <BUFGP>.
 
 Elaborating module <BUF>.
-WARNING:HDLCompiler:1127 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" Line 27: Assignment to start ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" Line 40: Assignment to btn_clk ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/student/Desktop/EE201/ee201_final_project/memory_game.v" Line 27: Assignment to start ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/student/Desktop/EE201/ee201_final_project/memory_game.v" Line 40: Assignment to btn_clk ignored, since the identifier is never used
 
 Elaborating module <hvsync_generator>.
 WARNING:HDLCompiler:413 - "/home/student/Desktop/EE201/ee201_final_project/hvsync_generator.v" Line 34: Result of 11-bit expression is truncated to fit in 10-bit target.
@@ -170,30 +170,29 @@ WARNING:HDLCompiler:413 - "/home/student/Desktop/EE201/ee201_final_project/ee201
 WARNING:HDLCompiler:413 - "/home/student/Desktop/EE201/ee201_final_project/ee201_debounce_DPB_SCEN_CCEN_MCEN.v" Line 236: Result of 24-bit expression is truncated to fit in 23-bit target.
 
 Elaborating module <gameplay_sm>.
-WARNING:HDLCompiler:1127 - "/home/student/Desktop/EE201/ee201_final_project/gameplay_sm.v" Line 40: Assignment to QS1C ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/student/Desktop/EE201/ee201_final_project/gameplay_sm.v" Line 44: Assignment to QS1C ignored, since the identifier is never used
 
 Elaborating module <lsfr_8bit_rand_num_gen>.
 WARNING:HDLCompiler:1127 - "/home/student/Desktop/EE201/ee201_final_project/lsfr_8bit_rand_num_gen.v" Line 40: Assignment to lfsr_done ignored, since the identifier is never used
-WARNING:HDLCompiler:413 - "/home/student/Desktop/EE201/ee201_final_project/gameplay_sm.v" Line 154: Result of 5-bit expression is truncated to fit in 4-bit target.
-WARNING:HDLCompiler:413 - "/home/student/Desktop/EE201/ee201_final_project/gameplay_sm.v" Line 160: Result of 5-bit expression is truncated to fit in 4-bit target.
-WARNING:HDLCompiler:413 - "/home/student/Desktop/EE201/ee201_final_project/gameplay_sm.v" Line 166: Result of 5-bit expression is truncated to fit in 4-bit target.
-WARNING:HDLCompiler:413 - "/home/student/Desktop/EE201/ee201_final_project/gameplay_sm.v" Line 172: Result of 5-bit expression is truncated to fit in 4-bit target.
-WARNING:HDLCompiler:413 - "/home/student/Desktop/EE201/ee201_final_project/gameplay_sm.v" Line 195: Result of 5-bit expression is truncated to fit in 4-bit target.
-WARNING:HDLCompiler:413 - "/home/student/Desktop/EE201/ee201_final_project/gameplay_sm.v" Line 199: Result of 3-bit expression is truncated to fit in 2-bit target.
-WARNING:HDLCompiler:413 - "/home/student/Desktop/EE201/ee201_final_project/gameplay_sm.v" Line 203: Result of 5-bit expression is truncated to fit in 4-bit target.
-WARNING:HDLCompiler:413 - "/home/student/Desktop/EE201/ee201_final_project/gameplay_sm.v" Line 235: Result of 26-bit expression is truncated to fit in 25-bit target.
-WARNING:HDLCompiler:413 - "/home/student/Desktop/EE201/ee201_final_project/gameplay_sm.v" Line 260: Result of 3-bit expression is truncated to fit in 2-bit target.
-WARNING:HDLCompiler:413 - "/home/student/Desktop/EE201/ee201_final_project/gameplay_sm.v" Line 264: Result of 5-bit expression is truncated to fit in 4-bit target.
-WARNING:HDLCompiler:413 - "/home/student/Desktop/EE201/ee201_final_project/gameplay_sm.v" Line 281: Result of 3-bit expression is truncated to fit in 2-bit target.
-WARNING:HDLCompiler:189 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" Line 92: Size mismatch in connection of port <state>. Formal port size is 10-bit while actual signal size is 9-bit.
-WARNING:HDLCompiler:413 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" Line 122: Result of 3-bit expression is truncated to fit in 2-bit target.
-WARNING:HDLCompiler:413 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" Line 124: Result of 32-bit expression is truncated to fit in 2-bit target.
-WARNING:HDLCompiler:413 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" Line 126: Result of 3-bit expression is truncated to fit in 2-bit target.
-WARNING:HDLCompiler:413 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" Line 128: Result of 32-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:413 - "/home/student/Desktop/EE201/ee201_final_project/gameplay_sm.v" Line 164: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "/home/student/Desktop/EE201/ee201_final_project/gameplay_sm.v" Line 170: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "/home/student/Desktop/EE201/ee201_final_project/gameplay_sm.v" Line 176: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "/home/student/Desktop/EE201/ee201_final_project/gameplay_sm.v" Line 182: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "/home/student/Desktop/EE201/ee201_final_project/gameplay_sm.v" Line 210: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "/home/student/Desktop/EE201/ee201_final_project/gameplay_sm.v" Line 213: Result of 3-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:413 - "/home/student/Desktop/EE201/ee201_final_project/gameplay_sm.v" Line 220: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "/home/student/Desktop/EE201/ee201_final_project/gameplay_sm.v" Line 254: Result of 26-bit expression is truncated to fit in 25-bit target.
+WARNING:HDLCompiler:413 - "/home/student/Desktop/EE201/ee201_final_project/gameplay_sm.v" Line 283: Result of 3-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:413 - "/home/student/Desktop/EE201/ee201_final_project/gameplay_sm.v" Line 287: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "/home/student/Desktop/EE201/ee201_final_project/gameplay_sm.v" Line 304: Result of 3-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:413 - "/home/student/Desktop/EE201/ee201_final_project/memory_game.v" Line 115: Result of 3-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:413 - "/home/student/Desktop/EE201/ee201_final_project/memory_game.v" Line 117: Result of 32-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:413 - "/home/student/Desktop/EE201/ee201_final_project/memory_game.v" Line 119: Result of 3-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:413 - "/home/student/Desktop/EE201/ee201_final_project/memory_game.v" Line 121: Result of 32-bit expression is truncated to fit in 2-bit target.
 
 Elaborating module <card_memory_4>.
 WARNING:HDLCompiler:1499 - "/home/student/Desktop/EE201/ee201_final_project/ipcore_dir/card_memory_4.v" Line 39: Empty module <card_memory_4> remains a black box.
-WARNING:HDLCompiler:189 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" Line 240: Size mismatch in connection of port <addrb>. Formal port size is 4-bit while actual signal size is 5-bit.
+WARNING:HDLCompiler:189 - "/home/student/Desktop/EE201/ee201_final_project/memory_game.v" Line 225: Size mismatch in connection of port <addrb>. Formal port size is 4-bit while actual signal size is 5-bit.
 
 Elaborating module <memory_mux>.
 
@@ -223,31 +222,31 @@ WARNING:HDLCompiler:1499 - "/home/student/Desktop/EE201/ee201_final_project/ipco
 
 Elaborating module <async_rom_9>.
 WARNING:HDLCompiler:1499 - "/home/student/Desktop/EE201/ee201_final_project/ipcore_dir/async_rom_9.v" Line 39: Empty module <async_rom_9> remains a black box.
-WARNING:HDLCompiler:413 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" Line 348: Result of 5-bit expression is truncated to fit in 4-bit target.
-WARNING:HDLCompiler:634 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" Line 343: Net <SSD1[3]> does not have a driver.
-WARNING:HDLCompiler:552 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" Line 232: Input port dina[5] is not connected on this instance
+WARNING:HDLCompiler:413 - "/home/student/Desktop/EE201/ee201_final_project/memory_game.v" Line 333: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:634 - "/home/student/Desktop/EE201/ee201_final_project/memory_game.v" Line 329: Net <SSD1[3]> does not have a driver.
+WARNING:HDLCompiler:552 - "/home/student/Desktop/EE201/ee201_final_project/memory_game.v" Line 217: Input port dina[5] is not connected on this instance
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <vga_demo>.
-    Related source file is "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v".
-INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" line 65: Output port <DPB> of the instance <UP_debounce> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" line 65: Output port <MCEN> of the instance <UP_debounce> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" line 65: Output port <CCEN> of the instance <UP_debounce> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" line 67: Output port <DPB> of the instance <DOWN_debounce> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" line 67: Output port <MCEN> of the instance <DOWN_debounce> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" line 67: Output port <CCEN> of the instance <DOWN_debounce> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" line 69: Output port <DPB> of the instance <LEFT_debounce> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" line 69: Output port <MCEN> of the instance <LEFT_debounce> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" line 69: Output port <CCEN> of the instance <LEFT_debounce> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" line 71: Output port <DPB> of the instance <RIGHT_debounce> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" line 71: Output port <MCEN> of the instance <RIGHT_debounce> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" line 71: Output port <CCEN> of the instance <RIGHT_debounce> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" line 73: Output port <DPB> of the instance <CENTER_debounce> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" line 73: Output port <MCEN> of the instance <CENTER_debounce> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/vga_demo.v" line 73: Output port <CCEN> of the instance <CENTER_debounce> is unconnected or connected to loadless signal.
+    Related source file is "/home/student/Desktop/EE201/ee201_final_project/memory_game.v".
+INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/memory_game.v" line 68: Output port <DPB> of the instance <UP_debounce> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/memory_game.v" line 68: Output port <MCEN> of the instance <UP_debounce> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/memory_game.v" line 68: Output port <CCEN> of the instance <UP_debounce> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/memory_game.v" line 70: Output port <DPB> of the instance <DOWN_debounce> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/memory_game.v" line 70: Output port <MCEN> of the instance <DOWN_debounce> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/memory_game.v" line 70: Output port <CCEN> of the instance <DOWN_debounce> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/memory_game.v" line 72: Output port <DPB> of the instance <LEFT_debounce> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/memory_game.v" line 72: Output port <MCEN> of the instance <LEFT_debounce> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/memory_game.v" line 72: Output port <CCEN> of the instance <LEFT_debounce> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/memory_game.v" line 74: Output port <DPB> of the instance <RIGHT_debounce> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/memory_game.v" line 74: Output port <MCEN> of the instance <RIGHT_debounce> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/memory_game.v" line 74: Output port <CCEN> of the instance <RIGHT_debounce> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/memory_game.v" line 76: Output port <DPB> of the instance <CENTER_debounce> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/memory_game.v" line 76: Output port <MCEN> of the instance <CENTER_debounce> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/memory_game.v" line 76: Output port <CCEN> of the instance <CENTER_debounce> is unconnected or connected to loadless signal.
 WARNING:Xst:653 - Signal <SSD1> is used but never assigned. This sourceless signal will be automatically connected to value GND.
 WARNING:Xst:653 - Signal <SSD2> is used but never assigned. This sourceless signal will be automatically connected to value GND.
     Found 2-bit register for signal <selectRow>.
@@ -260,117 +259,117 @@ WARNING:Xst:653 - Signal <SSD2> is used but never assigned. This sourceless sign
     Found 1-bit register for signal <vga_g>.
     Found 1-bit register for signal <vga_r>.
     Found 28-bit register for signal <DIV_CLK>.
-    Found 10-bit subtractor for signal <selectStartX> created at line 202.
-    Found 10-bit subtractor for signal <selectStartY> created at line 203.
-    Found 11-bit subtractor for signal <GND_1_o_GND_1_o_sub_179_OUT> created at line 269.
-    Found 13-bit subtractor for signal <GND_1_o_GND_1_o_sub_183_OUT> created at line 270.
-    Found 14-bit subtractor for signal <GND_1_o_GND_1_o_sub_187_OUT> created at line 271.
-    Found 15-bit subtractor for signal <GND_1_o_GND_1_o_sub_192_OUT> created at line 272.
-    Found 11-bit subtractor for signal <GND_1_o_GND_1_o_sub_200_OUT> created at line 280.
-    Found 13-bit subtractor for signal <GND_1_o_GND_1_o_sub_204_OUT> created at line 281.
-    Found 14-bit subtractor for signal <GND_1_o_GND_1_o_sub_208_OUT> created at line 282.
-    Found 15-bit subtractor for signal <GND_1_o_GND_1_o_sub_213_OUT> created at line 283.
-    Found 6-bit subtractor for signal <index_X[5]_GND_1_o_sub_215_OUT> created at line 286.
+    Found 10-bit subtractor for signal <selectStartX> created at line 189.
+    Found 10-bit subtractor for signal <selectStartY> created at line 190.
+    Found 11-bit subtractor for signal <GND_1_o_GND_1_o_sub_179_OUT> created at line 245.
+    Found 13-bit subtractor for signal <GND_1_o_GND_1_o_sub_183_OUT> created at line 246.
+    Found 14-bit subtractor for signal <GND_1_o_GND_1_o_sub_187_OUT> created at line 247.
+    Found 15-bit subtractor for signal <GND_1_o_GND_1_o_sub_192_OUT> created at line 248.
+    Found 11-bit subtractor for signal <GND_1_o_GND_1_o_sub_200_OUT> created at line 256.
+    Found 13-bit subtractor for signal <GND_1_o_GND_1_o_sub_204_OUT> created at line 257.
+    Found 14-bit subtractor for signal <GND_1_o_GND_1_o_sub_208_OUT> created at line 258.
+    Found 15-bit subtractor for signal <GND_1_o_GND_1_o_sub_213_OUT> created at line 259.
+    Found 6-bit subtractor for signal <index_X[5]_GND_1_o_sub_215_OUT> created at line 262.
     Found 28-bit adder for signal <DIV_CLK[27]_GND_1_o_add_1_OUT> created at line 37.
-    Found 2-bit adder for signal <selectRow[1]_GND_1_o_add_9_OUT> created at line 122.
-    Found 2-bit adder for signal <selectCol[1]_GND_1_o_add_11_OUT> created at line 126.
-    Found 11-bit adder for signal <n0502[10:0]> created at line 138.
-    Found 12-bit adder for signal <n0388> created at line 138.
-    Found 12-bit adder for signal <n0390> created at line 139.
-    Found 11-bit adder for signal <n0508[10:0]> created at line 139.
-    Found 12-bit adder for signal <n0510[11:0]> created at line 139.
-    Found 13-bit adder for signal <n0395> created at line 139.
-    Found 12-bit adder for signal <n0397> created at line 140.
-    Found 12-bit adder for signal <n0517[11:0]> created at line 140.
-    Found 13-bit adder for signal <n0519[12:0]> created at line 140.
-    Found 14-bit adder for signal <n0403> created at line 140.
-    Found 13-bit adder for signal <n0405> created at line 141.
-    Found 12-bit adder for signal <n0526[11:0]> created at line 141.
-    Found 13-bit adder for signal <n0529[12:0]> created at line 141.
-    Found 14-bit adder for signal <n0411> created at line 141.
-    Found 11-bit adder for signal <n0413> created at line 143.
-    Found 12-bit adder for signal <n0415> created at line 144.
-    Found 11-bit adder for signal <n0537[10:0]> created at line 144.
-    Found 12-bit adder for signal <n0539[11:0]> created at line 144.
-    Found 13-bit adder for signal <n0420> created at line 144.
-    Found 12-bit adder for signal <n0422> created at line 145.
-    Found 12-bit adder for signal <n0546[11:0]> created at line 145.
-    Found 13-bit adder for signal <n0548[12:0]> created at line 145.
-    Found 14-bit adder for signal <n0428> created at line 145.
-    Found 13-bit adder for signal <n0430> created at line 146.
-    Found 12-bit adder for signal <n0555[11:0]> created at line 146.
-    Found 13-bit adder for signal <n0558[12:0]> created at line 146.
-    Found 14-bit adder for signal <n0436> created at line 146.
-    Found 10-bit adder for signal <boxX> created at line 204.
-    Found 10-bit adder for signal <boxY> created at line 205.
-    Found 10-bit adder for signal <boxX[9]_selectWidth[9]_add_140_OUT> created at line 207.
-    Found 11-bit adder for signal <n0571[10:0]> created at line 207.
-    Found 12-bit adder for signal <n0445> created at line 207.
-    Found 11-bit adder for signal <n0575[10:0]> created at line 208.
-    Found 10-bit adder for signal <boxX[9]_selectWidth[9]_add_147_OUT> created at line 208.
-    Found 12-bit adder for signal <n0580[11:0]> created at line 208.
-    Found 13-bit adder for signal <n0449> created at line 208.
-    Found 10-bit adder for signal <boxY[9]_selectWidth[9]_add_157_OUT> created at line 209.
-    Found 12-bit adder for signal <n0452> created at line 209.
-    Found 10-bit adder for signal <boxY[9]_selectWidth[9]_add_164_OUT> created at line 210.
-    Found 12-bit adder for signal <n0592[11:0]> created at line 210.
-    Found 13-bit adder for signal <n0456> created at line 210.
-    Found 12-bit adder for signal <n0596[11:0]> created at line 270.
-    Found 13-bit adder for signal <n0598[12:0]> created at line 271.
-    Found 14-bit adder for signal <n0601[13:0]> created at line 272.
-    Found 6-bit adder for signal <index_Y[5]_GND_1_o_add_194_OUT> created at line 276.
-    Found 12-bit adder for signal <n0605[11:0]> created at line 281.
-    Found 13-bit adder for signal <n0607[12:0]> created at line 282.
-    Found 14-bit adder for signal <n0610[13:0]> created at line 283.
-    Found 4-bit adder for signal <SSD3> created at line 348.
-    Found 2-bit subtractor for signal <GND_1_o_GND_1_o_sub_11_OUT<1:0>> created at line 124.
-    Found 2-bit subtractor for signal <GND_1_o_GND_1_o_sub_13_OUT<1:0>> created at line 128.
-    Found 9x2-bit multiplier for signal <width[8]_PWR_1_o_MuLt_43_OUT> created at line 140.
-    Found 10x2-bit multiplier for signal <offset[9]_PWR_1_o_MuLt_50_OUT> created at line 141.
-    Found 10x2-bit multiplier for signal <n0343> created at line 204.
-    Found 10x2-bit multiplier for signal <n0344> created at line 205.
-    Found 11x2-bit multiplier for signal <BUS_0063_PWR_1_o_MuLt_189_OUT> created at line 272.
+    Found 2-bit adder for signal <selectRow[1]_GND_1_o_add_9_OUT> created at line 115.
+    Found 2-bit adder for signal <selectCol[1]_GND_1_o_add_11_OUT> created at line 119.
+    Found 11-bit adder for signal <n0518[10:0]> created at line 131.
+    Found 12-bit adder for signal <n0403> created at line 131.
+    Found 12-bit adder for signal <n0405> created at line 132.
+    Found 11-bit adder for signal <n0524[10:0]> created at line 132.
+    Found 12-bit adder for signal <n0526[11:0]> created at line 132.
+    Found 13-bit adder for signal <n0410> created at line 132.
+    Found 12-bit adder for signal <n0412> created at line 133.
+    Found 12-bit adder for signal <n0533[11:0]> created at line 133.
+    Found 13-bit adder for signal <n0535[12:0]> created at line 133.
+    Found 14-bit adder for signal <n0418> created at line 133.
+    Found 13-bit adder for signal <n0420> created at line 134.
+    Found 12-bit adder for signal <n0542[11:0]> created at line 134.
+    Found 13-bit adder for signal <n0545[12:0]> created at line 134.
+    Found 14-bit adder for signal <n0426> created at line 134.
+    Found 11-bit adder for signal <n0428> created at line 137.
+    Found 12-bit adder for signal <n0430> created at line 138.
+    Found 11-bit adder for signal <n0553[10:0]> created at line 138.
+    Found 12-bit adder for signal <n0555[11:0]> created at line 138.
+    Found 13-bit adder for signal <n0435> created at line 138.
+    Found 12-bit adder for signal <n0437> created at line 139.
+    Found 12-bit adder for signal <n0562[11:0]> created at line 139.
+    Found 13-bit adder for signal <n0564[12:0]> created at line 139.
+    Found 14-bit adder for signal <n0443> created at line 139.
+    Found 13-bit adder for signal <n0445> created at line 140.
+    Found 12-bit adder for signal <n0571[11:0]> created at line 140.
+    Found 13-bit adder for signal <n0574[12:0]> created at line 140.
+    Found 14-bit adder for signal <n0451> created at line 140.
+    Found 10-bit adder for signal <boxX> created at line 191.
+    Found 10-bit adder for signal <boxY> created at line 192.
+    Found 10-bit adder for signal <boxX[9]_selectWidth[9]_add_140_OUT> created at line 195.
+    Found 11-bit adder for signal <n0587[10:0]> created at line 195.
+    Found 12-bit adder for signal <n0460> created at line 195.
+    Found 11-bit adder for signal <n0591[10:0]> created at line 196.
+    Found 10-bit adder for signal <boxX[9]_selectWidth[9]_add_147_OUT> created at line 196.
+    Found 12-bit adder for signal <n0596[11:0]> created at line 196.
+    Found 13-bit adder for signal <n0464> created at line 196.
+    Found 10-bit adder for signal <boxY[9]_selectWidth[9]_add_157_OUT> created at line 197.
+    Found 12-bit adder for signal <n0467> created at line 197.
+    Found 10-bit adder for signal <boxY[9]_selectWidth[9]_add_164_OUT> created at line 198.
+    Found 12-bit adder for signal <n0608[11:0]> created at line 198.
+    Found 13-bit adder for signal <n0471> created at line 198.
+    Found 12-bit adder for signal <n0612[11:0]> created at line 246.
+    Found 13-bit adder for signal <n0614[12:0]> created at line 247.
+    Found 14-bit adder for signal <n0617[13:0]> created at line 248.
+    Found 6-bit adder for signal <index_Y[5]_GND_1_o_add_194_OUT> created at line 252.
+    Found 12-bit adder for signal <n0621[11:0]> created at line 257.
+    Found 13-bit adder for signal <n0623[12:0]> created at line 258.
+    Found 14-bit adder for signal <n0626[13:0]> created at line 259.
+    Found 4-bit adder for signal <SSD3> created at line 333.
+    Found 2-bit subtractor for signal <GND_1_o_GND_1_o_sub_11_OUT<1:0>> created at line 117.
+    Found 2-bit subtractor for signal <GND_1_o_GND_1_o_sub_13_OUT<1:0>> created at line 121.
+    Found 9x2-bit multiplier for signal <width[8]_PWR_1_o_MuLt_43_OUT> created at line 133.
+    Found 10x2-bit multiplier for signal <offset[9]_PWR_1_o_MuLt_50_OUT> created at line 134.
+    Found 10x2-bit multiplier for signal <n0358> created at line 191.
+    Found 10x2-bit multiplier for signal <n0359> created at line 192.
+    Found 11x2-bit multiplier for signal <BUS_0063_PWR_1_o_MuLt_189_OUT> created at line 248.
     Found 16x8-bit Read Only RAM for signal <SSD_CATHODES>
-    Found 1-bit 64-to-1 multiplexer for signal <index_X[5]_data[63]_Mux_219_o> created at line 299.
-    Found 4-bit 4-to-1 multiplexer for signal <SSD> created at line 372.
+    Found 1-bit 64-to-1 multiplexer for signal <index_X[5]_data[63]_Mux_219_o> created at line 275.
+    Found 4-bit 4-to-1 multiplexer for signal <SSD> created at line 346.
 WARNING:Xst:737 - Found 1-bit latch for signal <tempCardAddr<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <tempCardAddr<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <tempCardAddr<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <tempCardAddr<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-    Found 10-bit comparator lessequal for signal <n0039> created at line 138
-    Found 12-bit comparator lessequal for signal <n0043> created at line 138
-    Found 12-bit comparator lessequal for signal <n0047> created at line 139
-    Found 13-bit comparator lessequal for signal <n0052> created at line 139
-    Found 12-bit comparator lessequal for signal <n0056> created at line 140
-    Found 14-bit comparator lessequal for signal <n0062> created at line 140
-    Found 13-bit comparator lessequal for signal <n0067> created at line 141
-    Found 14-bit comparator lessequal for signal <n0072> created at line 141
-    Found 10-bit comparator lessequal for signal <n0075> created at line 143
-    Found 11-bit comparator lessequal for signal <n0078> created at line 143
-    Found 12-bit comparator lessequal for signal <n0082> created at line 144
-    Found 13-bit comparator lessequal for signal <n0087> created at line 144
-    Found 12-bit comparator lessequal for signal <n0091> created at line 145
-    Found 14-bit comparator lessequal for signal <n0096> created at line 145
-    Found 13-bit comparator lessequal for signal <n0100> created at line 146
-    Found 14-bit comparator lessequal for signal <n0105> created at line 146
-    Found 10-bit comparator lessequal for signal <n0145> created at line 207
-    Found 10-bit comparator greater for signal <CounterX[9]_boxX[9]_LessThan_142_o> created at line 207
-    Found 10-bit comparator lessequal for signal <n0150> created at line 207
-    Found 12-bit comparator greater for signal <GND_1_o_BUS_0043_LessThan_146_o> created at line 207
-    Found 10-bit comparator lessequal for signal <n0159> created at line 208
-    Found 13-bit comparator greater for signal <GND_1_o_BUS_0047_LessThan_152_o> created at line 208
-    Found 10-bit comparator greater for signal <CounterY[9]_boxY[9]_LessThan_159_o> created at line 209
-    Found 12-bit comparator greater for signal <GND_1_o_BUS_0052_LessThan_163_o> created at line 209
-    Found 10-bit comparator lessequal for signal <n0177> created at line 210
-    Found 13-bit comparator greater for signal <GND_1_o_BUS_0056_LessThan_169_o> created at line 210
-    Found 32-bit comparator equal for signal <GND_1_o_GND_1_o_equal_180_o> created at line 269
-    Found 32-bit comparator equal for signal <GND_1_o_GND_1_o_equal_184_o> created at line 270
-    Found 32-bit comparator equal for signal <GND_1_o_GND_1_o_equal_188_o> created at line 271
-    Found 32-bit comparator equal for signal <GND_1_o_GND_1_o_equal_193_o> created at line 272
-    Found 32-bit comparator equal for signal <GND_1_o_GND_1_o_equal_201_o> created at line 280
-    Found 32-bit comparator equal for signal <GND_1_o_GND_1_o_equal_205_o> created at line 281
-    Found 32-bit comparator equal for signal <GND_1_o_GND_1_o_equal_209_o> created at line 282
-    Found 32-bit comparator equal for signal <GND_1_o_GND_1_o_equal_214_o> created at line 283
+    Found 10-bit comparator lessequal for signal <n0038> created at line 131
+    Found 12-bit comparator lessequal for signal <n0042> created at line 131
+    Found 12-bit comparator lessequal for signal <n0046> created at line 132
+    Found 13-bit comparator lessequal for signal <n0051> created at line 132
+    Found 12-bit comparator lessequal for signal <n0055> created at line 133
+    Found 14-bit comparator lessequal for signal <n0061> created at line 133
+    Found 13-bit comparator lessequal for signal <n0066> created at line 134
+    Found 14-bit comparator lessequal for signal <n0071> created at line 134
+    Found 10-bit comparator lessequal for signal <n0074> created at line 137
+    Found 11-bit comparator lessequal for signal <n0077> created at line 137
+    Found 12-bit comparator lessequal for signal <n0081> created at line 138
+    Found 13-bit comparator lessequal for signal <n0086> created at line 138
+    Found 12-bit comparator lessequal for signal <n0090> created at line 139
+    Found 14-bit comparator lessequal for signal <n0095> created at line 139
+    Found 13-bit comparator lessequal for signal <n0099> created at line 140
+    Found 14-bit comparator lessequal for signal <n0104> created at line 140
+    Found 10-bit comparator lessequal for signal <n0144> created at line 195
+    Found 10-bit comparator greater for signal <CounterX[9]_boxX[9]_LessThan_142_o> created at line 195
+    Found 10-bit comparator lessequal for signal <n0149> created at line 195
+    Found 12-bit comparator greater for signal <GND_1_o_BUS_0043_LessThan_146_o> created at line 195
+    Found 10-bit comparator lessequal for signal <n0158> created at line 196
+    Found 13-bit comparator greater for signal <GND_1_o_BUS_0047_LessThan_152_o> created at line 196
+    Found 10-bit comparator greater for signal <CounterY[9]_boxY[9]_LessThan_159_o> created at line 197
+    Found 12-bit comparator greater for signal <GND_1_o_BUS_0052_LessThan_163_o> created at line 197
+    Found 10-bit comparator lessequal for signal <n0176> created at line 198
+    Found 13-bit comparator greater for signal <GND_1_o_BUS_0056_LessThan_169_o> created at line 198
+    Found 32-bit comparator equal for signal <GND_1_o_GND_1_o_equal_180_o> created at line 245
+    Found 32-bit comparator equal for signal <GND_1_o_GND_1_o_equal_184_o> created at line 246
+    Found 32-bit comparator equal for signal <GND_1_o_GND_1_o_equal_188_o> created at line 247
+    Found 32-bit comparator equal for signal <GND_1_o_GND_1_o_equal_193_o> created at line 248
+    Found 32-bit comparator equal for signal <GND_1_o_GND_1_o_equal_201_o> created at line 256
+    Found 32-bit comparator equal for signal <GND_1_o_GND_1_o_equal_205_o> created at line 257
+    Found 32-bit comparator equal for signal <GND_1_o_GND_1_o_equal_209_o> created at line 258
+    Found 32-bit comparator equal for signal <GND_1_o_GND_1_o_equal_214_o> created at line 259
     Summary:
 	inferred   1 RAM(s).
 	inferred   5 Multiplier(s).
@@ -433,11 +432,11 @@ Synthesizing Unit <gameplay_sm>.
     Related source file is "/home/student/Desktop/EE201/ee201_final_project/gameplay_sm.v".
         num_matches = 8
 WARNING:Xst:647 - Input <CardSelectData<5:4>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/gameplay_sm.v" line 78: Output port <lsfr_done> of the instance <rand_generator> is unconnected or connected to loadless signal.
-    Found 4-bit register for signal <NUM_MATCHES>.
+INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/gameplay_sm.v" line 79: Output port <lsfr_done> of the instance <rand_generator> is unconnected or connected to loadless signal.
     Found 10-bit register for signal <state>.
     Found 4-bit register for signal <CARD1>.
     Found 4-bit register for signal <CARD2>.
+    Found 4-bit register for signal <numMatches>.
     Found 2-bit register for signal <state_counter>.
     Found 4-bit register for signal <nums_written>.
     Found 4-bit register for signal <address_count>.
@@ -445,7 +444,7 @@ INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/gameplay_sm.v" 
     Found 1-bit register for signal <done_random>.
     Found 6-bit register for signal <dataOut>.
     Found 4-bit register for signal <dataLoc>.
-    Found 64-bit register for signal <n0424[63:0]>.
+    Found 64-bit register for signal <n0422[63:0]>.
     Found 4-bit register for signal <CARD1_loc>.
     Found 4-bit register for signal <CARD2_loc>.
     Found 1-bit register for signal <clock_counter<24>>.
@@ -486,89 +485,89 @@ INFO:Xst:3210 - "/home/student/Desktop/EE201/ee201_final_project/gameplay_sm.v" 
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 4-bit adder for signal <address_count[3]_GND_6_o_add_170_OUT> created at line 172.
-    Found 2-bit adder for signal <temp_count[1]_GND_6_o_add_192_OUT> created at line 199.
-    Found 4-bit adder for signal <nums_written[3]_GND_6_o_add_194_OUT> created at line 203.
-    Found 25-bit adder for signal <clock_counter[24]_GND_6_o_add_208_OUT> created at line 235.
-    Found 2-bit adder for signal <state_counter[1]_GND_6_o_add_215_OUT> created at line 260.
-    Found 4-bit adder for signal <NUM_MATCHES[3]_GND_6_o_add_217_OUT> created at line 264.
-    Found 4-bit 16-to-1 multiplexer for signal <address_count[3]_addr[15][3]_wide_mux_191_OUT> created at line 196.
-    Found 4-bit comparator lessequal for signal <GND_6_o_address_count[3]_LessThan_7_o> created at line 138
-    Found 4-bit comparator equal for signal <addr[0][3]_temp_random1[3]_equal_8_o> created at line 141
-    Found 4-bit comparator equal for signal <addr[0][3]_temp_random2[3]_equal_9_o> created at line 143
-    Found 4-bit comparator equal for signal <addr[0][3]_temp_random3[3]_equal_10_o> created at line 145
-    Found 4-bit comparator equal for signal <addr[0][3]_temp_random4[3]_equal_11_o> created at line 147
-    Found 4-bit comparator lessequal for signal <GND_6_o_address_count[3]_LessThan_12_o> created at line 138
-    Found 4-bit comparator equal for signal <addr[1][3]_temp_random1[3]_equal_14_o> created at line 141
-    Found 4-bit comparator equal for signal <addr[1][3]_temp_random2[3]_equal_15_o> created at line 143
-    Found 4-bit comparator equal for signal <addr[1][3]_temp_random3[3]_equal_16_o> created at line 145
-    Found 4-bit comparator equal for signal <addr[1][3]_temp_random4[3]_equal_17_o> created at line 147
-    Found 4-bit comparator lessequal for signal <GND_6_o_address_count[3]_LessThan_18_o> created at line 138
-    Found 4-bit comparator equal for signal <addr[2][3]_temp_random1[3]_equal_20_o> created at line 141
-    Found 4-bit comparator equal for signal <addr[2][3]_temp_random2[3]_equal_21_o> created at line 143
-    Found 4-bit comparator equal for signal <addr[2][3]_temp_random3[3]_equal_22_o> created at line 145
-    Found 4-bit comparator equal for signal <addr[2][3]_temp_random4[3]_equal_23_o> created at line 147
-    Found 4-bit comparator lessequal for signal <GND_6_o_address_count[3]_LessThan_24_o> created at line 138
-    Found 4-bit comparator equal for signal <addr[3][3]_temp_random1[3]_equal_26_o> created at line 141
-    Found 4-bit comparator equal for signal <addr[3][3]_temp_random2[3]_equal_27_o> created at line 143
-    Found 4-bit comparator equal for signal <addr[3][3]_temp_random3[3]_equal_28_o> created at line 145
-    Found 4-bit comparator equal for signal <addr[3][3]_temp_random4[3]_equal_29_o> created at line 147
-    Found 4-bit comparator lessequal for signal <GND_6_o_address_count[3]_LessThan_30_o> created at line 138
-    Found 4-bit comparator equal for signal <addr[4][3]_temp_random1[3]_equal_32_o> created at line 141
-    Found 4-bit comparator equal for signal <addr[4][3]_temp_random2[3]_equal_33_o> created at line 143
-    Found 4-bit comparator equal for signal <addr[4][3]_temp_random3[3]_equal_34_o> created at line 145
-    Found 4-bit comparator equal for signal <addr[4][3]_temp_random4[3]_equal_35_o> created at line 147
-    Found 4-bit comparator lessequal for signal <GND_6_o_address_count[3]_LessThan_36_o> created at line 138
-    Found 4-bit comparator equal for signal <addr[5][3]_temp_random1[3]_equal_38_o> created at line 141
-    Found 4-bit comparator equal for signal <addr[5][3]_temp_random2[3]_equal_39_o> created at line 143
-    Found 4-bit comparator equal for signal <addr[5][3]_temp_random3[3]_equal_40_o> created at line 145
-    Found 4-bit comparator equal for signal <addr[5][3]_temp_random4[3]_equal_41_o> created at line 147
-    Found 4-bit comparator lessequal for signal <GND_6_o_address_count[3]_LessThan_42_o> created at line 138
-    Found 4-bit comparator equal for signal <addr[6][3]_temp_random1[3]_equal_44_o> created at line 141
-    Found 4-bit comparator equal for signal <addr[6][3]_temp_random2[3]_equal_45_o> created at line 143
-    Found 4-bit comparator equal for signal <addr[6][3]_temp_random3[3]_equal_46_o> created at line 145
-    Found 4-bit comparator equal for signal <addr[6][3]_temp_random4[3]_equal_47_o> created at line 147
-    Found 4-bit comparator lessequal for signal <GND_6_o_address_count[3]_LessThan_48_o> created at line 138
-    Found 4-bit comparator equal for signal <addr[7][3]_temp_random1[3]_equal_50_o> created at line 141
-    Found 4-bit comparator equal for signal <addr[7][3]_temp_random2[3]_equal_51_o> created at line 143
-    Found 4-bit comparator equal for signal <addr[7][3]_temp_random3[3]_equal_52_o> created at line 145
-    Found 4-bit comparator equal for signal <addr[7][3]_temp_random4[3]_equal_53_o> created at line 147
-    Found 4-bit comparator lessequal for signal <PWR_6_o_address_count[3]_LessThan_54_o> created at line 138
-    Found 4-bit comparator equal for signal <addr[8][3]_temp_random1[3]_equal_56_o> created at line 141
-    Found 4-bit comparator equal for signal <addr[8][3]_temp_random2[3]_equal_57_o> created at line 143
-    Found 4-bit comparator equal for signal <addr[8][3]_temp_random3[3]_equal_58_o> created at line 145
-    Found 4-bit comparator equal for signal <addr[8][3]_temp_random4[3]_equal_59_o> created at line 147
-    Found 4-bit comparator lessequal for signal <PWR_6_o_address_count[3]_LessThan_60_o> created at line 138
-    Found 4-bit comparator equal for signal <addr[9][3]_temp_random1[3]_equal_62_o> created at line 141
-    Found 4-bit comparator equal for signal <addr[9][3]_temp_random2[3]_equal_63_o> created at line 143
-    Found 4-bit comparator equal for signal <addr[9][3]_temp_random3[3]_equal_64_o> created at line 145
-    Found 4-bit comparator equal for signal <addr[9][3]_temp_random4[3]_equal_65_o> created at line 147
-    Found 4-bit comparator lessequal for signal <PWR_6_o_address_count[3]_LessThan_66_o> created at line 138
-    Found 4-bit comparator equal for signal <addr[10][3]_temp_random1[3]_equal_68_o> created at line 141
-    Found 4-bit comparator equal for signal <addr[10][3]_temp_random2[3]_equal_69_o> created at line 143
-    Found 4-bit comparator equal for signal <addr[10][3]_temp_random3[3]_equal_70_o> created at line 145
-    Found 4-bit comparator equal for signal <addr[10][3]_temp_random4[3]_equal_71_o> created at line 147
-    Found 4-bit comparator lessequal for signal <PWR_6_o_address_count[3]_LessThan_72_o> created at line 138
-    Found 4-bit comparator equal for signal <addr[11][3]_temp_random1[3]_equal_74_o> created at line 141
-    Found 4-bit comparator equal for signal <addr[11][3]_temp_random2[3]_equal_75_o> created at line 143
-    Found 4-bit comparator equal for signal <addr[11][3]_temp_random3[3]_equal_76_o> created at line 145
-    Found 4-bit comparator equal for signal <addr[11][3]_temp_random4[3]_equal_77_o> created at line 147
-    Found 4-bit comparator lessequal for signal <PWR_6_o_address_count[3]_LessThan_78_o> created at line 138
-    Found 4-bit comparator equal for signal <addr[12][3]_temp_random1[3]_equal_80_o> created at line 141
-    Found 4-bit comparator equal for signal <addr[12][3]_temp_random2[3]_equal_81_o> created at line 143
-    Found 4-bit comparator equal for signal <addr[12][3]_temp_random3[3]_equal_82_o> created at line 145
-    Found 4-bit comparator equal for signal <addr[12][3]_temp_random4[3]_equal_83_o> created at line 147
-    Found 4-bit comparator lessequal for signal <PWR_6_o_address_count[3]_LessThan_84_o> created at line 138
-    Found 4-bit comparator equal for signal <addr[13][3]_temp_random1[3]_equal_86_o> created at line 141
-    Found 4-bit comparator equal for signal <addr[13][3]_temp_random2[3]_equal_87_o> created at line 143
-    Found 4-bit comparator equal for signal <addr[13][3]_temp_random3[3]_equal_88_o> created at line 145
-    Found 4-bit comparator equal for signal <addr[13][3]_temp_random4[3]_equal_89_o> created at line 147
-    Found 4-bit comparator lessequal for signal <PWR_6_o_address_count[3]_LessThan_90_o> created at line 138
-    Found 4-bit comparator equal for signal <addr[14][3]_temp_random1[3]_equal_92_o> created at line 141
-    Found 4-bit comparator equal for signal <addr[14][3]_temp_random2[3]_equal_93_o> created at line 143
-    Found 4-bit comparator equal for signal <addr[14][3]_temp_random3[3]_equal_94_o> created at line 145
-    Found 4-bit comparator equal for signal <addr[14][3]_temp_random4[3]_equal_95_o> created at line 147
-    Found 4-bit comparator equal for signal <n0339> created at line 240
+    Found 4-bit adder for signal <address_count[3]_GND_6_o_add_170_OUT> created at line 182.
+    Found 2-bit adder for signal <temp_count[1]_GND_6_o_add_192_OUT> created at line 213.
+    Found 4-bit adder for signal <nums_written[3]_GND_6_o_add_194_OUT> created at line 220.
+    Found 25-bit adder for signal <clock_counter[24]_GND_6_o_add_208_OUT> created at line 254.
+    Found 2-bit adder for signal <state_counter[1]_GND_6_o_add_215_OUT> created at line 283.
+    Found 4-bit adder for signal <numMatches[3]_GND_6_o_add_217_OUT> created at line 287.
+    Found 4-bit 16-to-1 multiplexer for signal <address_count[3]_addr[15][3]_wide_mux_191_OUT> created at line 211.
+    Found 4-bit comparator lessequal for signal <GND_6_o_address_count[3]_LessThan_7_o> created at line 146
+    Found 4-bit comparator equal for signal <addr[0][3]_temp_random1[3]_equal_8_o> created at line 150
+    Found 4-bit comparator equal for signal <addr[0][3]_temp_random2[3]_equal_9_o> created at line 152
+    Found 4-bit comparator equal for signal <addr[0][3]_temp_random3[3]_equal_10_o> created at line 154
+    Found 4-bit comparator equal for signal <addr[0][3]_temp_random4[3]_equal_11_o> created at line 156
+    Found 4-bit comparator lessequal for signal <GND_6_o_address_count[3]_LessThan_12_o> created at line 146
+    Found 4-bit comparator equal for signal <addr[1][3]_temp_random1[3]_equal_14_o> created at line 150
+    Found 4-bit comparator equal for signal <addr[1][3]_temp_random2[3]_equal_15_o> created at line 152
+    Found 4-bit comparator equal for signal <addr[1][3]_temp_random3[3]_equal_16_o> created at line 154
+    Found 4-bit comparator equal for signal <addr[1][3]_temp_random4[3]_equal_17_o> created at line 156
+    Found 4-bit comparator lessequal for signal <GND_6_o_address_count[3]_LessThan_18_o> created at line 146
+    Found 4-bit comparator equal for signal <addr[2][3]_temp_random1[3]_equal_20_o> created at line 150
+    Found 4-bit comparator equal for signal <addr[2][3]_temp_random2[3]_equal_21_o> created at line 152
+    Found 4-bit comparator equal for signal <addr[2][3]_temp_random3[3]_equal_22_o> created at line 154
+    Found 4-bit comparator equal for signal <addr[2][3]_temp_random4[3]_equal_23_o> created at line 156
+    Found 4-bit comparator lessequal for signal <GND_6_o_address_count[3]_LessThan_24_o> created at line 146
+    Found 4-bit comparator equal for signal <addr[3][3]_temp_random1[3]_equal_26_o> created at line 150
+    Found 4-bit comparator equal for signal <addr[3][3]_temp_random2[3]_equal_27_o> created at line 152
+    Found 4-bit comparator equal for signal <addr[3][3]_temp_random3[3]_equal_28_o> created at line 154
+    Found 4-bit comparator equal for signal <addr[3][3]_temp_random4[3]_equal_29_o> created at line 156
+    Found 4-bit comparator lessequal for signal <GND_6_o_address_count[3]_LessThan_30_o> created at line 146
+    Found 4-bit comparator equal for signal <addr[4][3]_temp_random1[3]_equal_32_o> created at line 150
+    Found 4-bit comparator equal for signal <addr[4][3]_temp_random2[3]_equal_33_o> created at line 152
+    Found 4-bit comparator equal for signal <addr[4][3]_temp_random3[3]_equal_34_o> created at line 154
+    Found 4-bit comparator equal for signal <addr[4][3]_temp_random4[3]_equal_35_o> created at line 156
+    Found 4-bit comparator lessequal for signal <GND_6_o_address_count[3]_LessThan_36_o> created at line 146
+    Found 4-bit comparator equal for signal <addr[5][3]_temp_random1[3]_equal_38_o> created at line 150
+    Found 4-bit comparator equal for signal <addr[5][3]_temp_random2[3]_equal_39_o> created at line 152
+    Found 4-bit comparator equal for signal <addr[5][3]_temp_random3[3]_equal_40_o> created at line 154
+    Found 4-bit comparator equal for signal <addr[5][3]_temp_random4[3]_equal_41_o> created at line 156
+    Found 4-bit comparator lessequal for signal <GND_6_o_address_count[3]_LessThan_42_o> created at line 146
+    Found 4-bit comparator equal for signal <addr[6][3]_temp_random1[3]_equal_44_o> created at line 150
+    Found 4-bit comparator equal for signal <addr[6][3]_temp_random2[3]_equal_45_o> created at line 152
+    Found 4-bit comparator equal for signal <addr[6][3]_temp_random3[3]_equal_46_o> created at line 154
+    Found 4-bit comparator equal for signal <addr[6][3]_temp_random4[3]_equal_47_o> created at line 156
+    Found 4-bit comparator lessequal for signal <GND_6_o_address_count[3]_LessThan_48_o> created at line 146
+    Found 4-bit comparator equal for signal <addr[7][3]_temp_random1[3]_equal_50_o> created at line 150
+    Found 4-bit comparator equal for signal <addr[7][3]_temp_random2[3]_equal_51_o> created at line 152
+    Found 4-bit comparator equal for signal <addr[7][3]_temp_random3[3]_equal_52_o> created at line 154
+    Found 4-bit comparator equal for signal <addr[7][3]_temp_random4[3]_equal_53_o> created at line 156
+    Found 4-bit comparator lessequal for signal <PWR_6_o_address_count[3]_LessThan_54_o> created at line 146
+    Found 4-bit comparator equal for signal <addr[8][3]_temp_random1[3]_equal_56_o> created at line 150
+    Found 4-bit comparator equal for signal <addr[8][3]_temp_random2[3]_equal_57_o> created at line 152
+    Found 4-bit comparator equal for signal <addr[8][3]_temp_random3[3]_equal_58_o> created at line 154
+    Found 4-bit comparator equal for signal <addr[8][3]_temp_random4[3]_equal_59_o> created at line 156
+    Found 4-bit comparator lessequal for signal <PWR_6_o_address_count[3]_LessThan_60_o> created at line 146
+    Found 4-bit comparator equal for signal <addr[9][3]_temp_random1[3]_equal_62_o> created at line 150
+    Found 4-bit comparator equal for signal <addr[9][3]_temp_random2[3]_equal_63_o> created at line 152
+    Found 4-bit comparator equal for signal <addr[9][3]_temp_random3[3]_equal_64_o> created at line 154
+    Found 4-bit comparator equal for signal <addr[9][3]_temp_random4[3]_equal_65_o> created at line 156
+    Found 4-bit comparator lessequal for signal <PWR_6_o_address_count[3]_LessThan_66_o> created at line 146
+    Found 4-bit comparator equal for signal <addr[10][3]_temp_random1[3]_equal_68_o> created at line 150
+    Found 4-bit comparator equal for signal <addr[10][3]_temp_random2[3]_equal_69_o> created at line 152
+    Found 4-bit comparator equal for signal <addr[10][3]_temp_random3[3]_equal_70_o> created at line 154
+    Found 4-bit comparator equal for signal <addr[10][3]_temp_random4[3]_equal_71_o> created at line 156
+    Found 4-bit comparator lessequal for signal <PWR_6_o_address_count[3]_LessThan_72_o> created at line 146
+    Found 4-bit comparator equal for signal <addr[11][3]_temp_random1[3]_equal_74_o> created at line 150
+    Found 4-bit comparator equal for signal <addr[11][3]_temp_random2[3]_equal_75_o> created at line 152
+    Found 4-bit comparator equal for signal <addr[11][3]_temp_random3[3]_equal_76_o> created at line 154
+    Found 4-bit comparator equal for signal <addr[11][3]_temp_random4[3]_equal_77_o> created at line 156
+    Found 4-bit comparator lessequal for signal <PWR_6_o_address_count[3]_LessThan_78_o> created at line 146
+    Found 4-bit comparator equal for signal <addr[12][3]_temp_random1[3]_equal_80_o> created at line 150
+    Found 4-bit comparator equal for signal <addr[12][3]_temp_random2[3]_equal_81_o> created at line 152
+    Found 4-bit comparator equal for signal <addr[12][3]_temp_random3[3]_equal_82_o> created at line 154
+    Found 4-bit comparator equal for signal <addr[12][3]_temp_random4[3]_equal_83_o> created at line 156
+    Found 4-bit comparator lessequal for signal <PWR_6_o_address_count[3]_LessThan_84_o> created at line 146
+    Found 4-bit comparator equal for signal <addr[13][3]_temp_random1[3]_equal_86_o> created at line 150
+    Found 4-bit comparator equal for signal <addr[13][3]_temp_random2[3]_equal_87_o> created at line 152
+    Found 4-bit comparator equal for signal <addr[13][3]_temp_random3[3]_equal_88_o> created at line 154
+    Found 4-bit comparator equal for signal <addr[13][3]_temp_random4[3]_equal_89_o> created at line 156
+    Found 4-bit comparator lessequal for signal <PWR_6_o_address_count[3]_LessThan_90_o> created at line 146
+    Found 4-bit comparator equal for signal <addr[14][3]_temp_random1[3]_equal_92_o> created at line 150
+    Found 4-bit comparator equal for signal <addr[14][3]_temp_random2[3]_equal_93_o> created at line 152
+    Found 4-bit comparator equal for signal <addr[14][3]_temp_random3[3]_equal_94_o> created at line 154
+    Found 4-bit comparator equal for signal <addr[14][3]_temp_random4[3]_equal_95_o> created at line 156
+    Found 4-bit comparator equal for signal <n0339> created at line 261
     Summary:
 	inferred   6 Adder/Subtractor(s).
 	inferred 132 D-type flip-flop(s).
@@ -756,8 +755,8 @@ The following registers are absorbed into counter <selectRow>: 1 register on sig
 The following registers are absorbed into counter <selectCol>: 1 register on signal <selectCol>.
 The following registers are absorbed into counter <index_X>: 1 register on signal <index_X>.
 The following registers are absorbed into counter <index_Y>: 1 register on signal <index_Y>.
-	Multiplier <Mmult_n0343> in block <vga_demo> and adder/subtractor <Madd_boxX> in block <vga_demo> are combined into a MAC<Maddsub_n0343>.
-	Multiplier <Mmult_n0344> in block <vga_demo> and adder/subtractor <Madd_boxY> in block <vga_demo> are combined into a MAC<Maddsub_n0344>.
+	Multiplier <Mmult_n0358> in block <vga_demo> and adder/subtractor <Madd_boxX> in block <vga_demo> are combined into a MAC<Maddsub_n0358>.
+	Multiplier <Mmult_n0359> in block <vga_demo> and adder/subtractor <Madd_boxY> in block <vga_demo> are combined into a MAC<Maddsub_n0359>.
 INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_SSD_CATHODES> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
@@ -993,24 +992,24 @@ Top Level Output File Name         : vga_demo.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 2328
+# BELS                             : 2267
 #      BUF                         : 2
 #      GND                         : 2
 #      INV                         : 19
 #      LUT1                        : 176
-#      LUT2                        : 59
-#      LUT3                        : 87
-#      LUT4                        : 148
-#      LUT5                        : 457
-#      LUT6                        : 830
-#      MUXCY                       : 253
-#      MUXF7                       : 76
+#      LUT2                        : 62
+#      LUT3                        : 88
+#      LUT4                        : 152
+#      LUT5                        : 334
+#      LUT6                        : 945
+#      MUXCY                       : 254
+#      MUXF7                       : 14
 #      MUXF8                       : 4
 #      VCC                         : 3
 #      XORCY                       : 212
 # FlipFlops/Latches                : 435
-#      FD                          : 204
-#      FDC                         : 72
+#      FD                          : 208
+#      FDC                         : 68
 #      FDCE                        : 10
 #      FDE                         : 72
 #      FDP                         : 17
@@ -1079,10 +1078,10 @@ Clock Information:
 -------------------------------------------------------------------------------------------------------------------+--------------------------------------------------+-------+
 Clock Signal                                                                                                       | Clock buffer(FF name)                            | Load  |
 -------------------------------------------------------------------------------------------------------------------+--------------------------------------------------+-------+
-row4_col4_MUX_394_o(Mmux_row4_col4_MUX_394_o13:O)                                                                  | NONE(*)(tempCardAddr_3)                          | 4     |
+row4_col4_MUX_394_o(Mmux_row4_col4_MUX_394_o11:O)                                                                  | NONE(*)(tempCardAddr_3)                          | 4     |
 DIV_CLK_1                                                                                                          | BUFG                                             | 398   |
 ClkPort                                                                                                            | BUFGP                                            | 20    |
-Madd_n0411_Madd_cy<0>8                                                                                             | NONE(Msub_selectStartX1)                         | 4     |
+Madd_n0426_Madd_cy<0>8                                                                                             | NONE(Msub_selectStartX1)                         | 4     |
 state_machine/rand_generator/reset_counter[15]_AND_15_o(state_machine/rand_generator/reset_counter[15]_AND_15_o1:O)| NONE(*)(state_machine/rand_generator/lfsr_15_LDC)| 1     |
 state_machine/rand_generator/reset_counter[15]_AND_45_o(state_machine/rand_generator/reset_counter[15]_AND_45_o1:O)| NONE(*)(state_machine/rand_generator/lfsr_0_LDC) | 1     |
 state_machine/rand_generator/reset_counter[15]_AND_41_o(state_machine/rand_generator/reset_counter[15]_AND_41_o1:O)| NONE(*)(state_machine/rand_generator/lfsr_2_LDC) | 1     |
@@ -1113,9 +1112,9 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 11.726ns (Maximum Frequency: 85.280MHz)
-   Minimum input arrival time before clock: 5.632ns
-   Maximum output required time after clock: 7.118ns
+   Minimum period: 12.949ns (Maximum Frequency: 77.229MHz)
+   Minimum input arrival time before clock: 6.636ns
+   Maximum output required time after clock: 8.162ns
    Maximum combinational path delay: 5.456ns
 
 Timing Details:
@@ -1124,36 +1123,36 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'DIV_CLK_1'
-  Clock period: 11.726ns (frequency: 85.280MHz)
-  Total number of paths / destination ports: 276859 / 554
+  Clock period: 12.949ns (frequency: 77.229MHz)
+  Total number of paths / destination ports: 298711 / 554
 -------------------------------------------------------------------------
-Delay:               11.726ns (Levels of Logic = 12)
-  Source:            state_machine/rand_generator/lfsr_1_C_1 (FF)
-  Destination:       state_machine/addr_15_55 (FF)
+Delay:               12.949ns (Levels of Logic = 12)
+  Source:            card_memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/TRUE_DP.PRIM9.ram (RAM)
+  Destination:       vga_b (FF)
   Source Clock:      DIV_CLK_1 rising
   Destination Clock: DIV_CLK_1 rising
 
-  Data Path: state_machine/rand_generator/lfsr_1_C_1 to state_machine/addr_15_55
+  Data Path: card_memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/TRUE_DP.PRIM9.ram to vga_b
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q              2   0.447   0.721  state_machine/rand_generator/lfsr_1_C_1 (state_machine/rand_generator/lfsr_1_C_1)
-     LUT3:I1->O           18   0.203   1.050  state_machine/rand_generator/lfsr_15 (state_machine/rand_generator/lfsr_1)
-     LUT6:I5->O            1   0.205   0.580  state_machine/addr[0][3]_temp_random3[3]_equal_10_o4_SW0 (N118)
-     LUT5:I4->O            2   0.205   0.845  state_machine/addr[0][3]_temp_random3[3]_equal_10_o4 (state_machine/addr[0][3]_temp_random3[3]_equal_10_o)
-     LUT6:I3->O            2   0.205   0.617  state_machine/addr[3][3]_temp_random3[3]_equal_28_o5 (state_machine/addr[3][3]_temp_random3[3]_equal_28_o_mmx_out)
-     LUT5:I4->O            2   0.205   0.617  state_machine/addr[7][3]_temp_random3[3]_equal_52_o53 (state_machine/addr[7][3]_temp_random3[3]_equal_52_o_mmx_out)
-     LUT6:I5->O            1   0.205   0.580  state_machine/Mmux_addr[0][3]_addr[0][3]_MUX_221_o51 (state_machine/Mmux_addr[0][3]_addr[0][3]_MUX_221_o5)
-     LUT6:I5->O            1   0.205   0.580  state_machine/Mmux_addr[0][3]_addr[0][3]_MUX_221_o55 (state_machine/Mmux_addr[0][3]_addr[0][3]_MUX_221_o54)
-     LUT5:I4->O            9   0.205   0.934  state_machine/Mmux_addr[0][3]_addr[0][3]_MUX_221_o512 (state_machine/addr[0][3]_addr[0][3]_MUX_221_o)
-     LUT5:I3->O            4   0.203   0.684  state_machine/Mmux_addr[0][3]_addr[0][3]_mux_178_OUT10211 (state_machine/Mmux_addr[0][3]_addr[0][3]_mux_178_OUT10211)
-     LUT5:I4->O           13   0.205   0.933  state_machine/Mmux_addr[0][3]_addr[0][3]_mux_178_OUT10212 (state_machine/Mmux_addr[0][3]_addr[0][3]_mux_178_OUT1021)
-     LUT6:I5->O            1   0.205   0.580  state_machine/Mmux_addr[0][3]_addr[0][3]_mux_178_OUT681 (state_machine/addr[0][3]_addr[0][3]_mux_178_OUT<3>)
-     LUT5:I4->O            1   0.205   0.000  state_machine/addr_15_3_dpot (state_machine/addr_15_3_dpot)
-     FDE:D                     0.102          state_machine/addr_15_3
+     RAMB8BWER:CLKAWRCLK->DOADO9   20   1.650   1.197  U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/TRUE_DP.PRIM9.ram (douta<4>)
+     end scope: 'card_memory:douta<4>'
+     LUT3:I1->O          131   0.203   2.063  Mmux_card_data21 (card_data<1>)
+     LUT6:I4->O            1   0.203   0.684  mem_mux/Mmux_temp742 (mem_mux/Mmux_temp741)
+     LUT6:I4->O            1   0.203   0.580  mem_mux/Mmux_temp743 (mem_mux/Mmux_temp742)
+     LUT6:I5->O            1   0.205   0.827  mem_mux/Mmux_temp744 (data<42>)
+     LUT6:I2->O            1   0.203   0.827  Mmux_index_X[5]_data[63]_Mux_219_o_124 (Mmux_index_X[5]_data[63]_Mux_219_o_124)
+     LUT6:I2->O            1   0.203   0.827  Mmux_index_X[5]_data[63]_Mux_219_o_71 (Mmux_index_X[5]_data[63]_Mux_219_o_71)
+     LUT6:I2->O            2   0.203   0.617  Mmux_PWR_1_o_GND_1_o_MUX_476_o1 (PWR_1_o_GND_1_o_MUX_476_o)
+     LUT6:I5->O            5   0.205   0.715  Mmux_selectEn_PWR_1_o_MUX_478_o11 (Mmux_selectEn_PWR_1_o_MUX_478_o1)
+     LUT2:I1->O            1   0.205   0.000  Mmux_selectEn_PWR_1_o_MUX_478_o15_SW0_G (N186)
+     MUXF7:I1->O           1   0.140   0.684  Mmux_selectEn_PWR_1_o_MUX_478_o15_SW0 (N181)
+     LUT6:I4->O            1   0.203   0.000  Mmux_selectEn_PWR_1_o_MUX_478_o16 (selectEn_PWR_1_o_MUX_478_o)
+     FDR:D                     0.102          vga_b
     ----------------------------------------
-    Total                     11.726ns (3.005ns logic, 8.721ns route)
-                                       (25.6% logic, 74.4% route)
+    Total                     12.949ns (3.928ns logic, 9.021ns route)
+                                       (30.3% logic, 69.7% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'ClkPort'
@@ -1199,30 +1198,30 @@ Delay:               2.028ns (Levels of Logic = 21)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'DIV_CLK_1'
-  Total number of paths / destination ports: 579 / 238
+  Total number of paths / destination ports: 575 / 234
 -------------------------------------------------------------------------
-Offset:              5.632ns (Levels of Logic = 3)
+Offset:              6.636ns (Levels of Logic = 3)
   Source:            Sw0 (PAD)
-  Destination:       state_machine/CARD2_loc_3 (FF)
+  Destination:       state_machine/addr_15_63 (FF)
   Destination Clock: DIV_CLK_1 rising
 
-  Data Path: Sw0 to state_machine/CARD2_loc_3
+  Data Path: Sw0 to state_machine/addr_15_63
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O             2   1.222   0.616  Sw0_IBUF (Sw0_IBUF)
-     BUF:I->O            158   0.568   2.016  BUF2 (reset)
-     LUT5:I4->O            4   0.205   0.683  state_machine/state__n2540_inv1 (state_machine/_n2540_inv)
-     FDE:CE                    0.322          state_machine/CARD1_loc_0
+     BUF:I->O             91   0.568   2.065  BUF2 (reset)
+     LUT4:I0->O           64   0.203   1.639  state_machine/state__n1570_inv1 (state_machine/_n1570_inv)
+     FDE:CE                    0.322          state_machine/addr_15_0
     ----------------------------------------
-    Total                      5.632ns (2.317ns logic, 3.315ns route)
-                                       (41.1% logic, 58.9% route)
+    Total                      6.636ns (2.315ns logic, 4.321ns route)
+                                       (34.9% logic, 65.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'ClkPort'
   Total number of paths / destination ports: 20 / 20
 -------------------------------------------------------------------------
-Offset:              4.851ns (Levels of Logic = 2)
+Offset:              4.654ns (Levels of Logic = 2)
   Source:            Sw0 (PAD)
   Destination:       DIV_CLK_0 (FF)
   Destination Clock: ClkPort rising
@@ -1232,11 +1231,11 @@ Offset:              4.851ns (Levels of Logic = 2)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O             2   1.222   0.616  Sw0_IBUF (Sw0_IBUF)
-     BUF:I->O            158   0.568   2.015  BUF2 (reset)
+     BUF:I->O             91   0.568   1.817  BUF2 (reset)
      FDR:R                     0.430          DIV_CLK_0
     ----------------------------------------
-    Total                      4.851ns (2.220ns logic, 2.631ns route)
-                                       (45.8% logic, 54.2% route)
+    Total                      4.654ns (2.220ns logic, 2.434ns route)
+                                       (47.7% logic, 52.3% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'state_machine/rand_generator/reset_counter[15]_AND_15_o'
@@ -1698,46 +1697,47 @@ Offset:              4.561ns (Levels of Logic = 17)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'DIV_CLK_1'
-  Total number of paths / destination ports: 70 / 20
+  Total number of paths / destination ports: 144 / 17
 -------------------------------------------------------------------------
-Offset:              7.118ns (Levels of Logic = 4)
+Offset:              8.162ns (Levels of Logic = 5)
   Source:            card_memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/TRUE_DP.PRIM9.ram (RAM)
-  Destination:       Cg (PAD)
+  Destination:       Cf (PAD)
   Source Clock:      DIV_CLK_1 rising
 
-  Data Path: card_memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/TRUE_DP.PRIM9.ram to Cg
+  Data Path: card_memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/TRUE_DP.PRIM9.ram to Cf
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     RAMB8BWER:CLKBRDCLK->DOBDO1   11   1.850   1.130  U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/TRUE_DP.PRIM9.ram (doutb<1>)
+     RAMB8BWER:CLKBRDCLK->DOBDO1    6   1.850   0.849  U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/TRUE_DP.PRIM9.ram (doutb<1>)
      end scope: 'card_memory:doutb<1>'
-     LUT4:I0->O            1   0.203   0.580  Mram_SSD_CATHODES112 (Mram_SSD_CATHODES111)
-     LUT6:I5->O            1   0.205   0.579  Mram_SSD_CATHODES113 (Cg_OBUF)
-     OBUF:I->O                 2.571          Cg_OBUF (Cg)
+     LUT2:I0->O            1   0.203   0.684  Mmux_SSD4_SW0 (N55)
+     LUT6:I4->O            7   0.203   1.021  Mmux_SSD4 (SSD<3>)
+     LUT4:I0->O            1   0.203   0.579  Mram_SSD_CATHODES21 (Cf_OBUF)
+     OBUF:I->O                 2.571          Cf_OBUF (Cf)
     ----------------------------------------
-    Total                      7.118ns (4.829ns logic, 2.289ns route)
-                                       (67.8% logic, 32.2% route)
+    Total                      8.162ns (5.030ns logic, 3.132ns route)
+                                       (61.6% logic, 38.4% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'ClkPort'
-  Total number of paths / destination ports: 33 / 9
+  Total number of paths / destination ports: 60 / 9
 -------------------------------------------------------------------------
-Offset:              6.220ns (Levels of Logic = 3)
+Offset:              6.161ns (Levels of Logic = 3)
   Source:            DIV_CLK_18 (FF)
-  Destination:       Cg (PAD)
+  Destination:       Cb (PAD)
   Source Clock:      ClkPort rising
 
-  Data Path: DIV_CLK_18 to Cg
+  Data Path: DIV_CLK_18 to Cb
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q             12   0.447   1.273  DIV_CLK_18 (DIV_CLK_18)
-     LUT6:I0->O            1   0.203   0.944  Mram_SSD_CATHODES111 (Mram_SSD_CATHODES11)
-     LUT6:I0->O            1   0.203   0.579  Mram_SSD_CATHODES113 (Cg_OBUF)
-     OBUF:I->O                 2.571          Cg_OBUF (Cg)
+     FDR:C->Q              7   0.447   1.138  DIV_CLK_18 (DIV_CLK_18)
+     LUT6:I0->O            7   0.203   1.021  Mmux_SSD31 (SSD<2>)
+     LUT4:I0->O            1   0.203   0.579  Mram_SSD_CATHODES61 (Cb_OBUF)
+     OBUF:I->O                 2.571          Cb_OBUF (Cb)
     ----------------------------------------
-    Total                      6.220ns (3.424ns logic, 2.796ns route)
-                                       (55.1% logic, 44.9% route)
+    Total                      6.161ns (3.424ns logic, 2.737ns route)
+                                       (55.6% logic, 44.4% route)
 
 =========================================================================
 Timing constraint: Default path analysis
@@ -1752,7 +1752,7 @@ Delay:               5.456ns (Levels of Logic = 3)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O             3   1.222   0.879  Sw1_IBUF (Sw1_IBUF)
-     LUT3:I0->O            1   0.205   0.579  Mmux_An311 (An3_OBUF)
+     LUT4:I1->O            1   0.205   0.579  Mmux_An311 (An3_OBUF)
      OBUF:I->O                 2.571          An3_OBUF (An3)
     ----------------------------------------
     Total                      5.456ns (3.998ns logic, 1.458ns route)
@@ -1776,27 +1776,27 @@ Clock to Setup on destination clock DIV_CLK_1
                                                        | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                                           |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 -------------------------------------------------------+---------+---------+---------+---------+
-DIV_CLK_1                                              |   11.726|         |         |         |
+DIV_CLK_1                                              |   12.949|         |         |         |
 row4_col4_MUX_394_o                                    |         |    1.427|         |         |
-state_machine/rand_generator/reset_counter[15]_AND_15_o|         |   10.780|         |         |
-state_machine/rand_generator/reset_counter[15]_AND_17_o|         |   11.267|         |         |
-state_machine/rand_generator/reset_counter[15]_AND_19_o|         |   11.311|         |         |
-state_machine/rand_generator/reset_counter[15]_AND_21_o|         |   10.548|         |         |
-state_machine/rand_generator/reset_counter[15]_AND_23_o|         |   10.666|         |         |
-state_machine/rand_generator/reset_counter[15]_AND_25_o|         |   11.208|         |         |
-state_machine/rand_generator/reset_counter[15]_AND_27_o|         |   11.348|         |         |
-state_machine/rand_generator/reset_counter[15]_AND_29_o|         |   10.413|         |         |
-state_machine/rand_generator/reset_counter[15]_AND_31_o|         |   11.269|         |         |
-state_machine/rand_generator/reset_counter[15]_AND_33_o|         |   11.617|         |         |
-state_machine/rand_generator/reset_counter[15]_AND_35_o|         |   11.719|         |         |
-state_machine/rand_generator/reset_counter[15]_AND_37_o|         |   11.031|         |         |
-state_machine/rand_generator/reset_counter[15]_AND_39_o|         |   10.585|         |         |
-state_machine/rand_generator/reset_counter[15]_AND_41_o|         |   11.801|         |         |
-state_machine/rand_generator/reset_counter[15]_AND_43_o|         |   11.903|         |         |
-state_machine/rand_generator/reset_counter[15]_AND_45_o|         |   10.429|         |         |
+state_machine/rand_generator/reset_counter[15]_AND_15_o|         |   11.603|         |         |
+state_machine/rand_generator/reset_counter[15]_AND_17_o|         |   11.372|         |         |
+state_machine/rand_generator/reset_counter[15]_AND_19_o|         |   11.187|         |         |
+state_machine/rand_generator/reset_counter[15]_AND_21_o|         |   11.367|         |         |
+state_machine/rand_generator/reset_counter[15]_AND_23_o|         |   11.572|         |         |
+state_machine/rand_generator/reset_counter[15]_AND_25_o|         |   11.313|         |         |
+state_machine/rand_generator/reset_counter[15]_AND_27_o|         |   11.224|         |         |
+state_machine/rand_generator/reset_counter[15]_AND_29_o|         |   11.231|         |         |
+state_machine/rand_generator/reset_counter[15]_AND_31_o|         |   12.092|         |         |
+state_machine/rand_generator/reset_counter[15]_AND_33_o|         |   11.722|         |         |
+state_machine/rand_generator/reset_counter[15]_AND_35_o|         |   11.596|         |         |
+state_machine/rand_generator/reset_counter[15]_AND_37_o|         |   11.849|         |         |
+state_machine/rand_generator/reset_counter[15]_AND_39_o|         |   11.408|         |         |
+state_machine/rand_generator/reset_counter[15]_AND_41_o|         |   11.906|         |         |
+state_machine/rand_generator/reset_counter[15]_AND_43_o|         |   11.780|         |         |
+state_machine/rand_generator/reset_counter[15]_AND_45_o|         |   11.247|         |         |
 -------------------------------------------------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock Madd_n0411_Madd_cy<0>8
+Clock to Setup on destination clock Madd_n0426_Madd_cy<0>8
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
@@ -1809,7 +1809,7 @@ Clock to Setup on destination clock row4_col4_MUX_394_o
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-DIV_CLK_1      |         |         |    6.224|         |
+DIV_CLK_1      |         |         |    6.457|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock state_machine/rand_generator/reset_counter[15]_AND_15_o
@@ -1943,15 +1943,15 @@ DIV_CLK_1      |         |         |    3.410|         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 37.00 secs
-Total CPU time to Xst completion: 34.83 secs
+Total REAL time to Xst completion: 26.00 secs
+Total CPU time to Xst completion: 24.28 secs
  
 --> 
 
 
-Total memory usage is 423120 kilobytes
+Total memory usage is 422552 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  104 (   0 filtered)
+Number of warnings :  103 (   0 filtered)
 Number of infos    :   18 (   0 filtered)
 

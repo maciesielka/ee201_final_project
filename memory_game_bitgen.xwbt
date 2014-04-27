@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/student/Desktop/EE201/ee201_final_project/memory_game.ncd
+OUTFILE=/home/student/Desktop/EE201/ee201_final_project/memory_game.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=/home/student/Desktop/EE201/ee201_final_project
+LICENSE=WebPack
+USER_INFO=210736937_0_0_159
